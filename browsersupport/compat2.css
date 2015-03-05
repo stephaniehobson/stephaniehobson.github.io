@@ -1,0 +1,565 @@
+/*
+
+add highlighting for :target
+
+*/
+
+
+/*
+table layout
+---------------------------------------------------------------- */
+.bs-table {
+    width: 100%;
+    background-color: #EAEFF2;
+}
+
+.bs-table,
+.bs-table thead,
+.bs-table tbody,
+.bs-table tr,
+.bs-table th{
+    display: flex;
+    box-sizing: border-box;
+}
+
+.bs-table,
+.bs-table thead,
+.bs-table tbody {
+    flex-direction: column;
+}
+
+.bs-table tr {
+    align-items: stretch;
+    border-bottom: 0px solid transparent;
+    transition: border-bottom 0.2s ease-out;
+}
+
+.bs-table th,
+.bs-table td {
+    position: relative;
+    flex-grow: 1;
+    padding: 5px 3px;
+    justify-content: center;
+    flex-basis: 0;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-bottom: 0px solid transparent;
+    transition: border-bottom 0.2s ease-out;
+}
+
+.bs-table thead tr + tr > th {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.bs-table thead tr:first-child th,
+.bs-table thead tr th:nth-child(2),
+.bs-table thead tr th:nth-child(4),
+.bs-table thead tr th:nth-child(6),
+.bs-table thead tr th:nth-child(8),
+.bs-table thead tr th:nth-child(10),
+.bs-table tbody tr td:nth-child(2),
+.bs-table tbody tr td:nth-child(4),
+.bs-table tbody tr td:nth-child(6),
+.bs-table tbody tr td:nth-child(8),
+.bs-table tbody tr td:nth-child(10){
+    border-left-width: 4px;
+}
+
+.bs-table thead > tr:first-child th {
+    padding-top: 0;
+    padding-bottom: 10px;
+}
+
+.bs-table thead > tr > th:first-child,
+.bs-table tbody th {
+    min-width: 200px;
+    width: 200px;
+    max-width: 200px;
+    justify-content: flex-start;
+    border-left: 0;
+}
+
+.bs-table tbody th {
+   display: block;
+}
+
+.bs-table tbody th code {
+    white-space: nowrap;
+}
+
+.bs-table td {
+    display: block; /* if we leave it table-cell it doesn't act like a flex-item */
+    text-align: center;
+}
+
+.bs-table td[tabindex] {
+    cursor: pointer;
+}
+
+@media all and (max-width: 800px) {
+
+    .bs-table tr {
+        flex-wrap: wrap;
+    }
+
+    .bs-table thead > tr > th:first-child{
+        min-width:0;
+        width: 0;
+        max-width: 0;
+        padding: 0;
+    }
+
+    .bs-table tbody th {
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        padding-top: 10px;
+        padding-bottom: 0;
+    }
+
+    .bs-table thead tr th:nth-child(2),
+    .bs-table tbody tr td:nth-child(2) {
+        border-left: 0;
+    }
+
+}
+
+@media all and (max-width: 480px) {
+
+    .bs-table thead {
+        display: none;
+    }
+    .bs-table tbody td {
+        position: relative;
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        border-top: 1px solid #fff;
+        border-left: 0;
+        box-sizing: border-box;
+        padding-left: 70px;
+        padding-right: 10px;
+        box-shadow: inset 60px 0 0 0 #EAEFF2;
+        text-align: left;
+      }
+
+}
+
+/*
+
+---------------------------------------------------------------- */
+
+.bs-table tr {
+    position: relative;
+}
+
+.bs-icons {
+    /* TODO: center icons if they wrap, :first-line? only on mobile?  */;
+    float: right;
+}
+
+.bs-history-link {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 11;
+    display: block;
+    width: 100%;
+    height: 11px;
+    margin-top: -10px;
+    clear: both;
+    text-align: center;
+    font-size: 10px;
+}
+
+/* increases hit area of the history link, making it easier to click/tap/etc */
+/* TODO: this works 85% of the time, problems with 2+ icons and multiple lines */
+.bs-history-link:before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    margin-left: -15px;
+    display: block;
+    height: 15px;
+    width: 30px;
+}
+    /* if there are icons the text is shifted left, shift the target extention as well */
+    .bs-icons + .bs-history-link:before {
+        margin-left: -30px;
+    }
+/*
+.bs-history-link i {
+    transition: padding 0.2s;
+}
+    .active .bs-history-link i {
+        transform: scaleY(-1);
+    }
+*/
+.active .bs-history-link,
+td[tabindex]:hover .bs-history-link,
+td[tabindex]:focus .bs-history-link {
+    background-color: #fff;
+}
+
+    .active.bs-supports-yes .bs-history-link,
+    td[tabindex].bs-supports-yes:hover .bs-history-link,
+    td[tabindex].bs-supports-yes:focus .bs-history-link {
+        color: #288436;
+    }
+    .active.bs-supports-no .bs-history-link,
+    td[tabindex].bs-supports-no:hover .bs-history-link,
+    td[tabindex].bs-supports-no:focus .bs-history-link {
+        color: #962a2a;
+    }
+    .active.bs-supports-partial .bs-history-link,
+    td[tabindex].bs-supports-partial:hover .bs-history-link,
+    td[tabindex].bs-supports-partial:focus .bs-history-link {
+        color: #a25e00;
+    }
+    .active.bs-supports-unknown .bs-history-link,
+    td[tabindex].bs-supports-unknown:hover .bs-history-link,
+    td[tabindex].bs-supports-unknown:focus .bs-history-link {
+        color: #bbbbbb;
+    }
+
+.active .bs-history-link {
+    margin-top: -7px;
+}
+
+.bs-history {
+    position: absolute;
+    top: 100%;
+    z-index: 10;
+    box-sizing: border-box;
+    border-top: 4px solid #fff;
+    padding-left: 204px;
+    display: none;
+    visibility: hidden;
+    overflow: hidden;
+    box-shadow: inset 204px 0 0 0 #fff;
+}
+
+    .active .bs-history {
+        display: block;
+        visibility: visible;
+        height: 0;
+        transition: height 0.2s ease-out;
+    }
+
+.bs-history dl {
+    text-align: left;
+    margin: 10px;
+    margin-left: 160px;
+}
+
+.bs-history dt {
+    float: left;
+    clear: left;
+    max-width: 120px;
+    margin-left: -150px;
+}
+
+.bs-history dt,
+.bs-history dd {
+    margin-top: 30px;
+}
+
+.bs-history dd {
+    min-height: 1.2em;
+    padding-bottom: 10px;
+}
+
+.bs-history dl > dt:first-child,
+.bs-history dl > dt:first-child + dd,
+.bs-history dd + dd {
+    margin-top: 0;
+}
+
+.bs-supports {
+    border: 1px solid #fff;
+    padding: 3px;
+    min-width: 120px;
+    text-align: center;
+}
+
+@media all and (max-width: 800px) {
+    .bs-history {
+        padding-left: 10px;
+        box-shadow: none;
+    }
+
+    th .bs-icons {
+        float: none;
+        display: inline-block;
+    }
+}
+
+@media all and (max-width: 480px) {
+
+    .bs-history-link {
+
+    }
+
+    .bs-history dl {
+       margin-left: 10px;
+    }
+
+    .bs-history dt {
+        margin-top: 20px;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .bs-history dd {
+        clear: left;
+        min-height: 0;
+    }
+}
+
+/*
+cell colouring
+---------------------------------------------------------------- */
+
+.bs-supports-yes,
+.bs-supports-no,
+.bs-supports-partial,
+.bs-supports-unknown,
+.bs-history {
+    color: #fff;
+}
+
+.bs-supports-yes a,
+.bs-supports-no a,
+.bs-supports-partial a,
+.bs-supports-unknown a,
+.bs-history {
+    color: #fff;
+}
+
+.bs-supports-yes,
+.bs-supports-yes .bs-history {
+    background-color: #288436; /*#309c40;*/
+}
+
+.bs-supports-no,
+.bs-supports-no .bs-history {
+    background-color: #962a2a; /*#af3232;*/
+}
+
+.bs-supports-no {
+    background-image:
+        linear-gradient(45deg, transparent 49.5%, rgba(0,0,0,0.2) 49.5%, rgba(0,0,0,0.2) 50.5%, transparent 50.5%),
+        linear-gradient(-45deg, transparent 49.5%, rgba(0,0,0,0.2) 49.5%, rgba(0,0,0,0.2) 50.5%, transparent 50.5%);
+    background-size: 600px 600px;
+    background-position: center center;
+}
+
+.bs-supports-partial,
+.bs-supports-partial .bs-history {
+    background: #a25e00; /* #ff9500; */
+}
+.bs-supports-partial {
+    background-image:
+        linear-gradient(45deg, transparent 49.5%, rgba(0,0,0,0.2) 49.5%, rgba(0,0,0,0.2) 50.5%, transparent 50.5%);
+    background-size: 600px 600px;
+    background-position: center center;
+}
+
+.bs-supports-unknown,
+.bs-supports-unknown .bs-history {
+    background-color: #bbbbbb;
+}
+
+
+@media all and (max-width: 480px) {
+    td.bs-supports-no {
+        background-position: 60px 0, -505px 0;
+    }
+
+    td.bs-supports-partial {
+        background-position: 60px 0;
+    }
+}
+
+/*
+icons
+---------------------------------------------------------------- */
+
+i.icon-file {
+    transform: rotate(180deg) scaleX(-1);
+}
+
+.only-icon > span{
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.only-icon > i {
+    margin:0;
+}
+
+a .only-icon > i {
+    float: right;
+    margin: 3px;
+}
+
+.only-icon > i[class^='logo'] {
+    display: inline-block;
+    height: 23px;
+    width: 27px;
+    overflow: hidden;
+    position: relative;
+    top: 3px;
+}
+
+.only-icon > i[class^='logo']:before {
+  content: url(icons-sprite.png);
+  position: absolute;
+}
+
+.logo-chrome:before {
+  top: -158px;
+  left: -20px;
+}
+.logo-firefox:before {
+  top: -181px;
+  left: 2px;
+}
+
+.logo-ie:before {
+  top: -91px;
+  left: -88px;
+}
+
+.logo-opera:before {
+  top: -22px;
+  left: -156px;
+}
+
+.logo-safari:before {
+  top: -45px;
+  left: -133px;
+}
+
+@media all and (max-width: 480px) {
+
+    [class*='bs-browser-']:before{
+        content: '';
+        background-image: url(icons-sprite.png);
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        height: 25px;
+        width: 25px;
+        filter: grayscale(100%);
+    }
+
+    .bs-browser-chrome-desktop:before {
+        background-position: -20px -156px ;
+    }
+    .bs-browser-chrome-android:before {
+        background-position: -20px -156px;
+    }
+    .bs-browser-firefox-desktop:before {
+        background-position: 2px -179px;
+    }
+    .bs-browser-firefox-android:before {
+        background-position: 2px -179px;
+    }
+    .bs-browser-internet-explorer-desktop:before {
+        background-position: -88px -89px;
+    }
+    .bs-browser-internet-explorer-mobile:before {
+        background-position: -88px -89px;
+    }
+    .bs-browser-opera-desktop:before {
+        background-position: -156px -20px;
+    }
+    .bs-browser-opera-mobile:before {
+        background-position: -156px -20px;
+    }
+    .bs-browser-safari-desktop:before {
+        background-position: -133px -43px;
+    }
+    .bs-browser-safari-mobile:before {
+        background-position: -133px -43px;
+    }
+
+    [class*='bs-browser-']:after {
+        position: absolute;
+        top: 8px;
+        left: 30px;
+        color: #4D4E53;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+        -moz-osx-font-smoothing: grayscale;
+        speak: none;
+    }
+
+    .bs-browser-chrome-desktop:after,
+    .bs-browser-firefox-desktop:after,
+    .bs-browser-internet-explorer-desktop:after,
+    .bs-browser-opera-desktop:after,
+    .bs-browser-safari-desktop:after {
+        content:"";
+    }
+
+    .bs-browser-chrome-android:after,
+    .bs-browser-firefox-android:after {
+        content:"";
+    }
+
+    .bs-browser-internet-explorer-mobile:after,
+    .bs-browser-opera-mobile:after,
+    .bs-browser-safari-mobile:after {
+        content:"";
+    }
+}
+
+/*
+legend
+---------------------------------------------------------------- */
+
+.bs-legend {
+    -moz-column-count: 2;
+    margin-bottom: 24px;
+}
+
+.bs-legend dt {
+    float: left;
+    width: 2em;
+    margin: 0 0 5px 0;
+    clear: left;
+}
+
+.bs-legend dl > dt:first-child {
+    margin-top: 0;
+}
+
+.bs-legend dd {
+    margin: 0 0 5px 2em;
+}
+
+/*
+footnotes
+---------------------------------------------------------------- */
+
+.bs-footnotes dt {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.bs-footnotes dl > dt:first-child {
+    margin-top: 0;
+}
+
+.bs-footnotes dd {
+    margin-left: 20px;
+}
