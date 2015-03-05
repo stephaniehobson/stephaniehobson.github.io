@@ -38,7 +38,7 @@
 
     // javascript is enabled, hide the footnotes and legend
     $('.bs-footnotes').hide();
-    $('.bs-legend').hide();
+    $('.bs-legend:not(#bs-legend-master)').hide();
 
     // generate info for cells with no info (legend, no history available, prompt to contribute)
     var $cells = $('.bs-table td');
