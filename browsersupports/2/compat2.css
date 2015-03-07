@@ -18,6 +18,7 @@ table layout
 .bs-table tbody,
 .bs-table tr,
 .bs-table th{
+    display: -webkit-flex;
     display: flex;
     box-sizing: border-box;
 }
@@ -25,10 +26,12 @@ table layout
 .bs-table,
 .bs-table thead,
 .bs-table tbody {
+    -webkit-flex-direction: column;
     flex-direction: column;
 }
 
 .bs-table tr {
+    -webkit-align-items: stretch;
     align-items: stretch;
     border-bottom: 0px solid transparent;
     transition: border-bottom 0.2s ease-out;
@@ -37,10 +40,13 @@ table layout
 .bs-table th,
 .bs-table td {
     position: relative;
+    -webkit-flex-grow: 1;
     flex-grow: 1;
-    padding: 5px 3px;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-flex-basis: 0;
     flex-basis: 0;
+    padding: 5px 3px;
     border-top: 1px solid #fff;
     border-left: 1px solid #fff;
     border-bottom: 0px solid transparent;
@@ -76,8 +82,10 @@ table layout
     min-width: 200px;
     width: 200px;
     max-width: 200px;
+    -webkit-justify-content: flex-start;
     justify-content: flex-start;
     border-left: 0;
+    text-align: left;
 }
 
 .bs-table tbody th {
@@ -100,7 +108,10 @@ table layout
 @media all and (max-width: 800px) {
 
     .bs-table tr {
+        -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
+        -webkit-flex-direction: column;
+        flex-direction: column;
     }
 
     .bs-table thead > tr > th:first-child{
