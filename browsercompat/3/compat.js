@@ -9,7 +9,7 @@
     // TODO: collapse tables longer than 2 rows on mobile?
     // TODO: sticky table headers on long desktop/tablet ? Duplicate table header on long tables?
     // TODO: wrap all icons on a row to new line if one cell wraps?
-
+    // TODO: support legend on history page
 
     /*
     Toogle History
@@ -118,7 +118,17 @@
                 // create the history DT
                 var $thisHistoryDT= $thisHistorySection.find('dt');
                 $thisHistoryDT.append($thisCell.html());
-                // TODO: copy cell support class
+                // copy cell support class
+                    // TODO: regex this so not dependent on what is essentially a lookup table.
+                    if($thisCell.hasClass('bc-supports-yes')) {
+                        $thisHistoryDT.addClass('bc-supports-yes');
+                    } else if($thisCell.hasClass('bc-supports-partial')) {
+                        $thisHistoryDT.addClass('bc-supports-partial');
+                    } else if($thisCell.hasClass('bc-supports-no')) {
+                        $thisHistoryDT.addClass('bc-supports-no');
+                    } else if($thisCell.hasClass('bc-supports-unknown')) {
+                        $thisHistoryDT.addClass('bc-supports-unknown');
+                    };
 
                 // create the history link in the cell (do last so not cloned)
                 $historyLink.clone().appendTo($thisCell);
