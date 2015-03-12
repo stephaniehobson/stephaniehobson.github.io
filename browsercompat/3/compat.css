@@ -9,8 +9,8 @@ TODO: add link styles for content in .bs-history
 .bc-support-partial,
 .bc-support-no {
     position: absolute;
-    top: 0;
-    left:0;
+    top: -1px;
+    left: -1px;
     display: block;
     height: 10px;
     width: 10px;
@@ -21,8 +21,8 @@ TODO: add link styles for content in .bs-history
 .bc-support-partial img,
 .bc-support-no img {
     position: absolute;
-    top: -1px;
-    left: -1px;
+    top: 0px;
+    left: 0px;
     display: none;
 }
 
@@ -137,7 +137,7 @@ table layout
 
 .bc-table thead tr + tr > th {
     border-top: 0;
-    padding: 0;
+    padding: 0 0 3px 0;
 }
 
 [class*=bc-browser-chrome] + [class*=bc-browser-chrome],
