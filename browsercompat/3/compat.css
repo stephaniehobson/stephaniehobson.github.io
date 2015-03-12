@@ -536,7 +536,13 @@ Support icons
 .active .bc-support-no img,
 td:hover .bc-support-yes img,
 td:hover .bc-support-partial img,
-td:hover .bc-support-no img {
+td:hover .bc-support-no img,
+td:focus .bc-support-yes img,
+td:focus .bc-support-partial img,
+td:focus .bc-support-no img,
+dt:hover .bc-support-yes img,
+dt:hover .bc-support-partial img,
+dt:hover .bc-support-no img {
     display: block;
 }
 
@@ -740,22 +746,27 @@ legend
 
 .bc-legend {
     -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    page-break-inside: avoid;
+    webkit-column-break-inside: avoid;
+    break-inside: avoid;
     margin-bottom: 24px;
 }
 
 .bc-legend dt {
-    float: left;
-    width: 2em;
+    display: inline-block;
     margin: 0 0 5px 0;
-    clear: left;
-}
-
-.bc-legend dl > dt:first-child {
-    margin-top: 0;
 }
 
 .bc-legend dd {
-    margin: 0 0 5px 2em;
+    display: inline;
+    margin: 0 10px 5px 10px;
+}
+
+.bc-legend dd:after {
+  content: '\a';
+  white-space: pre;
 }
 
 /*
