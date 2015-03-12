@@ -5,50 +5,6 @@ TODO: add link styles for content in .bs-history
 
 */
 
-.bc-support-yes,
-.bc-support-partial,
-.bc-support-no {
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    display: block;
-    height: 10px;
-    width: 10px;
-    overflow: hidden;
-}
-
-.bc-support-yes img,
-.bc-support-partial img,
-.bc-support-no img {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    display: none;
-}
-
-td:hover .bc-support-yes img,
-td:hover .bc-support-partial img,
-td:hover .bc-support-no img {
-    display: block;
-}
-
-.bc-support-partial img {
-    top: -10px;
-}
-
-.bc-support-no img {
-    top: -20px;
-}
-
-
-@media all and (max-width: 480px) {
-    td > .bc-support-yes,
-    td > .bc-support-partial,
-    td > .bc-support-no {
-        left: 60px;
-    }
-}
-
 
 /*
 table layout
@@ -87,6 +43,8 @@ table layout
 }
 
 .bc-table tr {
+    position: relative;
+
     -webkit-box-align: stretch;
     -moz-box-align: stretch;
     -webkit-align-items: stretch;
@@ -268,11 +226,11 @@ table layout
 }
 
 /*
-
+Table styling that is not layout related
 ---------------------------------------------------------------- */
 
-.bc-table tr {
-    position: relative;
+.bc-table abbr i {
+    cursor: help;
 }
 
 .bc-icons {
@@ -282,6 +240,335 @@ table layout
     /* TODO: center icons if they wrap, :first-line? only on mobile?  */;
     float: right;
 }
+
+/*
+cell colouring
+---------------------------------------------------------------- */
+
+.bc-supports-yes,
+.bc-supports-no,
+.bc-supports-partial,
+.bc-supports-unknown,
+.bc-history {
+    color: #fff;
+}
+
+.bc-supports-yes a,
+.bc-supports-no a,
+.bc-supports-partial a,
+.bc-supports-unknown a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.bc-history {
+    color: #fff;
+}
+
+.bc-supports-yes,
+.bc-supports-yes .bc-history {
+    background-color: #288436; /*#309c40;*/
+}
+
+.bc-supports-no,
+.bc-supports-no .bc-history {
+    background-color: #962a2a; /*#af3232;*/
+}
+
+.bc-supports-no {
+    background-image:
+        linear-gradient(45deg, transparent 49.5%, rgba(0,0,0,0.3) 49.5%, rgba(0,0,0,0.3) 50.5%, transparent 50.5%),
+        linear-gradient(-45deg, transparent 49.5%, rgba(0,0,0,0.3) 49.5%, rgba(0,0,0,0.3) 50.5%, transparent 50.5%);
+    background-size: 600px 600px;
+    background-position: center center;
+}
+
+.bc-supports-partial,
+.bc-supports-partial .bc-history {
+    background: #a25e00; /* #ff9500; */
+}
+.bc-supports-partial {
+    background-image:
+        linear-gradient(45deg, transparent 49.5%, rgba(0,0,0,0.3) 49.5%, rgba(0,0,0,0.3) 50.5%, transparent 50.5%);
+    background-size: 600px 600px;
+    background-position: center center;
+}
+
+.bc-supports-unknown,
+.bc-supports-unknown .bc-history {
+    background-color: #bbbbbb;
+}
+
+
+@media all and (max-width: 480px) {
+    td.bc-supports-no {
+        background-position: 60px 0, -505px 0;
+    }
+
+    td.bc-supports-partial {
+        background-position: 60px 0;
+    }
+}
+
+/*
+icons
+---------------------------------------------------------------- */
+
+.only-icon > span {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.only-icon > i {
+    margin:0;
+}
+
+a .only-icon > i {
+    float: right;
+    margin: 3px;
+}
+
+/*
+feature icons
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+.bc-icons i.icon-file {
+    transform: rotate(180deg) scaleX(-1);
+}
+
+/*
+browser logo icons
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+.only-icon > i[class^='logo'] {
+    display: inline-block;
+    height: 23px;
+    width: 27px;
+    overflow: hidden;
+    position: relative;
+    top: 3px;
+}
+
+.only-icon > i[class^='logo']:before {
+  content: url(icons-sprite.png);
+  position: absolute;
+}
+
+.logo-android-browser:before {
+  top: -135px;
+  left: -43px;
+}
+
+.logo-chrome:before {
+  top: -158px;
+  left: -20px;
+}
+
+.logo-firefox:before {
+  top: -181px;
+  left: 2px;
+}
+
+.logo-ie:before {
+  top: -91px;
+  left: -88px;
+}
+
+.logo-opera:before {
+  top: -22px;
+  left: -156px;
+}
+
+.logo-safari:before {
+  top: -45px;
+  left: -133px;
+}
+
+.only-icon > i.logo-fxos:before {
+    content: url(fxos.png);
+    top: 0;
+    left: 0;
+}
+
+@media all and (max-width: 480px) {
+
+    /* browser icons in mobile view */
+    [class*='bc-browser-']:before{
+        content: '';
+        background-image: url(icons-sprite.png);
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        height: 25px;
+        width: 25px;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+
+    .bc-browser-android-browser:before {
+        background-position: -43px -135px ;
+    }
+    .bc-browser-chrome-desktop:before {
+        background-position: -20px -156px ;
+    }
+    .bc-browser-chrome-android:before {
+        background-position: -20px -156px;
+    }
+    .bc-browser-firefox-desktop:before {
+        background-position: 2px -179px;
+    }
+    .bc-browser-firefox-android:before {
+        background-position: 2px -179px;
+    }
+    .bc-browser-firefox-fxos:before {
+        background-position: 2px -179px;
+    }
+    .bc-browser-internet-explorer-desktop:before {
+        background-position: -88px -89px;
+    }
+    .bc-browser-internet-explorer-mobile:before {
+        background-position: -88px -89px;
+    }
+    .bc-browser-opera-desktop:before {
+        background-position: -156px -20px;
+    }
+    .bc-browser-opera-mobile:before {
+        background-position: -156px -20px;
+    }
+    .bc-browser-opera-mini:before {
+        background-position: -156px -20px;
+    }
+    .bc-browser-safari-desktop:before {
+        background-position: -133px -43px;
+    }
+    .bc-browser-safari-mobile:before {
+        background-position: -133px -43px;
+    }
+
+    /* don't show icon if it's on the previous line */
+    [class*=bc-browser-chrome] + [class*=bc-browser-chrome]:before,
+    [class*=bc-browser-firefox] + [class*=bc-browser-firefox]:before,
+    [class*=bc-browser-internet-explorer] + [class*=bc-browser-internet-explorer]:before,
+    [class*=bc-browser-opera] + [class*=bc-browser-opera]:before,
+    [class*=bc-browser-safari] + [class*=bc-browser-safari]:before{
+        visibility: hidden;
+    }
+
+    /* medium icons in mobile view */
+    [class*='bc-browser-']:after {
+        position: absolute;
+        top: 8px;
+        left: 30px;
+        color: #4D4E53;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+        -moz-osx-font-smoothing: grayscale;
+        speak: none;
+    }
+
+    .bc-browser-chrome-desktop:after,
+    .bc-browser-firefox-desktop:after,
+    .bc-browser-internet-explorer-desktop:after,
+    .bc-browser-opera-desktop:after,
+    .bc-browser-safari-desktop:after {
+        content: '\f108';
+    }
+
+    .bc-browser-android-browser:after,
+    .bc-browser-chrome-android:after,
+    .bc-browser-firefox-android:after {
+        content: '\f17b';
+    }
+
+    .bc-browser-internet-explorer-mobile:after,
+    .bc-browser-opera-mobile:after,
+    .bc-browser-safari-mobile:after {
+        content: '\f10a';
+    }
+    .bc-browser-opera-mini:after {
+        content: '\f10b';
+    }
+
+    .bc-browser-firefox-fxos:after {
+        content: url('fxos.png');
+    }
+}
+
+/*
+Support icons
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+.bc-support-yes,
+.bc-support-partial,
+.bc-support-no {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    display: block;
+    height: 20px;
+    width: 20px;
+    overflow: hidden;
+    cursor: help;
+}
+
+    .bc-support-yes:after,
+    .bc-support-partial:after,
+    .bc-support-no:after {
+        content: '';
+    }
+
+.bc-support-yes img,
+.bc-support-partial img,
+.bc-support-no img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.active .bc-support-yes img,
+.active .bc-support-partial img,
+.active .bc-support-no img,
+td:hover .bc-support-yes img,
+td:hover .bc-support-partial img,
+td:hover .bc-support-no img {
+    display: block;
+}
+
+/* always show icon in high contrst themes */
+@media screen and (-ms-high-contrast) {
+    .bc-support-yes img,
+    .bc-support-partial img,
+    .bc-support-no img {
+        display: block;
+    }
+}
+
+.bc-support-partial img {
+    top: -20px;
+}
+
+.bc-support-no img {
+    top: -40px;
+}
+
+
+@media all and (max-width: 480px) {
+    td > .bc-support-yes,
+    td > .bc-support-partial,
+    td > .bc-support-no {
+        left: 60px;
+    }
+}
+
+/*
+History link and history
+---------------------------------------------------------------- */
 
 .bc-history-link {
     position: absolute;
@@ -340,9 +627,9 @@ td[tabindex]:focus .bc-history-link {
         color: #bbbbbb;
     }
 
-.active .bc-history-link {
-    margin-top: -7px;
-}
+    .active .bc-history-link {
+        margin-top: -7px;
+    }
 
 .bc-history {
     position: absolute;
@@ -355,6 +642,7 @@ td[tabindex]:focus .bc-history-link {
     visibility: hidden;
     overflow: hidden;
     box-shadow: inset 204px 0 0 0 #fff;
+    cursor: default;
 }
 
     .active .bc-history {
@@ -364,13 +652,13 @@ td[tabindex]:focus .bc-history-link {
         transition: height 0.2s ease-out;
     }
 
-.bc-history:before {
-    content: '';
-    display: block;
-    height: 45px;
-    width: 60px;
-    float: right;
-}
+    .bc-history:before {
+        content: '';
+        display: block;
+        height: 45px;
+        width: 60px;
+        float: right;
+    }
 
 .bc-history dl {
     text-align: left;
@@ -430,10 +718,6 @@ td[tabindex]:focus .bc-history-link {
 
 @media all and (max-width: 480px) {
 
-    .bc-history-link {
-
-    }
-
     .bc-history dl {
        margin-left: 10px;
     }
@@ -447,250 +731,6 @@ td[tabindex]:focus .bc-history-link {
     .bc-history dd {
         clear: left;
         min-height: 0;
-    }
-}
-
-/*
-cell colouring
----------------------------------------------------------------- */
-
-.bc-supports-yes,
-.bc-supports-no,
-.bc-supports-partial,
-.bc-supports-unknown,
-.bc-history {
-    color: #fff;
-}
-
-.bc-supports-yes a,
-.bc-supports-no a,
-.bc-supports-partial a,
-.bc-supports-unknown a,
-.bc-history {
-    color: #fff;
-}
-
-.bc-supports-yes,
-.bc-supports-yes .bc-history {
-    background-color: #288436; /*#309c40;*/
-}
-
-.bc-supports-no,
-.bc-supports-no .bc-history {
-    background-color: #962a2a; /*#af3232;*/
-}
-
-.bc-supports-no {
-    background-image:
-        linear-gradient(45deg, transparent 49.5%, rgba(0,0,0,0.3) 49.5%, rgba(0,0,0,0.3) 50.5%, transparent 50.5%),
-        linear-gradient(-45deg, transparent 49.5%, rgba(0,0,0,0.3) 49.5%, rgba(0,0,0,0.3) 50.5%, transparent 50.5%);
-    background-size: 600px 600px;
-    background-position: center center;
-}
-
-.bc-supports-partial,
-.bc-supports-partial .bc-history {
-    background: #a25e00; /* #ff9500; */
-}
-.bc-supports-partial {
-    background-image:
-        linear-gradient(45deg, transparent 49.5%, rgba(0,0,0,0.3) 49.5%, rgba(0,0,0,0.3) 50.5%, transparent 50.5%);
-    background-size: 600px 600px;
-    background-position: center center;
-}
-
-.bc-supports-unknown,
-.bc-supports-unknown .bc-history {
-    background-color: #bbbbbb;
-}
-
-
-@media all and (max-width: 480px) {
-    td.bc-supports-no {
-        background-position: 60px 0, -505px 0;
-    }
-
-    td.bc-supports-partial {
-        background-position: 60px 0;
-    }
-}
-
-/*
-icons
----------------------------------------------------------------- */
-
-i.icon-file {
-    transform: rotate(180deg) scaleX(-1);
-}
-
-.only-icon > span {
-  position: absolute !important;
-  height: 1px; width: 1px;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-.only-icon > i {
-    margin:0;
-}
-
-a .only-icon > i {
-    float: right;
-    margin: 3px;
-}
-
-.only-icon > i[class^='logo'] {
-    display: inline-block;
-    height: 23px;
-    width: 27px;
-    overflow: hidden;
-    position: relative;
-    top: 3px;
-}
-
-.only-icon > i[class^='logo']:before {
-  content: url(icons-sprite.png);
-  position: absolute;
-}
-
-.logo-android-browser:before {
-  top: -135px;
-  left: -43px;
-}
-
-.logo-chrome:before {
-  top: -158px;
-  left: -20px;
-}
-
-.logo-firefox:before {
-  top: -181px;
-  left: 2px;
-}
-
-.logo-ie:before {
-  top: -91px;
-  left: -88px;
-}
-
-.logo-opera:before {
-  top: -22px;
-  left: -156px;
-}
-
-.logo-safari:before {
-  top: -45px;
-  left: -133px;
-}
-
-.only-icon > i.logo-fxos:before {
-    content: url(fxos.png);
-    top: 0;
-    left: 0;
-}
-
-@media all and (max-width: 480px) {
-
-    [class*='bc-browser-']:before{
-        content: '';
-        background-image: url(icons-sprite.png);
-        position: absolute;
-        top: 2px;
-        left: 2px;
-        height: 25px;
-        width: 25px;
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-    }
-
-    .bc-browser-android-browser:before {
-        background-position: -43px -135px ;
-    }
-    .bc-browser-chrome-desktop:before {
-        background-position: -20px -156px ;
-    }
-    .bc-browser-chrome-android:before {
-        background-position: -20px -156px;
-    }
-    .bc-browser-firefox-desktop:before {
-        background-position: 2px -179px;
-    }
-    .bc-browser-firefox-android:before {
-        background-position: 2px -179px;
-    }
-    .bc-browser-firefox-fxos:before {
-        background-position: 2px -179px;
-    }
-    .bc-browser-internet-explorer-desktop:before {
-        background-position: -88px -89px;
-    }
-    .bc-browser-internet-explorer-mobile:before {
-        background-position: -88px -89px;
-    }
-    .bc-browser-opera-desktop:before {
-        background-position: -156px -20px;
-    }
-    .bc-browser-opera-mobile:before {
-        background-position: -156px -20px;
-    }
-    .bc-browser-opera-mini:before {
-        background-position: -156px -20px;
-    }
-    .bc-browser-safari-desktop:before {
-        background-position: -133px -43px;
-    }
-    .bc-browser-safari-mobile:before {
-        background-position: -133px -43px;
-    }
-
-
-[class*=bc-browser-chrome] + [class*=bc-browser-chrome]:before,
-[class*=bc-browser-firefox] + [class*=bc-browser-firefox]:before,
-[class*=bc-browser-internet-explorer] + [class*=bc-browser-internet-explorer]:before,
-[class*=bc-browser-opera] + [class*=bc-browser-opera]:before,
-[class*=bc-browser-safari] + [class*=bc-browser-safari]:before{
-    visibility: hidden;
-}
-
-    [class*='bc-browser-']:after {
-        position: absolute;
-        top: 8px;
-        left: 30px;
-        color: #4D4E53;
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1;
-        -moz-osx-font-smoothing: grayscale;
-        speak: none;
-    }
-
-    .bc-browser-chrome-desktop:after,
-    .bc-browser-firefox-desktop:after,
-    .bc-browser-internet-explorer-desktop:after,
-    .bc-browser-opera-desktop:after,
-    .bc-browser-safari-desktop:after {
-        content: '\f108';
-    }
-
-    .bc-browser-android-browser:after,
-    .bc-browser-chrome-android:after,
-    .bc-browser-firefox-android:after {
-        content: '\f17b';
-    }
-
-    .bc-browser-internet-explorer-mobile:after,
-    .bc-browser-opera-mobile:after,
-    .bc-browser-safari-mobile:after {
-        content: '\f10a';
-    }
-    .bc-browser-opera-mini:after {
-        content: '\f10b';
-    }
-
-    .bc-browser-firefox-fxos:after {
-        content: url('fxos.png');
     }
 }
 
@@ -727,10 +767,36 @@ footnotes
     font-weight: bold;
 }
 
-.bc-footnotes dl > dt:first-child {
-    margin-top: 0;
-}
+    .bc-footnotes dl > dt:first-child {
+        margin-top: 0;
+    }
 
 .bc-footnotes dd {
     margin-left: 20px;
+}
+
+/*
+reverse icons
+---------------------------------------------------------------- */
+
+.bc-table th[colspan='5']{
+    -webkit-box-flex: 5;
+    -moz-box-flex: 5;
+    -webkit-flex: 5 5 0;
+    -ms-flex: 5 5 0;
+    flex: 5 5 0;
+}
+
+.bc-table th[colspan='8']{
+    -webkit-box-flex: 8;
+    -moz-box-flex: 8;
+    -webkit-flex: 8 8 0;
+    -ms-flex: 8 8 0;
+    flex: 8 8 0;
+}
+
+.only-icon > i.logo-fxos-c:before {
+    content: url(fxos-c.png);
+    top: 0;
+    left: 0;
 }
