@@ -113,6 +113,62 @@ table layout
 }
 
 /*
+Flexbox for those lucky few who can handle it
+- we only needs this to make equal height columns in the middle display view
+- IE is not among those that can handle this code, but it doesn't supoort @support so we're good
+- all browsers which support @support also use unprefixed syntax
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+@supports (display: flex) {
+
+    @media all and (min-width: 481px) and (max-width: 800px) {
+
+        .bc-table,
+        .bc-table thead,
+        .bc-table tbody,
+        .bc-table tr,
+        .bc-table th {
+            display: flex;
+        }
+
+        .bc-table,
+        .bc-table thead,
+        .bc-table tbody {
+            flex-direction: column;
+        }
+
+        .bc-table tr {
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        .bc-table th,
+        .bc-table td {
+            flex: 1 1 0;
+            justify-content: center;
+        }
+
+        .bc-table th[colspan='2'] {
+            flex: 2 2 0;
+        }
+        .bc-table th[colspan='3'] {
+            flex: 3 3 0;
+        }
+
+        .bc-table tbody th {
+            display: block;
+            flex: 1 1 100%;
+            justify-content: flex-start;
+        }
+
+        .bc-table td {
+            display: block; /* if we leave it table-cell it doesn't act like a flex-item */
+        }
+    }
+}
+
+
+/*
 Table styling that is not layout related
 ---------------------------------------------------------------- */
 
@@ -552,6 +608,10 @@ History-link
     clear: both;
     text-align: center;
     font-size: 10px;
+}
+
+.active .bc-history-link {
+    z-index: 21;
 }
 
 /* increases hit area of the history link, making it easier to click/tap/etc, only necisary if JS is off */
