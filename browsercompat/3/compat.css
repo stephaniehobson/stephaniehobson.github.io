@@ -93,6 +93,10 @@ table layout
     flex: 3 3 0;
 }
 
+.bc-table thead td {
+    border-top-color: transparent;
+}
+
 .bc-table thead tr + tr > th {
     border-top: 0;
     padding: 0 0 3px 0;
@@ -110,7 +114,7 @@ table layout
     padding: 0 0 10px 0;
 }
 
-.bc-table thead > tr > th:first-child,
+.bc-table thead > tr > td:first-child,
 .bc-table tbody th {
 
     -webkit-box-pack: flex-start;
@@ -119,6 +123,7 @@ table layout
     -ms-flex-pack: flex-start;
     justify-content: flex-start;
 
+    box-sizing: border-box;
     min-width: 200px;
     width: 200px;
     max-width: 200px;
@@ -151,7 +156,7 @@ table layout
         flex-wrap: wrap;
     }
 
-    .bc-table thead > tr > th:first-child{
+    .bc-table thead > tr > td:first-child {
         min-width:0;
         width: 0;
         max-width: 0;
@@ -787,6 +792,20 @@ footnotes
 /*
 reverse icons
 ---------------------------------------------------------------- */
+
+.bc-table-medium-reverse thead > tr i {
+    padding-bottom: 3px;
+}
+
+.bc-table-medium-reverse thead > tr:first-child i {
+    padding-top:10px;
+    padding-bottom: 0;
+    font-size: 24px;
+}
+
+.bc-table-medium-reverse thead > tr:first-child th {
+    border-bottom: 4px solid #fff;
+}
 
 .bc-table th[colspan='5']{
     -webkit-box-flex: 5;
