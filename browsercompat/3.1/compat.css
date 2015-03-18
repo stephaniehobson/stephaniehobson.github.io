@@ -12,6 +12,7 @@ table layout
 .bc-table {
     width: 100%;
     background-color: #EAEFF2;
+    border-spacing: 0;
 }
 
 .bc-table,
@@ -75,6 +76,7 @@ table layout
     border-left: 4px solid #fff;
     border-bottom: 0px solid transparent;
     transition: border-bottom 0.2s ease-out;
+    text-align: center;
 }
 
 .bc-table th[colspan='2']{
@@ -93,11 +95,11 @@ table layout
 }
 
 .bc-table thead td {
-    border-top-color: transparent;
+    border-top: none;
 }
 
 .bc-table thead tr + tr > th {
-    border-top: 0;
+    border-top: none;
     padding: 0 0 3px 0;
 }
 
