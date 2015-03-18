@@ -1,0 +1,851 @@
+/*
+
+TODO: add highlighting for :target (non js footnote links)
+TODO: add link styles for content in .bs-history
+
+*/
+
+
+/*
+table layout
+---------------------------------------------------------------- */
+
+/*
+
+.bc-table,
+.bc-table thead,
+.bc-table tbody,
+.bc-table tr,
+.bc-table th{
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+}
+
+.bc-table,
+.bc-table thead,
+.bc-table tbody {
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.bc-table tr {
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.bc-table th,
+.bc-table td {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    flex: 1 1 0;
+
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.bc-table th[colspan='2']{
+    -webkit-box-flex: 2;
+    -moz-box-flex: 2;
+    -webkit-flex: 2 2 0;
+    -ms-flex: 2 2 0;
+    flex: 2 2 0;
+}
+.bc-table th[colspan='3']{
+    -webkit-box-flex: 3;
+    -moz-box-flex: 3;
+    -webkit-flex: 3 3 0;
+    -ms-flex: 3 3 0;
+    flex: 3 3 0;
+}
+
+.bc-table thead > tr > td:first-child,
+.bc-table tbody th {
+
+    -webkit-box-pack: flex-start;
+    -moz-box-pack: flex-start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+}
+
+.bc-table tbody th {
+   display: block;
+}
+
+.bc-table tbody th code {
+    white-space: nowrap;
+}
+
+.bc-table td {
+    display: block;
+}
+
+@media all and (max-width: 800px) {
+
+    .bc-table tr {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .bc-table thead > tr > td:first-child {
+        min-width:0;
+        width: 0;
+        max-width: 0;
+        padding: 0;
+    }
+
+    .bc-table tbody th {
+
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1 1 100%;
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
+
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        padding-top: 10px;
+        padding-bottom: 0;
+    }
+
+    .bc-table thead tr th:nth-child(2),
+    .bc-table tbody tr td:nth-child(2) {
+        border-left: 0;
+    }
+
+}
+
+@media all and (max-width: 480px) {
+
+    .bc-table thead {
+        display: none;
+    }
+
+    .bc-table tr {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .bc-table tbody th,
+    .bc-table tbody td {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
+
+    .bc-table tbody td {
+        position: relative;
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        border-top: 1px solid #fff;
+        border-left: 0;
+        box-sizing: border-box;
+        padding-left: 70px;
+        padding-right: 10px;
+        box-shadow: inset 60px 0 0 0 #EAEFF2;
+        text-align: left;
+      }
+
+}
+
+*/
+
+/*
+Table styling that is not layout related
+---------------------------------------------------------------- */
+
+.bc-table {
+    width: 100%;
+    background-color: #EAEFF2;
+}
+
+.bc-table,
+.bc-table thead,
+.bc-table tbody,
+.bc-table tr,
+.bc-table th {
+    box-sizing: border-box;
+}
+
+.bc-table tr {
+    position: relative;
+    border-bottom: 0px solid transparent;
+    transition: border-bottom 0.2s ease-out;
+}
+
+.bc-table th,
+.bc-table td {
+    position: relative;
+    padding: 5px 3px;
+    border-top: 1px solid #fff;
+    border-left: 4px solid #fff;
+    border-bottom: 0px solid transparent;
+    transition: border-bottom 0.2s ease-out;
+    text-align: center;
+}
+
+    .bc-table thead td {
+        border-top-color: transparent;
+    }
+
+    .bc-table thead tr + tr > th {
+        border-top: 0;
+        padding: 0 0 3px 0;
+    }
+
+    [class*=bc-browser-chrome] + [class*=bc-browser-chrome],
+    [class*=bc-browser-firefox] + [class*=bc-browser-firefox],
+    [class*=bc-browser-internet-explorer] + [class*=bc-browser-internet-explorer],
+    [class*=bc-browser-opera] + [class*=bc-browser-opera],
+    [class*=bc-browser-safari] + [class*=bc-browser-safari]{
+        border-left-width: 1px;
+    }
+
+    .bc-table thead > tr:first-child th {
+        padding: 0 0 10px 0;
+    }
+
+    .bc-table thead > tr > td:first-child,
+    .bc-table tbody th {
+        box-sizing: border-box;
+        min-width: 200px;
+        width: 200px;
+        max-width: 200px;
+        border-left: 0;
+        text-align: left;
+    }
+
+.bc-table tbody th code {
+    white-space: nowrap;
+}
+
+.bc-table td[tabindex] {
+    cursor: pointer;
+}
+
+.bc-table abbr i {
+    cursor: help;
+}
+
+.bc-icons {
+    position: relative;
+    z-index: 12; /* raise z-index so tool tips still appear even if overlapping history link */
+
+    /* TODO: center icons if they wrap, :first-line? only on mobile?  */;
+    float: right;
+}
+
+/*
+cell colouring
+---------------------------------------------------------------- */
+
+.bc-supports-yes,
+.bc-supports-no,
+.bc-supports-partial,
+.bc-supports-unknown,
+.bc-history {
+    color: #fff;
+}
+
+.bc-supports-yes a,
+.bc-supports-no a,
+.bc-supports-partial a,
+.bc-supports-unknown a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.bc-history {
+    color: #fff;
+}
+
+.bc-supports-yes,
+.bc-supports-yes .bc-history {
+    background-color: #288436; /*#309c40;*/
+}
+
+.bc-supports-no,
+.bc-supports-no .bc-history {
+    background-color: #962a2a; /*#af3232;*/
+}
+
+.bc-supports-no {
+    background-image:
+        linear-gradient(45deg, transparent 49.5%, rgba(0,0,0,0.3) 49.5%, rgba(0,0,0,0.3) 50.5%, transparent 50.5%),
+        linear-gradient(-45deg, transparent 49.5%, rgba(0,0,0,0.3) 49.5%, rgba(0,0,0,0.3) 50.5%, transparent 50.5%);
+    background-size: 600px 600px;
+    background-position: center center;
+}
+
+.bc-supports-partial,
+.bc-supports-partial .bc-history {
+    background: #a25e00; /* #ff9500; */
+}
+.bc-supports-partial {
+    background-image:
+        linear-gradient(45deg, transparent 49.5%, rgba(0,0,0,0.3) 49.5%, rgba(0,0,0,0.3) 50.5%, transparent 50.5%);
+    background-size: 600px 600px;
+    background-position: center center;
+}
+
+.bc-supports-unknown,
+.bc-supports-unknown .bc-history {
+    background-color: #bbbbbb;
+}
+
+
+@media all and (max-width: 480px) {
+    td.bc-supports-no {
+        background-position: 60px 0, -505px 0;
+    }
+
+    td.bc-supports-partial {
+        background-position: 60px 0;
+    }
+}
+
+/*
+icons
+---------------------------------------------------------------- */
+
+.only-icon > span {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.only-icon > i {
+    margin:0;
+}
+
+a .only-icon > i {
+    float: right;
+    margin: 3px;
+}
+
+/*
+feature icons
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+.bc-icons i.icon-file {
+    transform: rotate(180deg) scaleX(-1);
+}
+
+/*
+browser logo icons
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+.only-icon > i[class^='logo'] {
+    display: inline-block;
+    height: 23px;
+    width: 27px;
+    overflow: hidden;
+    position: relative;
+    top: 3px;
+}
+
+.only-icon > i[class^='logo']:before {
+  content: url(icons-sprite.png);
+  position: absolute;
+}
+
+.logo-android-browser:before {
+  top: -135px;
+  left: -43px;
+}
+
+.logo-chrome:before {
+  top: -158px;
+  left: -20px;
+}
+
+.logo-firefox:before {
+  top: -181px;
+  left: 2px;
+}
+
+.logo-ie:before {
+  top: -91px;
+  left: -88px;
+}
+
+.logo-opera:before {
+  top: -22px;
+  left: -156px;
+}
+
+.logo-safari:before {
+  top: -45px;
+  left: -133px;
+}
+
+.only-icon > i.logo-fxos:before {
+    content: url(fxos.png);
+    top: 0;
+    left: 0;
+}
+
+@media all and (max-width: 480px) {
+
+    /* browser icons in mobile view */
+    [class*='bc-browser-']:before{
+        content: '';
+        background-image: url(icons-sprite.png);
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        height: 25px;
+        width: 25px;
+    }
+
+    .bc-browser-android-browser:before {
+        background-position: -43px -135px ;
+    }
+    .bc-browser-chrome-desktop:before {
+        background-position: -20px -156px ;
+    }
+    .bc-browser-chrome-android:before {
+        background-position: -20px -156px;
+    }
+    .bc-browser-firefox-desktop:before {
+        background-position: 2px -179px;
+    }
+    .bc-browser-firefox-android:before {
+        background-position: 2px -179px;
+    }
+    .bc-browser-firefox-fxos:before {
+        background-position: 2px -179px;
+    }
+    .bc-browser-internet-explorer-desktop:before {
+        background-position: -88px -89px;
+    }
+    .bc-browser-internet-explorer-mobile:before {
+        background-position: -88px -89px;
+    }
+    .bc-browser-opera-desktop:before {
+        background-position: -156px -20px;
+    }
+    .bc-browser-opera-mobile:before {
+        background-position: -156px -20px;
+    }
+    .bc-browser-opera-mini:before {
+        background-position: -156px -20px;
+    }
+    .bc-browser-safari-desktop:before {
+        background-position: -133px -43px;
+    }
+    .bc-browser-safari-mobile:before {
+        background-position: -133px -43px;
+    }
+
+    /* don't show icon if it's on the previous line */
+    [class*=bc-browser-chrome] + [class*=bc-browser-chrome]:before,
+    [class*=bc-browser-firefox] + [class*=bc-browser-firefox]:before,
+    [class*=bc-browser-internet-explorer] + [class*=bc-browser-internet-explorer]:before,
+    [class*=bc-browser-opera] + [class*=bc-browser-opera]:before,
+    [class*=bc-browser-safari] + [class*=bc-browser-safari]:before{
+        visibility: hidden;
+    }
+
+    /* medium icons in mobile view */
+    [class*='bc-browser-']:after {
+        position: absolute;
+        top: 8px;
+        left: 30px;
+        color: #4D4E53;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+        -moz-osx-font-smoothing: grayscale;
+        speak: none;
+    }
+
+    .bc-browser-chrome-desktop:after,
+    .bc-browser-firefox-desktop:after,
+    .bc-browser-internet-explorer-desktop:after,
+    .bc-browser-opera-desktop:after,
+    .bc-browser-safari-desktop:after {
+        content: '\f108';
+    }
+
+    .bc-browser-android-browser:after,
+    .bc-browser-chrome-android:after,
+    .bc-browser-firefox-android:after {
+        content: '\f17b';
+    }
+
+    .bc-browser-internet-explorer-mobile:after,
+    .bc-browser-opera-mobile:after,
+    .bc-browser-safari-mobile:after {
+        content: '\f10a';
+    }
+    .bc-browser-opera-mini:after {
+        content: '\f10b';
+    }
+
+    .bc-browser-firefox-fxos:after {
+        content: url('fxos.png');
+    }
+}
+
+/*
+Support icons
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+.bc-support-yes,
+.bc-support-partial,
+.bc-support-no {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    display: block;
+    height: 19px;
+    width: 20px;
+    overflow: hidden;
+    cursor: help;
+}
+
+    .bc-support-yes:after,
+    .bc-support-partial:after,
+    .bc-support-no:after {
+        content: '';
+    }
+
+.bc-support-yes img,
+.bc-support-partial img,
+.bc-support-no img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.active .bc-support-yes img,
+.active .bc-support-partial img,
+.active .bc-support-no img,
+td:hover .bc-support-yes img,
+td:hover .bc-support-partial img,
+td:hover .bc-support-no img,
+td:focus .bc-support-yes img,
+td:focus .bc-support-partial img,
+td:focus .bc-support-no img,
+dt:hover .bc-support-yes img,
+dt:hover .bc-support-partial img,
+dt:hover .bc-support-no img {
+    display: block;
+}
+
+/* always show icon in high contrst themes */
+@media screen and (-ms-high-contrast) {
+    .bc-support-yes img,
+    .bc-support-partial img,
+    .bc-support-no img {
+        display: block;
+    }
+}
+
+.bc-support-partial img {
+    top: -20px;
+}
+
+.bc-support-no img {
+    top: -40px;
+}
+
+
+@media all and (max-width: 480px) {
+    td > .bc-support-yes,
+    td > .bc-support-partial,
+    td > .bc-support-no {
+        left: 60px;
+    }
+}
+
+/*
+History link and history
+---------------------------------------------------------------- */
+
+.bc-history-link {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 11;
+    display: block;
+    width: 100%;
+    height: 11px;
+    margin-top: -10px;
+    clear: both;
+    text-align: center;
+    font-size: 10px;
+}
+
+/* increases hit area of the history link, making it easier to click/tap/etc, only necisary if JS is off */
+.bc-history-link:before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    margin-left: -15px;
+    display: block;
+    height: 15px;
+    width: 30px;
+}
+    /* if there are icons the text is shifted left, shift the target extention as well */
+    .bc-icons + .bc-history-link:before {
+        margin-left: -30px;
+    }
+
+.active .bc-history-link,
+td[tabindex]:hover .bc-history-link,
+td[tabindex]:focus .bc-history-link {
+    background-color: #fff;
+}
+
+    .active.bc-supports-yes .bc-history-link,
+    td[tabindex].bc-supports-yes:hover .bc-history-link,
+    td[tabindex].bc-supports-yes:focus .bc-history-link {
+        color: #288436;
+    }
+    .active.bc-supports-no .bc-history-link,
+    td[tabindex].bc-supports-no:hover .bc-history-link,
+    td[tabindex].bc-supports-no:focus .bc-history-link {
+        color: #962a2a;
+    }
+    .active.bc-supports-partial .bc-history-link,
+    td[tabindex].bc-supports-partial:hover .bc-history-link,
+    td[tabindex].bc-supports-partial:focus .bc-history-link {
+        color: #a25e00;
+    }
+    .active.bc-supports-unknown .bc-history-link,
+    td[tabindex].bc-supports-unknown:hover .bc-history-link,
+    td[tabindex].bc-supports-unknown:focus .bc-history-link {
+        color: #bbbbbb;
+    }
+
+    .active .bc-history-link {
+        margin-top: -7px;
+    }
+
+.bc-history {
+    position: absolute;
+    top: 100%;
+    z-index: 10;
+    box-sizing: border-box;
+    border-top: 4px solid #fff;
+    padding-left: 204px;
+    display: none;
+    visibility: hidden;
+    overflow: hidden;
+    box-shadow: inset 204px 0 0 0 #fff;
+    cursor: default;
+}
+
+    .active .bc-history {
+        display: block;
+        visibility: visible;
+        height: 0;
+        transition: height 0.2s ease-out;
+    }
+
+    .bc-history:before {
+        content: '';
+        display: block;
+        height: 45px;
+        width: 60px;
+        float: right;
+    }
+
+.bc-history dl {
+    text-align: left;
+    margin: 10px;
+    margin-left: 160px;
+}
+
+.bc-history dt {
+    float: left;
+    clear: left;
+    max-width: 120px;
+    margin-left: -150px;
+}
+
+.bc-history dt,
+.bc-history dd {
+    margin-top: 30px;
+}
+
+.bc-history dd {
+    min-height: 1.2em;
+    padding-top: 4px;
+    padding-bottom: 10px;
+}
+
+.bc-history dl > dt:first-child,
+.bc-history dl > dt:first-child + dd,
+.bc-history dd + dd {
+    margin-top: 0;
+}
+
+.bc-history-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.bc-supports {
+    position: relative;
+    border: 1px solid #fff;
+    padding: 3px;
+    min-width: 120px;
+    text-align: center;
+}
+
+@media all and (max-width: 800px) {
+    .bc-history {
+        padding-left: 0;
+        box-shadow: none;
+    }
+
+    th .bc-icons {
+        float: none;
+        display: inline-block;
+    }
+}
+
+@media all and (max-width: 480px) {
+
+    .bc-history dl {
+       margin-left: 10px;
+    }
+
+    .bc-history dt {
+        margin-top: 20px;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .bc-history dd {
+        clear: left;
+        min-height: 0;
+    }
+}
+
+/*
+legend
+---------------------------------------------------------------- */
+
+.bc-legend {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    page-break-inside: avoid;
+    webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 24px;
+}
+
+.bc-legend dt {
+    display: inline-block;
+    margin: 0 0 5px 0;
+}
+
+.bc-legend dd {
+    display: inline;
+    margin: 0 10px 5px 10px;
+}
+
+.bc-legend dd:after {
+  content: '\a';
+  white-space: pre;
+}
+
+/*
+footnotes
+---------------------------------------------------------------- */
+
+.bc-footnotes dt {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+    .bc-footnotes dl > dt:first-child {
+        margin-top: 0;
+    }
+
+.bc-footnotes dd {
+    margin-left: 20px;
+}
+
+/*
+reverse icons
+---------------------------------------------------------------- */
+
+.bc-table-medium-reverse thead > tr i {
+    padding-bottom: 3px;
+}
+
+.bc-table-medium-reverse thead > tr:first-child i {
+    padding-top:10px;
+    padding-bottom: 0;
+    font-size: 24px;
+}
+
+.bc-table-medium-reverse thead > tr:first-child th {
+    border-bottom: 4px solid #fff;
+}
+
+.bc-table th[colspan='5']{
+    -webkit-box-flex: 5;
+    -moz-box-flex: 5;
+    -webkit-flex: 5 5 0;
+    -ms-flex: 5 5 0;
+    flex: 5 5 0;
+}
+
+.bc-table th[colspan='8']{
+    -webkit-box-flex: 8;
+    -moz-box-flex: 8;
+    -webkit-flex: 8 8 0;
+    -ms-flex: 8 8 0;
+    flex: 8 8 0;
+}
+
+.only-icon > i.logo-fxos-c:before {
+    content: url(fxos-c.png);
+    top: 0;
+    left: 0;
+}
