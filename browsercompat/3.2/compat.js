@@ -254,8 +254,10 @@
         setTimeout(function() {
             $thisHistory.css('height', historyHeight + 'px');
             // add measured height to history and to the cell/row it is being displayed beneath (CSS handles transition)
-            if(window.innerWidth > 800) {
+            if(window.innerWidth > 801) {
                 $thisRow.find('th, td').css('border-bottom', historyHeight + 'px solid transparent');
+            } if(window.innerWidth > 481) {
+                $thisRow.find('td').css('border-bottom', historyHeight + 'px solid transparent');
             } else {
                 $thisCell.css('border-bottom', historyHeight + 'px solid transparent');
             }

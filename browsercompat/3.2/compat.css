@@ -255,6 +255,9 @@ Table styling that is not layout related
 
 @media all and (max-width: 800px) {
 
+    .bc-table tbody th {
+        border-right: 0;
+    }
 }
 
 @media all and (max-width: 480px) {
