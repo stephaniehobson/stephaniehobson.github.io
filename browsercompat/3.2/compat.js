@@ -207,6 +207,8 @@
         // place history on page relative to its cell
         // TODO: is this RTL friendly?!?!
 
+            // left
+
             // get cell coords
             var cellLeft = $thisCell.offset().left;
             // console.log('cellLeft = ' + cellLeft);
@@ -222,8 +224,22 @@
             var historyLeft = tableLeft - cellLeft - parseInt(cellLeftBorder);
             // console.log('historyLeft = ' + historyLeft);
 
+
+            // top
+            // can't just to top:100% in CSS because IE messes it up.
+
+            // get cell height
+            var cellTop = $thisCell.outerHeight();
+
+            // get cell bottom border
+            var cellBottomBorder = $thisCell.css('border-bottom-width');
+
+            var historyTop = cellTop - parseInt(cellBottomBorder) -1;
+
             // move history where it will display
             $thisHistory.css('left', historyLeft + 'px');
+            $thisHistory.css('top', historyTop + 'px');
+
 
         // measure height
         $thisHistory.css('display', 'block');
