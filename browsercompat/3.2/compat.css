@@ -273,16 +273,16 @@ supports colouring
 ---------------------------------------------------------------- */
 
 .bc-supports-yes,
-.bc-supports-no,
 .bc-supports-partial,
+.bc-supports-no,
 .bc-supports-unknown,
 .bc-history {
     color: #fff;
 }
 
 .bc-supports-yes a,
-.bc-supports-no a,
 .bc-supports-partial a,
+.bc-supports-no a,
 .bc-supports-unknown a {
     color: #fff;
     text-decoration: underline;
@@ -295,6 +295,17 @@ supports colouring
 .bc-supports-yes,
 .bc-supports-yes .bc-history {
     background-color: #288436; /*#309c40;*/
+}
+
+.bc-supports-partial,
+.bc-supports-partial .bc-history {
+    background: #a25e00; /* #ff9500; */
+}
+.bc-supports-partial {
+    background-image:
+        linear-gradient(to bottom right, transparent 60px, rgba(0,0,0,0.2) 60px, rgba(0,0,0,0.2) 70px, transparent 70px, transparent 130px, rgba(0,0,0,0.2) 130px, rgba(0,0,0,0.2) 140px, transparent 140px);
+    background-size: 100px 100px;
+    background-position: 50% -26px;
 }
 
 .bc-supports-no,
@@ -310,17 +321,6 @@ supports colouring
     background-position: 50% -26px, 50% -26px;
 }
 
-.bc-supports-partial,
-.bc-supports-partial .bc-history {
-    background: #a25e00; /* #ff9500; */
-}
-.bc-supports-partial {
-    background-image:
-        linear-gradient(to bottom right, transparent 60px, rgba(0,0,0,0.2) 60px, rgba(0,0,0,0.2) 70px, transparent 70px, transparent 130px, rgba(0,0,0,0.2) 130px, rgba(0,0,0,0.2) 140px, transparent 140px);
-    background-size: 100px 100px;
-    background-position: 50% -26px;
-}
-
 .bc-supports-unknown,
 .bc-supports-unknown .bc-history {
     background-color: #bbbbbb;
@@ -328,12 +328,13 @@ supports colouring
 
 
 @media all and (max-width: 480px) {
-    td.bc-supports-no {
-        background-position: 60px 0, -505px 0;
-    }
 
     td.bc-supports-partial {
-        background-position: 60px 0;
+         background-position: 30px -26px;
+    }
+
+    td.bc-supports-no {
+        background-position: 30px -26px, 30px -26px;
     }
 }
 
