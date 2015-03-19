@@ -1,7 +1,6 @@
 /*
 
 TODO: add highlighting for :target (non js footnote links)
-TODO: add link styles for content in .bs-history
 
 */
 
@@ -198,6 +197,16 @@ Table styling that is not layout related
 
     .bc-table thead td {
         border-top-color: transparent;
+        border-right: 4px solid #fff;
+        border-left: 0;
+    }
+
+    .bc-table tbody th {
+        border-right: 4px solid #fff;
+    }
+
+    .bc-table thead td + th,
+    .bc-table tbody th + td {
         border-left: 0;
     }
 
@@ -239,15 +248,12 @@ Table styling that is not layout related
     position: relative;
     z-index: 12; /* raise z-index so tool tips still appear even if overlapping history link */
 
-    /* TODO: center icons if they wrap, :first-line? only on mobile?  */;
+    /* TODO: center icons if they wrap, :first-line? only on mobile?  */
     float: right;
 }
 
 @media all and (max-width: 800px) {
-    .bc-table thead td + th,
-    .bc-table tbody th + td {
-        border-left: 0;
-    }
+
 }
 
 @media all and (max-width: 480px) {
@@ -294,10 +300,10 @@ supports colouring
 
 .bc-supports-no {
     background-image:
-        linear-gradient(45deg, transparent 49.5%, rgba(0,0,0,0.3) 49.5%, rgba(0,0,0,0.3) 50.5%, transparent 50.5%),
-        linear-gradient(-45deg, transparent 49.5%, rgba(0,0,0,0.3) 49.5%, rgba(0,0,0,0.3) 50.5%, transparent 50.5%);
-    background-size: 600px 600px;
-    background-position: center center;
+        linear-gradient(to bottom right, transparent 60px, rgba(0,0,0,0.2) 60px, rgba(0,0,0,0.2) 70px, transparent 70px, transparent 130px, rgba(0,0,0,0.2) 130px, rgba(0,0,0,0.2) 140px, transparent 140px),
+        linear-gradient(to bottom left, transparent 60px, rgba(0,0,0,0.2) 60px, rgba(0,0,0,0.2) 70px, transparent 70px, transparent 130px, rgba(0,0,0,0.2) 130px, rgba(0,0,0,0.2) 140px, transparent 140px);
+    background-size: 100px 100px, 100px 100px;
+    background-position: 50% -26px, 50% -26px;
 }
 
 .bc-supports-partial,
@@ -306,9 +312,9 @@ supports colouring
 }
 .bc-supports-partial {
     background-image:
-        linear-gradient(45deg, transparent 49.5%, rgba(0,0,0,0.3) 49.5%, rgba(0,0,0,0.3) 50.5%, transparent 50.5%);
-    background-size: 600px 600px;
-    background-position: center center;
+        linear-gradient(to bottom right, transparent 60px, rgba(0,0,0,0.2) 60px, rgba(0,0,0,0.2) 70px, transparent 70px, transparent 130px, rgba(0,0,0,0.2) 130px, rgba(0,0,0,0.2) 140px, transparent 140px);
+    background-size: 100px 100px;
+    background-position: 50% -26px;
 }
 
 .bc-supports-unknown,
@@ -671,11 +677,11 @@ History
     z-index: 20;
     box-sizing: border-box;
     border-top: 4px solid #fff;
-    padding-left: 204px;
+    padding-left: 200px;
     display: none;
     visibility: hidden;
     overflow: hidden;
-    box-shadow: inset 204px 0 0 0 #fff;
+    box-shadow: inset 200px 0 0 0 #fff;
     cursor: default;
 }
 
