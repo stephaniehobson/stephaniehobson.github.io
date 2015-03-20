@@ -2,6 +2,9 @@
 
 TODO: add highlighting for :target (non js footnote links)
 TODO: bug, fullscreen, bc-history over laps top border on following cell only if <code> in <th>;
+TODO: bug, tablet, block, one cell taller than others, adding bottom border makes it stick out below history;
+    (can't change technique because flex acts weirdly, fix by calculating heigh in js?)
+TODO: spacing/padding around all icons (switch to sprite?);
 
 */
 
@@ -682,6 +685,7 @@ History
     z-index: 20;
     box-sizing: border-box;
     border-top: 4px solid #fff;
+    border-bottom: 3px solid #fff;
     padding-left: 200px;
     display: none;
     visibility: hidden;

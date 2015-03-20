@@ -2,9 +2,6 @@
 (function(win, doc, $) {
     'use strict';
 
-    // TODO: don't toggle the cell if they're trying to copy/paste?
-        // TODO: add actual close button?
-        // TODO: let them click links
     // TODO: avoid scrolling when expanding/collapsing from one to another
     // TODO: collapse tables longer than 2 rows on mobile?
     // TODO: sticky table headers on long desktop/tablet ? Duplicate table header on long tables?
