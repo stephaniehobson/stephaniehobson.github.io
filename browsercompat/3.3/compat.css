@@ -876,6 +876,80 @@ footnotes
 }
 
 /*
+light colours
+---------------------------------------------------------------- */
+
+.bc-light .bc-supports-yes,
+.bc-light .bc-supports-partial,
+.bc-light .bc-supports-no,
+.bc-light .bc-supports-unknown,
+.bc-light .bc-history {
+    color: #4D4E53;
+}
+
+.bc-light .bc-supports-yes a,
+.bc-light .bc-supports-partial a,
+.bc-light .bc-supports-no a,
+.bc-light .bc-supports-unknown a {
+    color: #4D4E53;
+    text-decoration: underline;
+}
+
+.bc-light .bc-history {
+    color: #4D4E53;
+}
+
+.bc-light .bc-supports-yes,
+.bc-light .bc-supports-yes .bc-history {
+    background-color: #F1F9F6; /*#309c40;*/
+}
+
+.bc-light .bc-supports-partial,
+.bc-light .bc-supports-partial .bc-history {
+    background: #FFFAE5; /* #ff9500; */
+}
+.bc-light .bc-supports-partial {
+    background-image:
+            linear-gradient(to bottom right, rgba(255,255,255,0.7) 0px, rgba(255,255,255,0.7) 4px, transparent 4px, transparent 65px, rgba(255,255,255,0.7) 65px, rgba(255,255,255,0.7) 75px, transparent 75px, transparent 136px, rgba(255,255,255,0.7) 136px, rgba(255,255,255,0.7) 146px, transparent 146px);
+    background-size: 100px 100px;
+    background-position: 50% 50%;
+}
+
+.bc-light .bc-supports-no,
+.bc-light .bc-supports-no .bc-history {
+    background-color: #FFF0F0; /*#af3232;*/
+}
+
+.bc-light .bc-supports-no {
+    background-image:
+        linear-gradient(to bottom right, rgba(255,255,255,0.7) 0px, rgba(255,255,255,0.7) 4px, transparent 4px, transparent 65px, rgba(255,255,255,0.7) 65px, rgba(255,255,255,0.7) 75px, transparent 75px, transparent 136px, rgba(255,255,255,0.7) 136px, rgba(255,255,255,0.7) 146px, transparent 146px),
+        linear-gradient(to bottom left, rgba(255,255,255,0.7) 0px, rgba(255,255,255,0.7) 4px, transparent 4px, transparent 65px, rgba(255,255,255,0.7) 65px, rgba(255,255,255,0.7) 75px, transparent 75px, transparent 136px, rgba(255,255,255,0.7) 136px, rgba(255,255,255,0.7) 146px, transparent 146px);
+    background-size: 100px 100px, 100px 100px;
+    background-position: 50% 50%, 50% 50%;
+}
+
+.bc-light .bc-supports-unknown,
+.bc-light .bc-supports-unknown .bc-history {
+    background-color: #EAEFF2;
+}
+
+.bc-light .bc-history-link {
+    border-top: 1px solid rgba(0,0,0, 0.1);
+}
+
+
+@media all and (max-width: 480px) {
+
+    td.bc-supports-partial {
+         background-position: 30px -26px;
+    }
+
+    td.bc-supports-no {
+        background-position: 30px -26px, 30px -26px;
+    }
+}
+
+/*
 reverse icons
 ---------------------------------------------------------------- */
 
