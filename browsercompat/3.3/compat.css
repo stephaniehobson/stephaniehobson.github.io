@@ -196,8 +196,17 @@ Table styling that is not layout related
     border-bottom: 0px solid transparent;
     transition: border-bottom 0.2s ease-out;
     text-align: center;
-    vertical-align: top;
 }
+
+    .bc-table thead tr + tr > th {
+        border-top: 0;
+        padding: 3px 0;
+    }
+
+    .bc-table thead > tr:first-child th {
+        padding: 2px 0 3px 0;
+        border-bottom: 4px solid #fff;
+    }
 
     .bc-table thead td {
         border-top-color: transparent;
@@ -205,18 +214,15 @@ Table styling that is not layout related
         border-left: 0;
     }
 
-    .bc-table tbody th {
-        border-right: 4px solid #fff;
-    }
-
     .bc-table thead td + th,
     .bc-table tbody th + td {
         border-left: 0;
     }
 
-    .bc-table thead tr + tr > th {
-        border-top: 0;
-        padding: 0 0 3px 0;
+    .bc-table tbody th {
+        border-right: 4px solid #fff;
+        border-left: 0;
+        text-align: left;
     }
 
     [class*=bc-browser-chrome] + [class*=bc-browser-chrome],
@@ -227,18 +233,16 @@ Table styling that is not layout related
         border-left-width: 1px;
     }
 
-    .bc-table thead > tr:first-child th {
-        padding: 0 0 10px 0;
+    .bc-table td:focus {
+        /* make outline more visible */
+        z-index: 1;
     }
 
-    .bc-table tbody th {
-        border-left: 0;
-        text-align: left;
-    }
 
 .no-js .bc-table tbody td,
 .bc-table tbody td[tabindex] {
-    padding: 8px 3px;
+    padding-top: 8px;
+    padding-bottom: 12px;
 }
 
 .bc-table tbody th code {
@@ -251,14 +255,6 @@ Table styling that is not layout related
 
 .bc-table abbr i {
     cursor: help;
-}
-
-.bc-icons {
-    position: relative;
-    z-index: 12; /* raise z-index so tool tips still appear even if overlapping history link */
-
-    /* TODO: center icons if they wrap, :first-line? only on mobile?  */
-    float: right;
 }
 
 @media all and (max-width: 800px) {
@@ -274,6 +270,12 @@ Table styling that is not layout related
         border-left: 0;
         box-shadow: inset 60px 0 0 0 #EAEFF2;
     }
+
+    .no-js .bc-table tbody td,
+    .bc-table tbody td[tabindex] {
+       padding-bottom: 20px;
+    }
+
 }
 
 /*
@@ -311,9 +313,9 @@ supports colouring
 }
 .bc-supports-partial {
     background-image:
-        linear-gradient(to bottom right, transparent 60px, rgba(0,0,0,0.2) 60px, rgba(0,0,0,0.2) 70px, transparent 70px, transparent 130px, rgba(0,0,0,0.2) 130px, rgba(0,0,0,0.2) 140px, transparent 140px);
+            linear-gradient(to bottom right, rgba(0,0,0,0.15) 0px, rgba(0,0,0,0.15) 4px, transparent 4px, transparent 65px, rgba(0,0,0,0.15) 65px, rgba(0,0,0,0.15) 75px, transparent 75px, transparent 136px, rgba(0,0,0,0.15) 136px, rgba(0,0,0,0.15) 146px, transparent 146px);
     background-size: 100px 100px;
-    background-position: 50% -26px;
+    background-position: 50% 50%;
 }
 
 .bc-supports-no,
@@ -323,10 +325,10 @@ supports colouring
 
 .bc-supports-no {
     background-image:
-        linear-gradient(to bottom right, transparent 60px, rgba(0,0,0,0.2) 60px, rgba(0,0,0,0.2) 70px, transparent 70px, transparent 130px, rgba(0,0,0,0.2) 130px, rgba(0,0,0,0.2) 140px, transparent 140px),
-        linear-gradient(to bottom left, transparent 60px, rgba(0,0,0,0.2) 60px, rgba(0,0,0,0.2) 70px, transparent 70px, transparent 130px, rgba(0,0,0,0.2) 130px, rgba(0,0,0,0.2) 140px, transparent 140px);
+        linear-gradient(to bottom right, rgba(0,0,0,0.15) 0px, rgba(0,0,0,0.15) 4px, transparent 4px, transparent 65px, rgba(0,0,0,0.15) 65px, rgba(0,0,0,0.15) 75px, transparent 75px, transparent 136px, rgba(0,0,0,0.15) 136px, rgba(0,0,0,0.15) 146px, transparent 146px),
+        linear-gradient(to bottom left, rgba(0,0,0,0.15) 0px, rgba(0,0,0,0.15) 4px, transparent 4px, transparent 65px, rgba(0,0,0,0.15) 65px, rgba(0,0,0,0.15) 75px, transparent 75px, transparent 136px, rgba(0,0,0,0.15) 136px, rgba(0,0,0,0.15) 146px, transparent 146px);
     background-size: 100px 100px, 100px 100px;
-    background-position: 50% -26px, 50% -26px;
+    background-position: 50% 50%, 50% 50%;
 }
 
 .bc-supports-unknown,
@@ -365,6 +367,23 @@ icons
 a .only-icon > i {
     float: right;
     margin: 3px;
+}
+
+.bc-icons {
+    position: relative;
+    z-index: 12; /* raise z-index so tool tips still appear even if overlapping history link */
+
+    /* TODO: center icons if they wrap, :first-line? only on mobile?  */
+    float: right;
+    margin-right: 2px;
+}
+
+
+@media all and (max-width: 800px) {
+    th .bc-icons {
+        float: none;
+        display: inline-block;
+    }
 }
 
 /*
@@ -619,7 +638,7 @@ History-link
 .bc-history-link {
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 0;
     z-index: 11;
     display: block;
     width: 100%;
@@ -627,8 +646,8 @@ History-link
     margin-top: -10px;
     clear: both;
     text-align: center;
-    font-size: 10px;
-    border-top: 1px solid #fff;
+    font-size: 12px;
+    border-top: 1px solid rgba(255,255,255, 0.3);
     line-height: 1;
 }
 
@@ -656,6 +675,7 @@ History-link
 td[tabindex]:hover .bc-history-link,
 td[tabindex]:focus .bc-history-link {
     background-color: #fff;
+    border-top: 1px solid rgba(255,255,255, 1);
 }
 
     .active.bc-supports-yes .bc-history-link,
@@ -682,6 +702,29 @@ td[tabindex]:focus .bc-history-link {
     .active .bc-history-link {
         margin-top: -8px;
     }
+
+.bc-history-link i {
+    position: relative;
+    top: -2px;
+}
+
+
+@media all and (max-width: 480px) {
+    .bc-history-link {
+        width: calc(100% - 60px);
+        height: 20px;
+        margin-top: -20px;
+        font-size: 16px;
+    }
+
+    .active .bc-history-link {
+        margin-top: -18px;
+    }
+
+    .bc-history-link i {
+        top: 0;
+    }
+}
 
 /*
 History
@@ -766,11 +809,6 @@ History
         padding-left: 0;
         box-shadow: none;
     }
-
-    th .bc-icons {
-        float: none;
-        display: inline-block;
-    }
 }
 
 @media all and (max-width: 480px) {
@@ -841,6 +879,21 @@ footnotes
 reverse icons
 ---------------------------------------------------------------- */
 
+.bc-table-medium-reverse th,
+.bc-table-medium-reverse td {
+    border-left: 1px solid #fff;
+}
+
+    /* thicker border between mediums */
+    .bc-table-medium-reverse thead tr:first-child th + th,
+    .bc-table-medium-reverse .bc-browser-chrome-android {
+        border-left: 4px solid #fff;
+    }
+
+.bc-table-medium-reverse .bc-table thead > tr:first-child th {
+    padding-bottom: 5px;
+}
+
 .bc-table-medium-reverse thead > tr i {
     padding-bottom: 3px;
 }
@@ -851,8 +904,8 @@ reverse icons
     font-size: 24px;
 }
 
-.bc-table-medium-reverse thead > tr:first-child th {
-    border-bottom: 4px solid #fff;
+.bc-table-medium-reverse {
+
 }
 
 .bc-table th[colspan='5']{
