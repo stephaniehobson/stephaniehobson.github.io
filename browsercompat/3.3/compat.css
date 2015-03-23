@@ -877,6 +877,7 @@ footnotes
 
 /*
 light colours
+suggested by @craigcook green #E1FBD8, red #FCD8D8, gold #F8EBAC
 ---------------------------------------------------------------- */
 
 .bc-light .bc-supports-yes,
@@ -901,29 +902,29 @@ light colours
 
 .bc-light .bc-supports-yes,
 .bc-light .bc-supports-yes .bc-history {
-    background-color: #F1F9F6; /*#309c40;*/
+    background-color: #E0F1DA; /*#309c40;*/
 }
 
 .bc-light .bc-supports-partial,
 .bc-light .bc-supports-partial .bc-history {
-    background: #FFFAE5; /* #ff9500; */
+    background: #F1EFDA; /* #ff9500; */
 }
 .bc-light .bc-supports-partial {
     background-image:
-            linear-gradient(to bottom right, rgba(255,255,255,0.7) 0px, rgba(255,255,255,0.7) 4px, transparent 4px, transparent 65px, rgba(255,255,255,0.7) 65px, rgba(255,255,255,0.7) 75px, transparent 75px, transparent 136px, rgba(255,255,255,0.7) 136px, rgba(255,255,255,0.7) 146px, transparent 146px);
+            linear-gradient(to bottom right, rgba(255,255,255,0.65) 0px, rgba(255,255,255,0.65) 4px, transparent 4px, transparent 65px, rgba(255,255,255,0.65) 65px, rgba(255,255,255,0.65) 75px, transparent 75px, transparent 136px, rgba(255,255,255,0.65) 136px, rgba(255,255,255,0.65) 146px, transparent 146px);
     background-size: 100px 100px;
     background-position: 50% 50%;
 }
 
 .bc-light .bc-supports-no,
 .bc-light .bc-supports-no .bc-history {
-    background-color: #FFF0F0; /*#af3232;*/
+    background-color: #F1DADA; /*#af3232;*/
 }
 
 .bc-light .bc-supports-no {
     background-image:
-        linear-gradient(to bottom right, rgba(255,255,255,0.7) 0px, rgba(255,255,255,0.7) 4px, transparent 4px, transparent 65px, rgba(255,255,255,0.7) 65px, rgba(255,255,255,0.7) 75px, transparent 75px, transparent 136px, rgba(255,255,255,0.7) 136px, rgba(255,255,255,0.7) 146px, transparent 146px),
-        linear-gradient(to bottom left, rgba(255,255,255,0.7) 0px, rgba(255,255,255,0.7) 4px, transparent 4px, transparent 65px, rgba(255,255,255,0.7) 65px, rgba(255,255,255,0.7) 75px, transparent 75px, transparent 136px, rgba(255,255,255,0.7) 136px, rgba(255,255,255,0.7) 146px, transparent 146px);
+        linear-gradient(to bottom right, rgba(255,255,255,0.65) 0px, rgba(255,255,255,0.65) 4px, transparent 4px, transparent 65px, rgba(255,255,255,0.65) 65px, rgba(255,255,255,0.65) 75px, transparent 75px, transparent 136px, rgba(255,255,255,0.65) 136px, rgba(255,255,255,0.65) 146px, transparent 146px),
+        linear-gradient(to bottom left, rgba(255,255,255,0.65) 0px, rgba(255,255,255,0.65) 4px, transparent 4px, transparent 65px, rgba(255,255,255,0.65) 65px, rgba(255,255,255,0.65) 75px, transparent 75px, transparent 136px, rgba(255,255,255,0.65) 136px, rgba(255,255,255,0.65) 146px, transparent 146px);
     background-size: 100px 100px, 100px 100px;
     background-position: 50% 50%, 50% 50%;
 }
