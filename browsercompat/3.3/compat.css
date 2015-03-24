@@ -241,8 +241,20 @@ Table styling that is not layout related
 
 .no-js .bc-table tbody td,
 .bc-table tbody td[tabindex] {
-    padding-top: 8px;
+    padding-top: 6px;
     padding-bottom: 12px;
+}
+
+@supports (display: flex) {
+
+    @media all and (min-width: 481px) and (max-width: 800px) {
+
+        .no-js .bc-table tbody td,
+        .bc-table tbody td[tabindex] {
+            /* flex is top aligned not center aligned so keep spacing at top same as no icons */
+            padding-top: 5px;
+        }
+    }
 }
 
 .bc-table tbody th code {
@@ -375,7 +387,7 @@ a .only-icon > i {
 
     /* TODO: center icons if they wrap, :first-line? only on mobile?  */
     float: right;
-    margin-right: 2px;
+    margin: 0 2px;
 }
 
 
