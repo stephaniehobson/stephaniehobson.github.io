@@ -7,6 +7,7 @@
     // TODO: sticky table headers on long desktop/tablet ? Duplicate table header on long tables?
     // TODO: wrap all icons on a row to new line if one cell wraps?
     // TODO: support legend on history page
+    // TODO: scrolling to keep expanded tab in view
 
     /*
     Toogle History
