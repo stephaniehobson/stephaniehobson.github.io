@@ -2,13 +2,6 @@
 (function(win, doc, $) {
     'use strict';
 
-    // TODO: avoid scrolling when expanding/collapsing from one to another
-    // TODO: collapse tables longer than 2 rows on mobile?
-    // TODO: sticky table headers on long desktop/tablet ? Duplicate table header on long tables?
-    // TODO: wrap all icons on a row to new line if one cell wraps?
-    // TODO: support legend on history page
-    // TODO: scrolling to keep expanded tab in view
-
     /*
     Toogle History
     ====================================================================== */
@@ -18,165 +11,169 @@
     Initial setup of DOM
     -------------------------------------------------------------- */
 
-    // creating new element technique copied from http://ejohn.org/apps/workshop/intro/#19
-    var $historyLink = $('<a><span></span><i></i></a>')
-                       .attr('title', 'View feature history') /* TODO: not #l10n friendly */
-                       .addClass('bc-history-link only-icon')
-                       .find('i')
-                         .attr('aria-hidden', true)
-                         .addClass('icon-caret-down')
-                       .end();
-    var $historySection = $('<section><dl><dt><dd></dd></dt></dl></section>')
-                          .addClass('bc-history hidden')
-                          .attr('aria-hidden', true)
-                          .find('dt')
-                            .addClass('bc-supports')
-                          .end();
-    var $historyCloseButton = $('<button><abbr><span></span><i></i></abbr></button>')
-                          .addClass('bc-history-button')
-                          .find('abbr')
-                            .addClass('only-icon')
-                            .attr('title', 'Return to compatability table.') /* TODO: not #l10n friendly */
-                          .find('span')
-                            .append('Close')/* TODO: not #l10n friendly */
-                          .end()
-                          .find('i')
-                            .addClass('icon-times')
-                            .attr('aria-hidden', true)
-                          .end()
-                          .end();
-    var historyCount = 0;
+    if($('.bc-table').length > 0) {
 
-    // javascript is enabled, hide the footnotes and legend
-    $('.bc-footnotes').hide().attr('aria-hidden', true);
-    //$('.bc-legend:not(#bc-legend-master)').hide().attr('aria-hidden', true);
+        // creating new element technique copied from http://ejohn.org/apps/workshop/intro/#19
+        var $historyLink = $('<a><span></span><i></i></a>')
+                           .attr('title', 'View feature history') /* TODO: not #l10n friendly */
+                           .addClass('bc-history-link only-icon')
+                           .find('i')
+                             .attr('aria-hidden', true)
+                             .addClass('ic-history')
+                           .end();
+        var $historySection = $('<section><dl><dt><dd></dd></dt></dl></section>')
+                              .addClass('bc-history hidden')
+                              .attr('aria-hidden', true)
+                              .find('dt')
+                                .addClass('bc-supports')
+                              .end();
+        var $historyCloseButton = $('<button><abbr><span></span><i></i></abbr></button>')
+                              .addClass('bc-history-button')
+                              .find('abbr')
+                                .addClass('only-icon')
+                                .attr('title', 'Return to compatability table.') /* TODO: not #l10n friendly */
+                              .find('span')
+                                .append('Close')/* TODO: not #l10n friendly */
+                              .end()
+                              .find('i')
+                                .addClass('icon-times')
+                                .attr('aria-hidden', true)
+                              .end()
+                              .end();
+        var historyCount = 0;
 
-    // generate info for cells with no info (legend, no history available, prompt to contribute)
-    var $cells = $('.bc-table td');
+        // javascript is enabled, hide the footnotes and legend
+        $('.bc-footnotes').hide().attr('aria-hidden', true);
+        //$('.bc-legend:not(#bc-legend-master)').hide().attr('aria-hidden', true);
 
-    $cells.each(function () {
+        // generate info for cells with no info (legend, no history available, prompt to contribute)
+        var $cells = $('.bc-table td');
 
-        var $thisCell = $(this);
-        // console.log($thisCell);
+        $cells.each(function () {
 
-        // check if it already has a bc-history
-        var hasHistory = $thisCell.children('.bc-history').length;
-        if (hasHistory < 1) {
-            // console.log('no history');
-            // if not check for icons
-            var $icons = $thisCell.children('.bc-icons');
-            var hasIcons = $icons.length;
+            var $thisCell = $(this);
+            // console.log($thisCell);
 
-            if(hasIcons > 0) {
-                // console.log('has icons ');
+            // check if it already has a bc-history
+            var hasHistory = $thisCell.children('.bc-history').length;
+            if (hasHistory < 1) {
+                // console.log('no history');
+                // if not check for icons
+                var $icons = $thisCell.children('.bc-icons');
+                var hasIcons = $icons.length;
 
-                // change variable indicating if there's a history, since we're adding it
-                hasHistory = true;
+                if(hasIcons > 0) {
+                    // console.log('has icons ');
 
-                // create the history section
-                var $thisHistorySection = $historySection.clone();
+                    // change variable indicating if there's a history, since we're adding it
+                    hasHistory = true;
 
-                // create the history DD
-                var $thisHistoryDD = $thisHistorySection.find('dd');
+                    // create the history section
+                    var $thisHistorySection = $historySection.clone();
 
-                    // add icon explanations to history
-                    $icons.find('abbr').each(function() {
-                        var $abbr = $(this);
-                        var $newAbbr = $abbr.clone();
-                        var isFootnote = $newAbbr.find('.notes');
+                    // create the history DD
+                    var $thisHistoryDD = $thisHistorySection.find('dd');
 
-                        // add icon to definition
-                        $newAbbr.appendTo($thisHistoryDD);
+                        // add icon explanations to history
+                        $icons.find('abbr').each(function() {
+                            var $abbr = $(this);
+                            var $newAbbr = $abbr.clone();
+                            var isFootnote = $newAbbr.find('.ic-footnote');
 
-                        // add defintiion
-                        if(isFootnote.length < 1) {
-                            // straight forward copy of title if it's not a footnote
-                            var title = $newAbbr.attr('title');
-                            $thisHistoryDD.append(title);
-                        } else {
-                            // locate the actual footnote and copy it into the defintion
-                            var $thisFootnote = $abbr.parent();
-                            var thisFootnoteLink = $thisFootnote.attr('href');
-                            var $newFootnote = $(thisFootnoteLink);
-                            var definition;
-                            // this is either in a dt/dd format or a p, needs to be treated differently
-                            if($newFootnote.is('p')) {
-                                definition = $newFootnote.html();
-                                $thisHistoryDD.append(definition);
-                            } else if($newFootnote.is('dt')) {
-                                definition = $newFootnote.next('dd').html();
-                                $thisHistoryDD.append(definition);
-                            } // there's a problem if it's not one of those two :P
+                            // add icon to definition
+                            $newAbbr.appendTo($thisHistoryDD);
 
-                            // once we've got that, remove the anchor from the original
-                            $abbr.unwrap();
-                        }
-                    });
+                            // add defintiion
+                            if(isFootnote.length < 1) {
+                                // straight forward copy of title if it's not a footnote
+                                var title = $newAbbr.attr('title');
+                                $thisHistoryDD.append(title);
+                            } else {
+                                // locate the actual footnote and copy it into the defintion
+                                var $thisFootnote = $abbr.parent();
+                                var thisFootnoteLink = $thisFootnote.attr('href');
+                                var $newFootnote = $(thisFootnoteLink);
+                                var definition;
+                                // this is either in a dt/dd format or a p, needs to be treated differently
+                                if($newFootnote.is('p')) {
+                                    definition = $newFootnote.html();
+                                    $thisHistoryDD.append(definition);
+                                } else if($newFootnote.is('dt')) {
+                                    definition = $newFootnote.next('dd').html();
+                                    $thisHistoryDD.append(definition);
+                                } // there's a problem if it's not one of those two :P
 
-                // create the history DT
-                var $thisHistoryDT= $thisHistorySection.find('dt');
-                $thisHistoryDT.append($thisCell.html());
-                // copy cell support class
-                    // TODO: regex this so not dependent on what is essentially a lookup table.
-                    if($thisCell.hasClass('bc-supports-yes')) {
-                        $thisHistoryDT.addClass('bc-supports-yes');
-                    } else if($thisCell.hasClass('bc-supports-partial')) {
-                        $thisHistoryDT.addClass('bc-supports-partial');
-                    } else if($thisCell.hasClass('bc-supports-no')) {
-                        $thisHistoryDT.addClass('bc-supports-no');
-                    } else if($thisCell.hasClass('bc-supports-unknown')) {
-                        $thisHistoryDT.addClass('bc-supports-unknown');
-                    };
+                                // once we've got that, remove the anchor from the original
+                                $abbr.unwrap();
+                            }
+                        });
 
-                // create the history link in the cell (do last so not cloned)
-                $historyLink.clone().appendTo($thisCell);
+                    // create the history DT
+                    var $thisHistoryDT= $thisHistorySection.find('dt');
+                    $thisHistoryDT.append($thisCell.html());
+                    // copy cell support class
+                        // TODO: regex this so not dependent on what is essentially a lookup table.
+                        if($thisCell.hasClass('bc-supports-yes')) {
+                            $thisHistoryDT.addClass('bc-supports-yes');
+                        } else if($thisCell.hasClass('bc-supports-partial')) {
+                            $thisHistoryDT.addClass('bc-supports-partial');
+                        } else if($thisCell.hasClass('bc-supports-no')) {
+                            $thisHistoryDT.addClass('bc-supports-no');
+                        } else if($thisCell.hasClass('bc-supports-unknown')) {
+                            $thisHistoryDT.addClass('bc-supports-unknown');
+                        };
 
-                // apend the history section
-                $thisHistorySection.appendTo($thisCell);
+                    // create the history link in the cell (do last so not cloned)
+                    $historyLink.clone().appendTo($thisCell);
 
-            } // if(hasIcons)
+                    // apend the history section
+                    $thisHistorySection.appendTo($thisCell);
 
-        } else {
-            // already has history, needs to have link href removed so that anchor isn't keyboard focusable
-            $thisCell.find('.bc-history-link').removeAttr('href');
-            $thisCell.find('.bc-icons a .notes').parent().unwrap();
-        } // if (hasHistory < 1)
+                } // if(hasIcons)
 
-        // TODO? check if it is unknown and add call to contribute?
+            } else {
+                // already has history, needs to have link href removed so that anchor isn't keyboard focusable
+                $thisCell.find('.bc-history-link').removeAttr('href');
+                $thisCell.find('.bc-icons a .ic-footnote').parent().unwrap();
+            } // if (hasHistory < 1)
 
-        // now add listeners if the cell has history
-        // doing this seperate from above if because it may have changed
-        if(hasHistory > 0) {
-            // get history
-            var $thisHistory = $thisCell.find('.bc-history');
+            // TODO? check if it is unknown and add call to contribute?
 
-            // check for ID
-            var historyId = $thisHistory.attr('id');
+            // now add listeners if the cell has history
+            // doing this seperate from above if because it may have changed
+            if(hasHistory > 0) {
+                // get history
+                var $thisHistory = $thisCell.find('.bc-history');
 
-            if(!historyId) {
-                //console.log('no history ID');
-                historyId = 'bc-';
-                historyId += historyCount;
-                historyCount ++;
-                $thisHistory.attr('id', historyId);
-            }
+                // check for ID
+                var historyId = $thisHistory.attr('id');
 
-            // increase acessability
-            $thisCell.attr('tabindex', 0)
-                     .attr('aria-expanded', false)
-                     .attr('aria-controls', historyId);
+                if(!historyId) {
+                    //console.log('no history ID');
+                    historyId = 'bc-';
+                    historyId += historyCount;
+                    historyCount ++;
+                    $thisHistory.attr('id', historyId);
+                }
 
-            // add close button
-            var $thisHistoryCloseButton = $historyCloseButton.clone();
-            $thisHistoryCloseButton.on('click', function(event){ hideHistory($thisCell); }); /* click should trigger on tap and key*/
-            $thisHistoryCloseButton.appendTo($thisHistory);
+                // increase acessability
+                $thisCell.attr('tabindex', 0)
+                         .attr('aria-expanded', false)
+                         .attr('aria-controls', historyId);
+
+                // add close button
+                var $thisHistoryCloseButton = $historyCloseButton.clone();
+                $thisHistoryCloseButton.on('click', function(event){ hideHistory($thisCell); }); /* click should trigger on tap and key*/
+                $thisHistoryCloseButton.appendTo($thisHistory);
 
 
-            // add event listeners
-            $thisCell.on('click touchstart keydown', function(event){ toggleHistory(event, $thisCell); });
-        } // if(hasHistory > 0)
+                // add event listeners
+                $thisCell.on('click touchstart keydown', function(event){ toggleHistory(event, $thisCell); });
+            } // if(hasHistory > 0)
 
-    }); // $cells.each()
+        }); // $cells.each()
+
+    }
 
     /*
     showHistory
@@ -219,7 +216,7 @@
             // console.log('tableLeft = ' + tableLeft);
 
             // left coord of table minus left coord of cell
-            var historyLeft = tableLeft - cellLeft - parseInt(cellLeftBorder);
+            var historyLeft = tableLeft - cellLeft - parseInt(cellLeftBorder) - 1;
             // console.log('historyLeft = ' + historyLeft);
 
 

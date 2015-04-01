@@ -1,22 +1,294 @@
+@font-face {
+    font-family: 'compat-icons';
+    src:url('fonts/compat-icons.eot?-ehmwve');
+    src:url('fonts/compat-icons.eot?#iefix-ehmwve') format('embedded-opentype'),
+        url('fonts/compat-icons.woff?-ehmwve') format('woff'),
+        url('fonts/compat-icons.ttf?-ehmwve') format('truetype'),
+        url('fonts/compat-icons.svg?-ehmwve#compat-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="ic-"], [class*=" ic-"] {
+    font-family: 'compat-icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-altname:before {
+    content: "\e601";
+}
+
+.ic-firefoxos:before {
+    content: "\e600";
+}
+
+.ic-footnote:before {
+    content: "\e602";
+}
+
+.ic-prefix:before {
+    content: "\e603";
+}
+
+.ic-obsolete:before {
+    content: "\f014";
+}
+
+.ic-disabled:before {
+    content: "\f024";
+}
+
+.ic-non-standard:before {
+    content: "\f071";
+}
+
+.ic-experimental:before {
+    content: "\f0c3";
+}
+
+.ic-history:before {
+    content: "\f0dd";
+}
+
+.ic-desktop:before {
+    content: "\f108";
+}
+
+.ic-mobile:before {
+    content: "\f10a";
+}
+
+.ic-mini:before {
+    content: "\f10b";
+}
+
+.ic-protected:before {
+    content: "\f132";
+}
+
+.ic-android:before {
+    content: "\f17b";
+}
+
+.ic-safari:before {
+    content: "\e94a";
+}
+
+.ic-android-browser:before {
+    content: "\e9ca";
+}
+
+.ic-chrome:before {
+    content: "\eae5";
+}
+
+.ic-firefox:before {
+    content: "\eae6";
+}
+
+.ic-ie:before {
+    content: "\eae7";
+}
+
+.ic-opera:before {
+    content: "\eae8";
+}
+
+
 /*
+icons support rules
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
-TODO: add highlighting for :target (non js footnote links)
-TODO: bug, fullscreen, bc-history over laps top border on following cell only if <code> in <th>;
-TODO: bug, tablet, block, one cell taller than others, adding bottom border makes it stick out below history;
-    (can't change technique because flex acts weirdly, fix by calculating heigh in js?)
-TODO: spacing/padding around all icons (switch to sprite?);
+.only-icon > span {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* ie6, ie7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
 
-TODO: hand curor over footnote links when they're actually links (no js);
-TODO: bug, double bottom border when notes expanded on last cell in tr in mobile ;
+.only-icon > i {
+    margin: 0;
+}
 
-TODO: fxos icon not level with android icon in desktop;
-TODO: fxos icon wraps before other icons (no wrap on TH?);
+.bc-icons {
+    position: relative;
+    z-index: 12; /* raise z-index so tool tips still appear even if overlapping history link */
 
-TODO: domino mask icon for alt name;
+    /* TODO: center icons if they wrap, :first-line? only on mobile?  */
+    float: right;
+    margin: 0 2px;
+}
 
-TODO: good solution for icons not part of font-awesome (sprite?) inline SVG?;
+.bc-icons a {
+    text-decoration: none;
+}
 
-*/
+@media all and (max-width: 800px) {
+    th .bc-icons {
+        float: none;
+        display: inline-block;
+    }
+}
+
+ /* icons in mobile view */
+
+@media all and (max-width: 480px) {
+
+    [class*='bc-browser-']:before,
+    [class*='bc-browser-']:after {
+        position: absolute;
+        font-family: 'compat-icons';
+        speak: none;
+        color: #4D4E53;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-align: center;
+        text-transform: none;
+        line-height: 1;
+    }
+
+    [class*='bc-browser-']:before{
+        top: 8px;
+        left: 30px;
+        height: 25px;
+        width: 25px;
+    }
+
+    .bc-browser-android-browser:before {
+        content: '\e9ca';
+    }
+    .bc-browser-chrome-desktop:before,
+    .bc-browser-chrome-android:before {
+        content: '\eae5';
+    }
+    .bc-browser-firefox-desktop:before,
+    .bc-browser-firefox-android:before,
+    .bc-browser-firefox-fxos:before {
+        content: '\eae6';
+    }
+    .bc-browser-internet-explorer-desktop:before,
+    .bc-browser-internet-explorer-mobile:before {
+        content: '\eae7';
+    }
+    .bc-browser-opera-desktop:before,
+    .bc-browser-opera-mobile:before,
+    .bc-browser-opera-mini:before {
+        content: '\eae8';
+    }
+    .bc-browser-safari-desktop:before,
+    .bc-browser-safari-mobile:before {
+        content: '\e94a';
+    }
+
+    /* medium icons in mobile view */
+
+    [class*='bc-browser-']:after {
+        top: 8px;
+        left: 2px;
+        width: 25px;
+    }
+
+    .bc-browser-chrome-desktop:after,
+    .bc-browser-firefox-desktop:after,
+    .bc-browser-internet-explorer-desktop:after,
+    .bc-browser-opera-desktop:after,
+    .bc-browser-safari-desktop:after {
+        content: '\f108';
+    }
+
+    .bc-browser-android-browser:after,
+    .bc-browser-chrome-android:after,
+    .bc-browser-firefox-android:after {
+        content: '\f17b';
+    }
+
+    .bc-browser-internet-explorer-mobile:after,
+    .bc-browser-opera-mobile:after,
+    .bc-browser-safari-mobile:after {
+        content: '\f10a';
+    }
+    .bc-browser-opera-mini:after {
+        content: '\f10b';
+    }
+
+    .bc-browser-firefox-fxos:after {
+        content: '\e600';
+    }
+
+}
+
+/*
+Support icons
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+.bc-level {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    display: block;
+    height: 19px;
+    width: 20px;
+    overflow: hidden;
+    cursor: help;
+}
+
+    .bc-support:after {
+        content: '';
+    }
+
+.bc-level img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.bc-level-partial img {
+    top: -20px;
+}
+
+.bc-level-no img {
+    top: -40px;
+}
+
+.active .bc-level img,
+*:hover > .bc-level img,
+*:focus > .bc-level img {
+    display: block;
+}
+
+@media all and (max-width: 480px) {
+    td > .bc-level {
+        left: 60px;
+    }
+}
+
+/* always show support icon in high contrst themes */
+@media screen and (-ms-high-contrast) {
+    .bc-level img {
+        display: block;
+    }
+}
+
+
+
+/*
+---------------------------------------------------------------- */
+
+abbr {
+    cursor: help;
+}
 
 
 /*
@@ -39,7 +311,7 @@ table layout
     width: 10%; /* not actually 10% but triggers making all equal width */
 }
 
-    .bc-table thead tr:first-child th[colspan='2'] {
+    .bc-table thead th[colspan='2'] {
         width: 20%;
     }
 
@@ -129,7 +401,7 @@ table layout
 /*
 Flexbox for those lucky few who can handle it
 - we only needs this to make equal height columns in the middle display view
-- IE is not among those that can handle this code, but it doesn't supoort @support so we're good
+- ie is not among those that can handle this code, but it doesn't supoort @support so we're good
 - all browsers which support @support also use unprefixed syntax
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
@@ -215,15 +487,16 @@ Table styling that is not layout related
     text-align: center;
 }
 
-    .bc-table thead > tr:first-child th {
+    .bc-table .bc-mediums th {
         padding: 2px 0 5px 0;
         border-bottom: 4px solid #fff;
         font-size: 24px;
     }
 
-    .bc-table thead tr + tr > th {
+    .bc-table .bc-browsers th {
         border-top: 0;
         padding: 3px 0;
+        font-size:18px;
     }
 
     .bc-table thead td {
@@ -254,7 +527,7 @@ Table styling that is not layout related
 */
 
     /* thicker border between mediums */
-    thead tr:first-child th + th,
+    .bc-mediums th + th,
     [class*=desktop] + [class*=android],
     [class*=desktop] + [class*=mobile],
     [class*=desktop] + [class*=fxos],
@@ -292,10 +565,6 @@ Table styling that is not layout related
 
 .bc-table td[tabindex] {
     cursor: pointer;
-}
-
-.bc-table abbr i {
-    cursor: help;
 }
 
 @media all and (max-width: 800px) {
@@ -338,7 +607,7 @@ supports colouring
 .bc-supports-partial,
 .bc-supports-no,
 .bc-supports-unknown,
-.bc-history {
+.bc-table .bc-history {
     color: #fff;
 }
 
@@ -348,10 +617,6 @@ supports colouring
 .bc-supports-unknown a {
     color: #fff;
     text-decoration: underline;
-}
-
-.bc-history {
-    color: #fff;
 }
 
 .bc-supports-yes,
@@ -388,306 +653,6 @@ supports colouring
     background-color: #bbbbbb;
 }
 
-/*
-icons
----------------------------------------------------------------- */
-
-.only-icon > span {
-  position: absolute !important;
-  height: 1px; width: 1px;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-.only-icon > i {
-    margin:0;
-}
-
-.bc-icons {
-    position: relative;
-    z-index: 12; /* raise z-index so tool tips still appear even if overlapping history link */
-
-    /* TODO: center icons if they wrap, :first-line? only on mobile?  */
-    float: right;
-    margin: 0 2px;
-}
-
-.bc-icons a {
-    text-decoration: none;
-}
-
-@media all and (max-width: 800px) {
-    th .bc-icons {
-        float: none;
-        display: inline-block;
-    }
-}
-
-
-/*
-feature icons
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-
-.icon-notes:after {
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1;
-    -moz-osx-font-smoothing: grayscale;
-    speak: none;
-    content: '\f15b';
-}
-
-.icon-notes {
-    transform: rotate(180deg) scaleX(-1);
-}
-
-.bc-icons .icon-notes {
-    font-size: 12px;
-}
-
-.prefix,
-.notes {
-    font-style: normal;
-    vertical-align: top;
-}
-
-/*
-browser logo icons
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-
-.only-icon > i[class^='logo'] {
-    display: inline-block;
-    height: 23px;
-    width: 27px;
-    overflow: hidden;
-    position: relative;
-    top: 3px;
-}
-
-.only-icon > i[class^='logo']:before {
-  content: url(icons-sprite.png);
-  position: absolute;
-}
-
-.logo-android-browser:before {
-  top: -135px;
-  left: -43px;
-}
-
-.logo-chrome:before {
-  top: -158px;
-  left: -20px;
-}
-
-.logo-firefox:before {
-  top: -181px;
-  left: 2px;
-}
-
-.logo-ie:before {
-  top: -91px;
-  left: -88px;
-}
-
-.logo-opera:before {
-  top: -22px;
-  left: -156px;
-}
-
-.logo-safari:before {
-  top: -45px;
-  left: -133px;
-}
-
-.only-icon > i.logo-fxos:before {
-    content: url(fxos.png);
-    top: 0;
-    left: 0;
-}
-
-@media all and (max-width: 480px) {
-
-    /* browser icons in mobile view */
-    [class*='bc-browser-']:before{
-        content: '';
-        background-image: url(icons-sprite.png);
-        position: absolute;
-        top: 2px;
-        left: 30px;
-        height: 25px;
-        width: 25px;
-    }
-
-    .bc-browser-android-browser:before {
-        background-position: -43px -135px ;
-    }
-    .bc-browser-chrome-desktop:before {
-        background-position: -20px -156px ;
-    }
-    .bc-browser-chrome-android:before {
-        background-position: -20px -156px;
-    }
-    .bc-browser-firefox-desktop:before {
-        background-position: 2px -179px;
-    }
-    .bc-browser-firefox-android:before {
-        background-position: 2px -179px;
-    }
-    .bc-browser-firefox-fxos:before {
-        background-position: 2px -179px;
-    }
-    .bc-browser-internet-explorer-desktop:before {
-        background-position: -88px -89px;
-    }
-    .bc-browser-internet-explorer-mobile:before {
-        background-position: -88px -89px;
-    }
-    .bc-browser-opera-desktop:before {
-        background-position: -156px -20px;
-    }
-    .bc-browser-opera-mobile:before {
-        background-position: -156px -20px;
-    }
-    .bc-browser-opera-mini:before {
-        background-position: -156px -20px;
-    }
-    .bc-browser-safari-desktop:before {
-        background-position: -133px -43px;
-    }
-    .bc-browser-safari-mobile:before {
-        background-position: -133px -43px;
-    }
-
-    /* don't show icon if it's on the previous line */
-/*    [class*=bc-browser-chrome] + [class*=bc-browser-chrome]:before,
-    [class*=bc-browser-firefox] + [class*=bc-browser-firefox]:before,
-    [class*=bc-browser-internet-explorer] + [class*=bc-browser-internet-explorer]:before,
-    [class*=bc-browser-opera] + [class*=bc-browser-opera]:before,
-    [class*=bc-browser-safari] + [class*=bc-browser-safari]:before{
-        visibility: hidden;
-    }
-*/
-    /* medium icons in mobile view */
-
-    [class*='bc-browser-']:after {
-        position: absolute;
-        top: 8px;
-        left: 2px;
-        width: 25px;
-        color: #4D4E53;
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1;
-        -moz-osx-font-smoothing: grayscale;
-        speak: none;
-        text-align: center;
-    }
-
-    .bc-browser-chrome-desktop:after,
-    .bc-browser-firefox-desktop:after,
-    .bc-browser-internet-explorer-desktop:after,
-    .bc-browser-opera-desktop:after,
-    .bc-browser-safari-desktop:after {
-        content: '\f108';
-    }
-
-    .bc-browser-android-browser:after,
-    .bc-browser-chrome-android:after,
-    .bc-browser-firefox-android:after {
-        content: '\f17b';
-    }
-
-    .bc-browser-internet-explorer-mobile:after,
-    .bc-browser-opera-mobile:after,
-    .bc-browser-safari-mobile:after {
-        content: '\f10a';
-    }
-    .bc-browser-opera-mini:after {
-        content: '\f10b';
-    }
-
-    .bc-browser-firefox-fxos:after {
-        content: url('fxos.png');
-    }
-
-}
-
-/*
-Support icons
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-
-.bc-support-yes,
-.bc-support-partial,
-.bc-support-no {
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    display: block;
-    height: 19px;
-    width: 20px;
-    overflow: hidden;
-    cursor: help;
-}
-
-    .bc-support-yes:after,
-    .bc-support-partial:after,
-    .bc-support-no:after {
-        content: '';
-    }
-
-.bc-support-yes img,
-.bc-support-partial img,
-.bc-support-no img {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    display: none;
-}
-
-.active .bc-support-yes img,
-.active .bc-support-partial img,
-.active .bc-support-no img,
-td:hover .bc-support-yes img,
-td:hover .bc-support-partial img,
-td:hover .bc-support-no img,
-td:focus .bc-support-yes img,
-td:focus .bc-support-partial img,
-td:focus .bc-support-no img,
-dt:hover .bc-support-yes img,
-dt:hover .bc-support-partial img,
-dt:hover .bc-support-no img {
-    display: block;
-}
-
-.bc-support-partial img {
-    top: -20px;
-}
-
-.bc-support-no img {
-    top: -40px;
-}
-
-
-@media all and (max-width: 480px) {
-    td > .bc-support-yes,
-    td > .bc-support-partial,
-    td > .bc-support-no {
-        left: 60px;
-    }
-}
-
-/* always show support icon in high contrst themes */
-@media screen and (-ms-high-contrast) {
-    .bc-support-yes img,
-    .bc-support-partial img,
-    .bc-support-no img {
-        display: block;
-    }
-}
-
 
 /*
 History link and history
@@ -711,6 +676,10 @@ History-link
     font-size: 12px;
     border-top: 1px solid rgba(255,255,255, 0.3);
     line-height: 1;
+}
+
+a.bc-history-link { /* needs additional specificity to over ride rule giving it an underline */
+    text-decoration: none;
 }
 
 .active .bc-history-link {
@@ -767,7 +736,7 @@ td[tabindex]:focus .bc-history-link {
 
 .bc-history-link i {
     position: relative;
-    top: -2px;
+    top: -4px;
 }
 
 
@@ -793,24 +762,27 @@ History
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
 .bc-history {
-    position: absolute;
-    top: 100%;
     z-index: 20;
     box-sizing: border-box;
     border-top: 4px solid #fff;
     border-bottom: 3px solid #fff;
-    padding-left: 200px;
-    display: none;
-    visibility: hidden;
     overflow: hidden;
-    box-shadow: inset 200px 0 0 0 #fff;
     cursor: default;
 }
+
+    .bc-table .bc-history{
+        position: absolute;
+        top: 100%;
+        display: none;
+        visibility: hidden;
+        box-shadow: inset 200px 0 0 0 #fff;
+    }
 
     .active .bc-history {
         display: block;
         visibility: visible;
         height: 0;
+        padding-left: 200px;
         transition: height 0.2s ease-out;
     }
 
@@ -859,6 +831,7 @@ History
 }
 
 .bc-supports {
+    display: inline-block;
     position: relative;
     border: 1px solid #fff;
     padding: 3px;
@@ -867,11 +840,13 @@ History
 }
 
 .bc-legend .bc-supports {
+    display: inline-block;
     min-width: 30px;
 }
 
 @media all and (max-width: 800px) {
-    .bc-history {
+
+    .bc-table .bc-history {
         padding-left: 0;
         box-shadow: none;
     }
@@ -946,7 +921,7 @@ footnotes
 ---------------------------------------------------------------- */
 
 .only-icon > i.logo-fxos-c:before {
-    content: url(fxos-c.png);
+    content: url('fxos-c.png');
     top: 0;
     left: 0;
 }
