@@ -7,8 +7,9 @@
 
     <title>Compat - Contribution - Support</title>
 
-    <link rel="stylesheet" media="all" href="../bootstrap-3.3.4-dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" media="all" href="../../4.0/compat.css" />
+    <link rel="stylesheet" media="all" href="../bootstrap-3.3.4-dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" media="all" href="../../4.0/compat.css" >
+    <link rel="stylesheet" media="all" href="styles.css" >
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="../bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
@@ -17,40 +18,15 @@
 <body>
 
 <div class="container">
-
-<form class="row">
-
-    <h1>requestPointerLock</h1>
-
-    <h2>
-        <select>
-            <option>Blackberry</option>
-            <option>Chrome for Android</option>
-            <option selected>Chrome for Desktop</option>
-            <option>Firefox for Desktop</option>
-            <option>Firefox for Android</option>
-            <option>Internet Explorer for Desktop</option>
-            <option>Internet Explorer for Mobile</option>
-            <option>Opera for Desktop</option>
-            <option>Opera Mobile</option>
-            <option>Opera Mini</option>
-            <option>Safari for Desktop</option>
-            <option>Safari for iOS</option>
-        </select>
-    -
-        <select>
-            <option>23.0</option>
-        </select>
-    </h2>
-
-
-    <div class="form-group">
-        <label>Supported</label><br>
+<div class="row">
+<form>
+<div class="form-group">
+        <label>Supported *</label><br>
         <label class="radio-inline">
             <input type="radio" id="support-yes" value="yes" name="support"> Yes
         </label>
         <label class="radio-inline">
-            <input type="radio" id="support-partial" value="partial" name="support"> Partial
+            <input type="radio" id="support-partial" value="partial" name="support" checked> Partial
         </label>
         <label class="radio-inline">
             <input type="radio" id="support-no" value="no" name="support"> No
@@ -59,7 +35,7 @@
             <input type="radio" id="support-unknown" value="unknown" > Unknown
         </label>
     </div>
-    <label>Attributes:</label>
+    <label>Attributes</label>
     <div class="form-group">
         <div class="checkbox">
             <label>
@@ -70,7 +46,7 @@
                 Requires a vendor prefix
             </label>
             <div class="collapse in" id="prefix_mandatory">
-                <label>Which prefix?</label>
+                <label>Which prefix? *</label>
                 <select name="prefix">
                     <option>-moz-</option>
                     <option>-ms-</option>
@@ -88,7 +64,7 @@
                 Uses a non-standard name
             </label>
             <div class="collapse" id="alt-name">
-                <label>What name?</label>
+                <label>What name? *</label>
                 <input type="text">
             </div>
         </div>
@@ -101,51 +77,55 @@
                 User must explicitly enable this feature.
             </label>
             <div class="collapse" id="config">
-                <input type="text">
-                <input type="text">
+                <label>What is the full configuration strong that ships in the browser by default? (ie <code>media.peerconnection.enabled=off</code>) *</label><input type="text">
+                <label>What is the full configuration string required to enable this feature? (ie <code>media.peerconnection.enabled=on</code>) *</label> <input type="text"><br>
             </div>
         </div>
         <div class="checkbox">
             <label>
-                <input type="checkbox" data-toggle="collapse" data-target="#protected" aria-expanded="true" aria-controls="protected">
+                <input type="checkbox" data-toggle="collapse" data-target="#protected" aria-expanded="true" aria-controls="protected" checked>
                 <span class="only-icon">
                     <i aria-hidden="true" class="ic-protected"></i>
                 </span>
                 Additonal steps are required to get permission or certification for use.
             </label>
-            <div class="collapse" id="protected">
+            <div class="collapse in" id="protected">
                 <label>Please explain in footnotes.</label>
             </div>
         </div>
     </div>
     <div class="form-group">
-        <label>Footnote:</label>
-        <textarea class="form-control" rows="3">Allowed in sandboxed &lt;iframe> if the non-standard value webkit-allow-pointer-lock is set to the sandbox attribute.
+        <label>Footnote</label>
+        <textarea class="form-control" rows="3">User is prompted to grant access.
         </textarea>
     </div>
 
-    Delete
-
-    Save
-
-    Save and next (what's next?)
-
+    <button type="button" class="btn btn-success">Save</button><button type="button" class="btn btn-default">Cancel</button>
 </form>
 
+</div>
+
 <ul>
-    <li>inherit from previous support item</li>
-    <li>show previous support before or after</li>
-    <li>only admins can add browser types</li>
-    <li>need interface for users to add versions
+    <li>Setting a flag automatically sets support to no</li>
+    <li>Setting a flag to unknown automatically clears the other fields</li>
+    <li>Adding a new support item automatically inherits from last support icon historically?</li>
+    <li>Auto select the appropirate prefix (opera would need a drop down, maybe others?)
         <ul>
-            <li>can we check against authorative lists to auto generate these?</li>
+            <li>Moderation tools should auto flag prefix miss matches</li>
         </ul>
     </li>
-    <li></li>
-    <li></li>
+    <li>When checkbox is checked the revealed fileds are required</li>
+    <li>Are prefix and alt name mutually exclusive?</li>
+</ul>
+
+<ul>
+    <li>Checking boxes populates the support cell visualization</li>
+    <li>Add button creates support form with a drop down for version number</li>
+    <li>Only write out landmark version numbers, if 17, 18, 19, 20 all have the same, collapse 18 &amp; 19 the way unknwn versions are collapsed, only add edit button instead of add button</li>
 </ul>
 
 </div>
+
 
 </body>
 </html>

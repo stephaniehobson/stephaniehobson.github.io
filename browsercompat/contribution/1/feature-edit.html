@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Compat - Contribution - Edit Feature</title>
+
+    <link rel="stylesheet" media="all" href="../bootstrap-3.3.4-dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" media="all" href="../../4.0/compat.css" >
+    <link rel="stylesheet" media="all" href="styles.css" >
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+<div class="row">
+
+    <div class="bc-feature-head">
+        <button type="button" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+        </button>
+        <h1>
+            FeatureName
+        </h1>
+        <strong>Slug:</strong> feature_slug
+        &nbsp;<strong>Status:</strong>
+            <span class="only-icon">
+                <i class="ic-experimental" aria-hidden="true"></i>
+            </span> Experimental,
+        &nbsp;<strong><a href="#">MDN source</a></strong><br>
+        <strong>Child Features:</strong> <a href="#">none, inline and block</a>, <a href="#">inline-block</a>, <a href="#">list-item</a>, <a href="#">run-in</a>, <a href="">and 8 more &rsaquo;</a>
+    </div>
+
+
+    <table class="bc-select-browser">
+        <tr>
+            <td>
+                <abbr class="only-icon" title="Chrome for Android">
+                    <span>Chrome for Android</span>
+                    <i aria-hidden="true" class="ic-chrome"></i><br>
+                    <i aria-hidden="true" class="ic-android"></i>
+                </abbr>
+            </td>
+            <td class="active">
+                <abbr class="only-icon" title="Chrome for Desktop">
+                    <span>Chrome for Desktop</span>
+                    <i aria-hidden="true" class="ic-chrome"></i><br>
+                    <i aria-hidden="true" class="ic-desktop"></i>
+                </abbr>
+            </td>
+            <td >
+                <abbr class="only-icon" title="Firefox for Android">
+                    <span>Firefox for Android</span>
+                    <i aria-hidden="true" class="ic-firefox"></i><br>
+                    <i aria-hidden="true" class="ic-android"></i>
+                </abbr>
+            </td>
+            <td>
+                <abbr class="only-icon" title="Firefox for Desktop">
+                    <span>Firefox for Desktop</span>
+                    <i aria-hidden="true" class="ic-firefox"></i><br>
+                    <i aria-hidden="true" class="ic-desktop"></i>
+                </abbr>
+            </td>
+            <td>
+                <abbr class="only-icon" title="Internet Explorer for Desktop">
+                    <span>Internet Explorer for Desktop</span>
+                    <i aria-hidden="true" class="ic-ie"></i><br>
+                    <i aria-hidden="true" class="ic-desktop"></i>
+                </abbr>
+            </td>
+            <td>
+                <abbr class="only-icon" title="Internet Explorer for Mobile">
+                    <span>Internet Explorer for Mobile</span>
+                    <i aria-hidden="true" class="ic-ie"></i><br>
+                    <i aria-hidden="true" class="ic-mobile"></i>
+                </abbr>
+            </td>
+            <td>
+                <abbr class="only-icon" title="Opera for Desktop">
+                    <span>Opera for Desktop</span>
+                    <i aria-hidden="true" class="ic-opera"></i><br>
+                    <i aria-hidden="true" class="ic-desktop"></i>
+                </abbr>
+            </td>
+            <td >
+                <abbr class="only-icon" title="Opera Mobile">
+                    <span>Opera Mobile</span>
+                    <i aria-hidden="true" class="ic-opera"></i><br>
+                    <i aria-hidden="true" class="ic-mobile"></i>
+                </abbr>
+            </td>
+            <td>
+                <abbr class="only-icon" title="Opera Mini">
+                    <span>Opera Mini</span>
+                    <i aria-hidden="true" class="ic-opera"></i><br>
+                    <i aria-hidden="true" class="ic-mini"></i>
+                </abbr>
+            </td>
+            <td>
+                <abbr class="only-icon" title="Safari for Desktop">
+                    <span>Safari for Desktop</span>
+                    <i aria-hidden="true" class="ic-safari"></i><br>
+                    <i aria-hidden="true" class="ic-desktop"></i>
+                </abbr>
+            </td>
+            <td>
+                <abbr class="only-icon" title="Safari for iOS">
+                    <span>Safari for iOS</span>
+                    <i aria-hidden="true" class="ic-safari"></i><br>
+                    <i aria-hidden="true" class="ic-mobile"></i>
+                </abbr>
+            </td>
+            <td>
+                <select>
+                    <option>Other browsers</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
+<section class="bc-history active">
+      <dl>
+        <dt><span class="bc-supports">
+          Add version +
+
+        </span></dt>
+        <dd>&nbsp;</dd>
+        <dt><span class="bc-supports-partial bc-supports"><abbr title="Partial support." class="bc-level bc-level-partial only-icon"><span>Partial support.</span><img src="../../4.0/support-sprite.gif" aria-hidden="true"></abbr>
+          23.0
+          <div class="bc-icons">
+            <abbr class="only-icon" title="Requires the -webkit- prefix.">
+              <span>Prefixed</span>
+              <i aria-hidden="true" class="ic-prefix"></i>
+            </abbr>
+            <abbr class="only-icon" title="See implementation notes.">
+              <span>Notes</span>
+              <i aria-hidden="true" class="ic-footnote"></i>
+            </abbr>
+          </div>
+        </span></dt>
+        <dd class="bc-edit"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></dd>
+        <dd>
+          <abbr class="only-icon" title="See implementation notes.">
+            <span>Notes</span>
+            <i aria-hidden="true" class="ic-footnote"></i>
+          </abbr>
+          allowed it in sandboxed <code>&lt;iframe&gt;</code> if the non-standard value webkit-allow-pointer-lock is set to the sandbox attribute.
+        </dd>
+        <dd>
+          <abbr class="only-icon" title="Requires the -webkit- prefix.">
+            <span>Prefixed</span>
+            <i aria-hidden="true" class="ic-prefix"></i>
+          </abbr>
+          -webkit- prefix required.
+        </dd>
+        <dt class="bc-history-rule"><span>Beta</span><span>Current</span></dt>
+        <dt><span class="bc-supports-partial bc-supports"><abbr title="Partial support." class="bc-level bc-level-partial only-icon"><span>Partial support.</span><img src="../../4.0/support-sprite.gif" aria-hidden="true"></abbr>
+          22.0
+          <div class="bc-icons">
+            <abbr class="only-icon" title="Requires the -webkit- prefix.">
+              <span>Prefixed</span>
+              <i aria-hidden="true" class="ic-prefix"></i>
+            </abbr>
+            <abbr class="only-icon" title="See implementation notes.">
+              <span>Notes</span>
+              <i aria-hidden="true" class="ic-footnote"></i>
+            </abbr>
+          </div>
+        </span></dt>
+        <dd class="bc-edit"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></dd>
+        <dd> <abbr class="only-icon" title="See implementation notes.">
+          <span>Notes</span>
+          <i aria-hidden="true" class="ic-footnote"></i>
+        </abbr>allowed it by default for all same-origin document</dd>
+        <dd>
+          <abbr class="only-icon" title="Requires the -webkit- prefix.">
+            <span>Prefixed</span>
+            <i aria-hidden="true" class="ic-prefix"></i>
+          </abbr>
+          -webkit- prefix required.
+        </dd>
+        <dt class="bc-history-rule"><span>Current</span><span>Retired</span></dt>
+        <dt>
+            <span class="bc-supports-partial bc-supports">
+          <abbr title="Partial support." class="bc-level bc-level-partial only-icon"><span>Partial support.</span><img src="../../4.0/support-sprite.gif" aria-hidden="true"></abbr>
+            21.0
+          <div class="bc-icons">
+            <abbr class="only-icon" title="Requires the -webkit- prefix.">
+              <span>Prefixed</span>
+              <i aria-hidden="true" class="ic-prefix"></i>
+            </abbr>
+            <abbr class="only-icon" title="Protected. Additonal steps are required to get permission or certification for use.">
+              <span>Protected</span>
+              <i aria-hidden="true" class="ic-protected"></i>
+            </abbr>
+            <abbr class="only-icon" title="See implementation notes.">
+              <span>Notes</span>
+              <i aria-hidden="true" class="ic-footnote"></i>
+            </abbr>
+
+          </div>
+          </span>
+        </dt>
+        <dd class="editing">
+
+                <div class="form-group">
+                        <label>Supported:</label><br>
+                        <label class="radio-inline">
+                            <input type="radio" id="support-yes" value="yes" name="support"> Yes
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" id="support-partial" value="partial" name="support" checked> Partial
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" id="support-no" value="no" name="support"> No
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" id="support-unknown" value="unknown" > Unknown
+                        </label>
+                    </div>
+                    <label>Attributes:</label>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" checked data-toggle="collapse" data-target="#prefix_mandatory" aria-expanded="true" aria-controls="prefix_mandatory">
+                                <span class="only-icon">
+                                    <i aria-hidden="true" class="ic-prefix"></i>
+                                </span>
+                                Requires a vendor prefix
+                            </label>
+                            <div class="collapse in" id="prefix_mandatory">
+                                <label>Which prefix?</label>
+                                <select name="prefix">
+                                    <option>-moz-</option>
+                                    <option>-ms-</option>
+                                    <option>-o-</option>
+                                    <option selected>-webkit-</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" data-toggle="collapse" data-target="#alt-name" aria-expanded="true" aria-controls="alt-name">
+                                <span class="only-icon">
+                                    <i aria-hidden="true" class="ic-altname"></i>
+                                </span>
+                                Uses a non-standard name
+                            </label>
+                            <div class="collapse" id="alt-name">
+                                <label>What name?</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" data-toggle="collapse" data-target="#config" aria-expanded="true" aria-controls="config">
+                                <span class="only-icon">
+                                    <i aria-hidden="true" class="ic-disabled"></i>
+                                </span>
+                                User must explicitly enable this feature.
+                            </label>
+                            <div class="collapse" id="config">
+                                <label>What is the full configuration strong that ships in the browser by default? (ie <code>media.peerconnection.enabled=off</code>)</label><input type="text">
+                                <label>What is the full configuration string required to enable this feature? (ie <code>media.peerconnection.enabled=on</code>) <input type="text"><br>
+                            </div>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" data-toggle="collapse" data-target="#protected" aria-expanded="true" aria-controls="protected" checked>
+                                <span class="only-icon">
+                                    <i aria-hidden="true" class="ic-protected"></i>
+                                </span>
+                                Additonal steps are required to get permission or certification for use.
+                            </label>
+                            <div class="collapse in" id="protected">
+                                <label>Please explain in footnotes.</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Footnote:</label>
+                        <textarea class="form-control" rows="3">User is prompted to grant access.
+                        </textarea>
+                    </div>
+
+                    <button type="button" class="btn btn-success">Save</button> &nbsp; <button type="button" class="btn btn-default">Cancel</button>
+                </form>
+
+
+
+        </dd>
+         <dt class="bc-add">
+           <span class="bc-supports-unknown bc-supports">17.0</span>
+           to
+           <span class="bc-supports-unknown bc-supports">20.0</span>
+           <button style="float: none" type="button" class="btn btn-default btn-sm">Expand</button></dd>
+        </dt>
+        <dt> <span class="bc-supports-no bc-supports">16.0
+          <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="../../4.0/support-sprite.gif" aria-hidden="true"></abbr>
+          <div class="bc-icons">
+            <abbr class="only-icon" title="Requires the -webkit- prefix.">
+              <span>Prefixed</span>
+              <i aria-hidden="true" class="ic-prefix"></i>
+            </abbr>
+            <abbr class="only-icon" title="Disabled by default.">
+              <span>Disabled.</span>
+              <i aria-hidden="true" class="ic-disabled"></i>
+            </abbr>
+            <abbr class="only-icon" title="See implementation notes.">
+              <span>Notes</span>
+              <i aria-hidden="true" class="ic-footnote"></i>
+            </abbr>
+          </div></span>
+        </dt>
+        <dd class="bc-edit"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></dd>
+        <dd> <abbr class="only-icon" title="See implementation notes.">
+          <span>Notes</span>
+          <i aria-hidden="true" class="ic-footnote"></i>
+        </abbr>allowed webkitRequestPointerLock() only in fullscreen.</dd>
+        <dd>
+          <abbr class="only-icon" title="Requires the -webkit- prefix.">
+            <span>Prefixed</span>
+            <i aria-hidden="true" class="ic-prefix"></i>
+          </abbr>
+          -webkit- prefix required.
+        </dd>
+        <dd>
+          <abbr class="only-icon" title="Disabled by default.">
+            <span>Disabled.</span>
+            <i aria-hidden="true" class="ic-disabled"></i>
+          </abbr> Disabled by default.
+        </dd>
+      </dl>
+    </section>
+
+
+
+<ul>
+    <li>Setting a flag automatically sets support to no</li>
+    <li>Setting a flag to unknown automatically clears the other fields</li>
+    <li>Adding a new support item automatically inherits from last support icon historically?</li>
+    <li>Auto select the appropirate prefix (opera would need a drop down)
+        <ul>
+            <li>Moderation tools should auto flag prefix miss matches</li>
+        </ul>
+    </li>
+    <li>When checkbox is checked the revieled fileds are required</li>
+    <li>Checking boxes populates the support cell visualization</li>
+    <li>Add button creates support form with a drop down for version number</li>
+    <li>Only write out landmark version numbers, if 17, 18, 19, 20 all have the same, collapse 18 &amp; 19 the way unknwn versions are collapsed, only add edit button instead of add button</li>
+    <li>Don't collapse versions that are current</li>
+</ul>
+
+<ul>
+    <li>only admins can add browser types?</li>
+    <li>need interface for users to add versions
+        <ul>
+            <li>can we check against authorative lists to auto generate these?</li>
+        </ul>
+    </li>
+    <li>browser choice is sticky, after selected for one edit is selected by default</li>
+</ul>
+
+</div>
+</div>
+
+</body>
+</html>

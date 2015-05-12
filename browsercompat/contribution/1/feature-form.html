@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Compat - Form - Feature</title>
+
+    <link rel="stylesheet" media="all" href="../bootstrap-3.3.4-dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" media="all" href="../../4.0/compat.css" >
+    <link rel="stylesheet" media="all" href="styles.css" >
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+<div class="row">
+<form>
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" value="">
+        <label><input type="checkbox"> Cannonical
+            <div class="bc-help"></div>
+        </label>
+    </div>
+    <div class="form-group">
+        <label>Slug <div class="bc-help"></div></label>
+        <input type="text" class="form-control" value="">
+    </div>
+
+    <div class="form-group">
+        <label>Status <div class="bc-help"></div></label><br>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="support-yes" value="yes" name="support">
+            <span class="only-icon">
+                <i class="ic-experimental" aria-hidden="true"></i>
+            </span>
+            Experimental
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="support-partial" value="partial" name="support">
+            <span class="only-icon">
+                <i class="ic-standard" aria-hidden="true"></i>
+            </span>
+            Standardized
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="support-no" value="no" name="support">
+            <span class="only-icon">
+                <i class="ic-stable" aria-hidden="true"></i>
+            </span>
+            Stable
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="support-unknown" value="unknown">
+            <span class="only-icon">
+                <i class="ic-obsolete" aria-hidden="true"></i>
+            </span>
+            Obsolete
+        </label>
+    </div>
+    <div class="form-group">
+        <label>MDN URI</label>
+        <input type="url" class="form-control" value="https://www.mozilla.org/en-US/firefox/37.0/releasenotes/">
+    </div>
+
+    <label>Children</label>
+
+<div class="form-group">
+    <label for="feature">Search for features</label>
+    <datalist id="features">
+        <select name="source">
+            <optgroup>API></optgroup>
+            <option value="AbstractWorker">AbstractWorker</option>
+            <option value="AbstractWorkeronerror">AbstractWorker.onerror</option>
+            <option value="AnalyserNode">AnalyserNode</option>
+            <option value="AnimationEvent">AnimationEvent</option>
+            <optgroup>CSS></optgroup>
+            <option value="active">:active</option>
+            <option value="after">::after</option>
+            <option value="basic-shape">&lt;basic-shape&gt;</option>
+            <option value="before">::before</option>
+            <optgroup>HTML></optgroup>
+            <option value="a">a</option>
+            <option value="abbr">abbr</option>
+            <option value="acronym">acronym</option>
+            <option value="address">address</option>
+            <optgroup>JavaScript></optgroup>
+            <option value="Array">Array</option>
+            <option value="Boolean">Boolean</option>
+            <option value="Collator">Collator</option>
+            <option value="Date">Date</option>
+            <optgroup>MathML></optgroup>
+            <option value="maction">maction</option>
+            <option value="math">math</option>
+            <option value="menclose">menclose</option>
+            <option value="merror">merror</option>
+            <optgroup>SVG></optgroup>
+            <option value="a">a</option>
+            <option value="altGlyph">altGlyph</option>
+            <option value="animate">animate</option>
+            <option value="circle">circle</option>
+        </select>
+    </datalist>
+    <input id="feature" name="feature" list="features" class="form-control">
+    <button type="button" class="btn btn-success">Add Feature</button>
+</div>
+
+    <button type="button" class="btn btn-success">Save</button><button type="button" class="btn btn-default">Cancel</button>
+</form>
+
+</div>
+
+<div class="row">
+    <ul>
+        <li>set slug to readonly once written</li>
+    </ul>
+</div>
+
+</div>
+
+
+</body>
+</html>

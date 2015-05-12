@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Compat - Contribution - Features</title>
+
+    <link rel="stylesheet" media="all" href="../bootstrap-3.3.4-dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" media="all" href="../../4.0/compat.css" >
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="row">
+    <label for="feature">Feature Search</label>
+    <datalist id="features">
+        <select name="source">
+            <optgroup>API></optgroup>
+            <option value="AbstractWorker">AbstractWorker</option>
+            <option value="AbstractWorkeronerror">AbstractWorker.onerror</option>
+            <option value="AnalyserNode">AnalyserNode</option>
+            <option value="AnimationEvent">AnimationEvent</option>
+            <optgroup>CSS></optgroup>
+            <option value="active">:active</option>
+            <option value="after">::after</option>
+            <option value="basic-shape">&lt;basic-shape&gt;</option>
+            <option value="before">::before</option>
+            <optgroup>HTML></optgroup>
+            <option value="a">a</option>
+            <option value="abbr">abbr</option>
+            <option value="acronym">acronym</option>
+            <option value="address">address</option>
+            <optgroup>JavaScript></optgroup>
+            <option value="Array">Array</option>
+            <option value="Boolean">Boolean</option>
+            <option value="Collator">Collator</option>
+            <option value="Date">Date</option>
+            <optgroup>MathML></optgroup>
+            <option value="maction">maction</option>
+            <option value="math">math</option>
+            <option value="menclose">menclose</option>
+            <option value="merror">merror</option>
+            <optgroup>SVG></optgroup>
+            <option value="a">a</option>
+            <option value="altGlyph">altGlyph</option>
+            <option value="animate">animate</option>
+            <option value="circle">circle</option>
+        </select>
+    </datalist>
+    <input id="feature" name="feature" list="features">
+</div>
+
+<div class="row">
+
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h2 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              API
+            </a>
+          </h2>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+          <ul>
+             <li><a href="feature-edit.html">AbstractWorker</a></li>
+             <li><a href="feature-edit.html">AbstractWorker.onerror</a></li>
+             <li><a href="feature-edit.html">AnalyserNode</a></li>
+             <li><a href="feature-edit.html">AnimationEvent</a></li>
+             <li>Etc...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h2 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              CSS
+            </a>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            <ul>
+             <li><a href="feature-edit.html">:active</a></li>
+             <li><a href="feature-edit.html">::after</a></li>
+             <li><a href="feature-edit.html">&lt;basic-shape></a></li>
+             <li><a href="feature-edit.html">::before</a></li>
+             <li>Etc...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h2 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              HTML
+            </a>
+          </h2>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            <ul>
+             <li><a href="feature-edit.html">a</a></li>
+             <li><a href="feature-edit.html">abbr</a></li>
+             <li><a href="feature-edit.html">acronym</a></li>
+             <li><a href="feature-edit.html">address</a></li>
+             <li>Etc...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingFour">
+          <h2 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              JavaScript
+            </a>
+          </h2>
+        </div>
+        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+          <div class="panel-body">
+            <ul>
+             <li><a href="feature-edit.html">Array</a></li>
+             <li><a href="feature-edit.html">Boolean</a></li>
+             <li><a href="feature-edit.html">Collator</a></li>
+             <li><a href="feature-edit.html">Date</a></li>
+             <li>Etc...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingFive">
+          <h2 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              MathML
+            </a>
+          </h2>
+        </div>
+        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+          <div class="panel-body">
+            <ul>
+             <li><a href="feature-edit.html">maction</a></li>
+             <li><a href="feature-edit.html">math</a></li>
+             <li><a href="feature-edit.html">menclose</a></li>
+             <li><a href="feature-edit.html">merror</a></li>
+             <li>Etc...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingSix">
+          <h2 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              SVG
+            </a>
+          </h2>
+        </div>
+        <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            <ul>
+             <li><a href="feature-edit.html">a</a></li>
+             <li><a href="feature-edit.html">altGlyph</a></li>
+             <li><a href="feature-edit.html">animate</a></li>
+             <li><a href="feature-edit.html">circle</a></li>
+             <li>Etc...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</div>
+
+</div>
+</body>
+</html>
