@@ -216,31 +216,31 @@
 <pre>
 &lt;tr class="bc-browsers">
     &lt;td>&lt;/td>
-    &lt;th class="bc-browser-chrome-desktop">
+    &lt;th class="bc-browser-chrome">
         &lt;abbr class="only-icon" title="Chrome for Desktop">
             &lt;span>Chrome for Desktop&lt;/span>
             &lt;i aria-hidden="true" class="ic-chrome">&lt;/i>
         &lt;/abbr>
     &lt;/th>
-    &lt;th class="bc-browser-firefox-desktop">
+    &lt;th class="bc-browser-firefox">
         &lt;abbr class="only-icon" title="Firefox for Desktop">
             &lt;span>Firefox for Desktop&lt;/span>
             &lt;i aria-hidden="true" class="ic-firefox">&lt;/i>
         &lt;/abbr>
     &lt;/th>
-    &lt;th class="bc-browser-internet-explorer-desktop">
+    &lt;th class="bc-browser-internet-explorer">
         &lt;abbr class="only-icon" title="Internet Explorer for Desktop">
             &lt;span>Internet Explorer for Desktop&lt;/span>
             &lt;i aria-hidden="true" class="ic-ie">&lt;/i>
         &lt;/abbr>
     &lt;/th>
-    &lt;th class="bc-browser-opera-desktop">
+    &lt;th class="bc-browser-opera">
         &lt;abbr class="only-icon" title="Opera for Desktop">
             &lt;span>Opera for Desktop&lt;/span>
             &lt;i aria-hidden="true" class="ic-opera">&lt;/i>
         &lt;/abbr>
     &lt;/th>
-    &lt;th class="bc-browser-safari-desktop">
+    &lt;th class="bc-browser-safari">
         &lt;abbr class="only-icon" title="Safari for Desktop">
             &lt;span>Safari for Desktop&lt;/span>
             &lt;i aria-hidden="true" class="ic-safari">&lt;/i>
@@ -252,27 +252,27 @@
             &lt;i aria-hidden="true" class="ic-chrome">&lt;/i>
         &lt;/abbr>
     &lt;/th>
-    &lt;th class="bc-browser-firefox-android">
+    &lt;th class="bc-browser-firefox_mobile">
         &lt;abbr class="only-icon" title="Firefox for Android">
             &lt;span>Firefox for Android&lt;/span>
             &lt;i aria-hidden="true" class="ic-firefox">&lt;/i>
             &lt;i aria-hidden="true" class="ic-android">&lt;/i>
         &lt;/abbr>
     &lt;/th>
-    &lt;th class="bc-browser-internet-explorer-mobile">
+    &lt;th class="bc-browser-ie_mobile">
         &lt;abbr class="only-icon" title="Internet Explorer for Mobile">
             &lt;span>Internet Explorer for Mobile&lt;/span>
             &lt;i aria-hidden="true" class="ic-ie">&lt;/i>
         &lt;/abbr>
     &lt;/th>
-    &lt;th class="bc-browser-opera-mobile">
+    &lt;th class="bc-browser-opera_mobile">
         &lt;abbr class="only-icon" title="Opera Mobile">
             &lt;span>Opera Mobile&lt;/span>
             &lt;i aria-hidden="true" class="ic-opera">&lt;/i>
             &lt;i aria-hidden="true" class="ic-mobile">&lt;/i>
         &lt;/abbr>
     &lt;/th>
-    &lt;th class="bc-browser-safari-mobile">
+    &lt;th class="bc-browser-safari_mobile">
         &lt;abbr class="only-icon" title="Safari Mobile">
             &lt;span>Safari Mobile&lt;/span>
             &lt;i aria-hidden="true" class="ic-safari">&lt;/i>
@@ -326,7 +326,7 @@
    <small>Determining the last version without a change could be complicated, sorry.</small></li>
   <li>The most basic support <code>&lt;td></code> has two classes on it <code>bc-supports-x</code> where x is <code>supports.support</code> and <code>bc-browser-x</code> where x = the browser slug. Browser slugs had not been finalized in the API when I wrote this code and the CSS will need to be updated once the slugs are finalized.
 <pre>
-&lt;td class="bc-supports-yes bc-browser-firefox-desktop">&lt;/td>
+&lt;td class="bc-supports-yes bc-browser-firefox">&lt;/td>
 </pre>
   </li>
   <li>The support cell also includes an icon for the level of support. The icon <code>title</code> and fallback text are not available from the API (see <a href="#icons">icons</a> for more details).
@@ -378,7 +378,7 @@
 </pre>
 <p>Full support cell example:</p>
 <pre>
-&lt;td class="bc-supports-yes bc-browser-firefox-desktop">
+&lt;td class="bc-supports-yes bc-browser-firefox">
   &lt;abbr title="Full support" class="bc-level bc-level-yes only-icon">
       &lt;span>Full support.&lt;/span>
       &lt;img src="support-sprite.gif" aria-hidden="true">
@@ -1086,7 +1086,7 @@
 
 </div>
 
-<h1>Sample Tables</h1>
+<h1 id="here">Sample Tables</h1>
 
 <p>Examples of how the above might look after being impelemented, if there is a descrepancy between the code in these tables and the code in the directions, use the code in the directions.</p>
 
@@ -1188,35 +1188,35 @@
         </tr>
         <tr class="bc-browsers">
             <td></td>
-            <th class="bc-browser-chrome-desktop">
+            <th class="bc-browser-chrome">
                 <abbr class="only-icon" title="Chrome for Desktop">
                     <span>Chrome for Desktop</span>
                     <i aria-hidden="true" class="ic-chrome"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-firefox-desktop">
+            <th class="bc-browser-firefox">
                 <abbr class="only-icon" title="Firefox for Desktop">
                     <span>Firefox for Desktop</span>
                     <i aria-hidden="true" class="ic-firefox"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-internet-explorer-desktop">
+            <th class="bc-browser-internet-explorer">
                 <abbr class="only-icon" title="Internet Explorer for Desktop">
                     <span>Internet Explorer for Desktop</span>
                     <i aria-hidden="true" class="ic-ie"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-opera-desktop">
+            <th class="bc-browser-opera">
                 <abbr class="only-icon" title="Opera for Desktop">
                     <span>Opera for Desktop</span>
                     <i aria-hidden="true" class="ic-opera"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-safari-desktop">
+            <th class="bc-browser-safari">
                 <abbr class="only-icon" title="Safari for Desktop">
                     <span>Safari for Desktop</span>
                     <i aria-hidden="true" class="ic-safari"></i>
@@ -1228,27 +1228,27 @@
                     <i aria-hidden="true" class="ic-chrome"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-firefox-android">
+            <th class="bc-browser-firefox_mobile">
                 <abbr class="only-icon" title="Firefox for Android">
                     <span>Firefox for Android</span>
                     <i aria-hidden="true" class="ic-firefox"></i>
                     <i aria-hidden="true" class="ic-android"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-internet-explorer-mobile">
+            <th class="bc-browser-ie_mobile">
                 <abbr class="only-icon" title="Internet Explorer for Mobile">
                     <span>Internet Explorer for Mobile</span>
                     <i aria-hidden="true" class="ic-ie"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-opera-mobile">
+            <th class="bc-browser-opera_mobile">
                 <abbr class="only-icon" title="Opera Mobile">
                     <span>Opera Mobile</span>
                     <i aria-hidden="true" class="ic-opera"></i>
                     <i aria-hidden="true" class="ic-mobile"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-safari-mobile">
+            <th class="bc-browser-safari_mobile">
                 <abbr class="only-icon" title="Safari Mobile">
                     <span>Safari Mobile</span>
                     <i aria-hidden="true" class="ic-safari"></i>
@@ -1259,7 +1259,7 @@
     <tbody>
         <tr>
             <th scope="row">Fake property</th>
-           <td class="bc-supports-partial bc-browser-chrome-desktop">
+           <td class="bc-supports-partial bc-browser-chrome">
                 <abbr title="Partial support." class="bc-level bc-level-partial only-icon"><span>Partial support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 23.0
               <div class="bc-icons">
@@ -1404,16 +1404,16 @@
 
 
             </td>
-            <td class="bc-supports-partial bc-browser-firefox-desktop">
+            <td class="bc-supports-partial bc-browser-firefox">
                 <abbr title="Partial support." class="bc-level bc-level-partial only-icon"><span>Partial support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Partial</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 9.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-           <td class="bc-supports-yes bc-browser-safari-desktop"> <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
+           <td class="bc-supports-yes bc-browser-safari"> <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 5.0
               <div class="bc-icons">
                 <a href="#safari-desktop-fakeproperty">
@@ -1427,13 +1427,13 @@
             <td class="bc-supports-yes bc-browser-chrome-android">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-mobile">
+            <td class="bc-supports-yes bc-browser-ie_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-             <td class="bc-supports-yes bc-browser-opera-mobile">
+             <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes
                 <div class="bc-icons">
@@ -1444,7 +1444,7 @@
                 </div>
 
                 </td>
-            <td class="bc-supports-no bc-browser-safari-mobile">
+            <td class="bc-supports-no bc-browser-safari_mobile">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
         </tr>
@@ -1520,35 +1520,35 @@
         </tr>
         <tr class="bc-browsers">
             <td></td>
-            <th class="bc-browser-chrome-desktop">
+            <th class="bc-browser-chrome">
                 <abbr class="only-icon" title="Chrome for Desktop">
                     <span>Chrome for Desktop</span>
                     <i aria-hidden="true" class="ic-chrome"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-firefox-desktop">
+            <th class="bc-browser-firefox">
                 <abbr class="only-icon" title="Firefox for Desktop">
                     <span>Firefox for Desktop</span>
                     <i aria-hidden="true" class="ic-firefox"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-internet-explorer-desktop">
+            <th class="bc-browser-internet-explorer">
                 <abbr class="only-icon" title="Internet Explorer for Desktop">
                     <span>Internet Explorer for Desktop</span>
                     <i aria-hidden="true" class="ic-ie"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-opera-desktop">
+            <th class="bc-browser-opera">
                 <abbr class="only-icon" title="Opera for Desktop">
                     <span>Opera for Desktop</span>
                     <i aria-hidden="true" class="ic-opera"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-safari-desktop">
+            <th class="bc-browser-safari">
                 <abbr class="only-icon" title="Safari for Desktop">
                     <span>Safari for Desktop</span>
                     <i aria-hidden="true" class="ic-safari"></i>
@@ -1566,7 +1566,7 @@
                     <i aria-hidden="true" class="ic-chrome"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-firefox-android">
+            <th class="bc-browser-firefox_mobile">
                 <abbr class="only-icon" title="Firefox for Android">
                     <span>Firefox for Android</span>
                     <i aria-hidden="true" class="ic-firefox"></i>
@@ -1580,20 +1580,20 @@
                     <i aria-hidden="true" class="ic-firefoxos"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-internet-explorer-mobile">
+            <th class="bc-browser-ie_mobile">
                 <abbr class="only-icon" title="Internet Explorer for Mobile">
                     <span>Internet Explorer for Mobile</span>
                     <i aria-hidden="true" class="ic-ie"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-opera-mobile">
+            <th class="bc-browser-opera_mobile">
                 <abbr class="only-icon" title="Opera Mobile">
                     <span>Opera Mobile</span>
                     <i aria-hidden="true" class="ic-opera"></i>
                     <i aria-hidden="true" class="ic-mobile"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-opera-mini">
+            <th class="bc-browser-opera_mini">
                 <abbr class="only-icon" title="Opera Mini">
                     <span>Opera Mini</span>
                     <i aria-hidden="true" class="ic-opera"></i>
@@ -1601,7 +1601,7 @@
                 </abbr>
             </th>
 
-            <th class="bc-browser-safari-mobile">
+            <th class="bc-browser-safari_mobile">
                 <abbr class="only-icon" title="Safari Mobile">
                     <span>Safari Mobile</span>
                     <i aria-hidden="true" class="ic-safari"></i>
@@ -1612,7 +1612,7 @@
     <tbody>
         <tr>
             <th scope="row">Fake property</th>
-           <td class="bc-supports-partial bc-browser-chrome-desktop">
+           <td class="bc-supports-partial bc-browser-chrome">
                 <abbr title="Partial support." class="bc-level bc-level-partial only-icon"><span>Partial support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 23.0
               <div class="bc-icons">
@@ -1754,16 +1754,16 @@
                     </dd>
                 </dl>
               </section>            </td>
-            <td class="bc-supports-partial bc-browser-firefox-desktop">
+            <td class="bc-supports-partial bc-browser-firefox">
                 <abbr title="Partial support." class="bc-level bc-level-partial only-icon"><span>Partial support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Partial</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 9.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-           <td class="bc-supports-yes bc-browser-safari-desktop"> <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
+           <td class="bc-supports-yes bc-browser-safari"> <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 5.0
 
               <div class="bc-icons">
@@ -1781,20 +1781,20 @@
             <td class="bc-supports-yes bc-browser-chrome-android">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
             <td class="bc-supports-unknown bc-browser-firefox-fxos"><abbr title="Unknown">?</abbr></td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-mobile">
+            <td class="bc-supports-yes bc-browser-ie_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-             <td class="bc-supports-yes bc-browser-opera-mobile">
+             <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-no bc-browser-opera-mini">
+            <td class="bc-supports-no bc-browser-opera_mini">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-no bc-browser-safari-mobile">
+            <td class="bc-supports-no bc-browser-safari_mobile">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
         </tr>
@@ -1870,13 +1870,13 @@
         </tr>
         <tr class="bc-browsers">
             <td></td>
-            <th class="bc-browser-chrome-desktop">
+            <th class="bc-browser-chrome">
                 <abbr class="only-icon" title="Chrome for Desktop">
                     <span>Chrome for Desktop</span>
                     <i aria-hidden="true" class="ic-chrome"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-firefox-desktop">
+            <th class="bc-browser-firefox">
                 <abbr class="only-icon" title="Firefox for Desktop">
                     <span>Firefox for Desktop</span>
                     <i aria-hidden="true" class="ic-firefox"></i>
@@ -1888,7 +1888,7 @@
                     <i aria-hidden="true" class="ic-chrome"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-safari-mobile">
+            <th class="bc-browser-safari_mobile">
                 <abbr class="only-icon" title="Safari Mobile">
                     <span>Safari Mobile</span>
                     <i aria-hidden="true" class="ic-safari"></i>
@@ -1899,7 +1899,7 @@
     <tbody>
         <tr>
             <th scope="row">Fake property</th>
-           <td class="bc-supports-partial bc-browser-chrome-desktop">
+           <td class="bc-supports-partial bc-browser-chrome">
                 <abbr title="Partial support." class="bc-level bc-level-partial only-icon"><span>Partial support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 23.0
               <div class="bc-icons">
@@ -2041,13 +2041,13 @@
                     </dd>
                 </dl>
               </section>            </td>
-            <td class="bc-supports-partial bc-browser-firefox-desktop">
+            <td class="bc-supports-partial bc-browser-firefox">
                 <abbr title="Partial support." class="bc-level bc-level-partial only-icon"><span>Partial support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Partial</td>
             <td class="bc-supports-yes bc-browser-chrome-android">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-no bc-browser-safari-mobile">
+            <td class="bc-supports-no bc-browser-safari_mobile">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
         </tr>
@@ -2123,35 +2123,35 @@
         </tr>
         <tr class="bc-browsers">
             <td></td>
-            <th class="bc-browser-chrome-desktop">
+            <th class="bc-browser-chrome">
                 <abbr class="only-icon" title="Chrome for Desktop">
                     <span>Chrome for Desktop</span>
                     <i aria-hidden="true" class="ic-chrome"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-firefox-desktop">
+            <th class="bc-browser-firefox">
                 <abbr class="only-icon" title="Firefox for Desktop">
                     <span>Firefox for Desktop</span>
                     <i aria-hidden="true" class="ic-firefox"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-internet-explorer-desktop">
+            <th class="bc-browser-internet-explorer">
                 <abbr class="only-icon" title="Internet Explorer for Desktop">
                     <span>Internet Explorer for Desktop</span>
                     <i aria-hidden="true" class="ic-ie"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-opera-desktop">
+            <th class="bc-browser-opera">
                 <abbr class="only-icon" title="Opera for Desktop">
                     <span>Opera for Desktop</span>
                     <i aria-hidden="true" class="ic-opera"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-safari-desktop">
+            <th class="bc-browser-safari">
                 <abbr class="only-icon" title="Safari for Desktop">
                     <span>Safari for Desktop</span>
                     <i aria-hidden="true" class="ic-safari"></i>
@@ -2163,7 +2163,7 @@
                     <i aria-hidden="true" class="ic-chrome"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-firefox-android">
+            <th class="bc-browser-firefox_mobile">
                 <abbr class="only-icon" title="Firefox">
                     <span>Firefox</span>
                     <i aria-hidden="true" class="ic-firefox"></i>
@@ -2173,13 +2173,13 @@
                     <i aria-hidden="true" class="ic-android"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-internet-explorer-mobile">
+            <th class="bc-browser-ie_mobile">
                 <abbr class="only-icon" title="Internet Explorer for Mobile">
                     <span>Internet Explorer for Mobile</span>
                     <i aria-hidden="true" class="ic-ie"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-opera-mobile">
+            <th class="bc-browser-opera_mobile">
                 <abbr class="only-icon" title="Opera">
                     <span>Opera</span>
                     <i aria-hidden="true" class="ic-opera"></i>
@@ -2189,7 +2189,7 @@
                     <i aria-hidden="true" class="ic-mobile"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-safari-mobile">
+            <th class="bc-browser-safari_mobile">
                 <abbr class="only-icon" title="Safari Mobile">
                     <span>Safari Mobile</span>
                     <i aria-hidden="true" class="ic-safari"></i>
@@ -2200,109 +2200,109 @@
     <tbody>
         <tr>
             <th scope="row">Basic support</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 2.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-safari-desktop">
+            <td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
             <td class="bc-supports-yes bc-browser-chrome-android">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 4.0</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-mobile">
+            <td class="bc-supports-yes bc-browser-ie_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
         </tr>
         <tr>
             <th scope="row">type</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 2.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-safari-desktop">
+            <td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
             <td class="bc-supports-yes bc-browser-chrome-android">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-mobile">
+            <td class="bc-supports-yes bc-browser-ie_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
         </tr>
         <tr>
             <th scope="row">type=button</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 3.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-safari-desktop">
+            <td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
             <td class="bc-supports-yes bc-browser-chrome-android">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-mobile">
+            <td class="bc-supports-yes bc-browser-ie_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-                            <td class="bc-supports-yes bc-browser-safari-mobile">
+                            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
         </tr>
         <tr>
             <th scope="row">type=checkbox</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 3.6
 
@@ -2322,38 +2322,38 @@
                 </dl>
               </section>
 
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 2.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-safari-desktop">
+            <td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
             <td class="bc-supports-yes bc-browser-chrome-android">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
             </td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-mobile">
+            <td class="bc-supports-yes bc-browser-ie_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
         </tr>
         <tr>
             <th scope="row">type=color</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 21.0</td>
-            <td class="bc-supports-partial bc-browser-firefox-desktop">
+            <td class="bc-supports-partial bc-browser-firefox">
                 <abbr title="Partial support." class="bc-level bc-level-partial only-icon"><span>Partial support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 29.0
               <div class="bc-icons">
@@ -2365,31 +2365,31 @@
                 </a>
               </div>
             </td>
-            <td class="bc-supports-no bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-no bc-browser-internet-explorer">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 11.0</td>
-            <td class="bc-supports-no bc-browser-safari-desktop">
+            <td class="bc-supports-no bc-browser-safari">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
             <td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td>
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.62</td>
-            <td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td>
+            <td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td>
         </tr>
         <tr>
             <th scope="row">type=date</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 5.0</td>
-            <td class="bc-supports-no bc-browser-firefox-desktop">
+            <td class="bc-supports-no bc-browser-firefox">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No
               <div class="bc-icons">
@@ -2401,13 +2401,13 @@
                 </a>
               </div>
             </td>
-            <td class="bc-supports-no bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-no bc-browser-internet-explorer">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.62</td>
-            <td class="bc-supports-yes bc-browser-safari-desktop">
+            <td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes
               <div class="bc-icons">
@@ -2422,22 +2422,22 @@
             <td class="bc-supports-no bc-browser-chrome-android">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-no bc-browser-internet-explorer-mobile">
+            <td class="bc-supports-no bc-browser-ie_mobile">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.62</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
         </tr>
         <tr>
             <th scope="row">type=datetime</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 5.0
 
@@ -2450,7 +2450,7 @@
                 </a>
               </div>
             </td>
-            <td class="bc-supports-no bc-browser-firefox-desktop">
+            <td class="bc-supports-no bc-browser-firefox">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No
               <div class="bc-icons">
@@ -2462,13 +2462,13 @@
                 </a>
               </div>
             </td>
-            <td class="bc-supports-no bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-no bc-browser-internet-explorer">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.62</td>
-            <td class="bc-supports-yes bc-browser-safari-desktop">
+            <td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes
               <div class="bc-icons">
@@ -2483,25 +2483,25 @@
             <td class="bc-supports-no bc-browser-chrome-android">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-no bc-browser-firefox-android">
+            <td class="bc-supports-no bc-browser-firefox_mobile">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-no bc-browser-internet-explorer-mobile">
+            <td class="bc-supports-no bc-browser-ie_mobile">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.62</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
         </tr>
         <tr>
             <th scope="row">type=datetime-local</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 5.0</td>
-            <td class="bc-supports-no bc-browser-firefox-desktop">
+            <td class="bc-supports-no bc-browser-firefox">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No
               <div class="bc-icons">
@@ -2513,13 +2513,13 @@
                 </a>
               </div>
             </td>
-            <td class="bc-supports-no bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-no bc-browser-internet-explorer">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.62</td>
-            <td class="bc-supports-partial bc-browser-safari-desktop">
+            <td class="bc-supports-partial bc-browser-safari">
                 <abbr title="Partial support." class="bc-level bc-level-partial only-icon"><span>Partial support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Partial
               <div class="bc-icons">
@@ -2534,43 +2534,43 @@
             <td class="bc-supports-no bc-browser-chrome-android">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-no bc-browser-firefox-android">
+            <td class="bc-supports-no bc-browser-firefox_mobile">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-no bc-browser-internet-explorer-mobile">
+            <td class="bc-supports-no bc-browser-ie_mobile">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.62</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
         </tr>
         <tr>
             <th scope="row">type=email</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 5.0</td>
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 4.0</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.62</td>
-            <td class="bc-supports-unknown bc-browser-safari-desktop"><abbr title="Unknown">?</abbr></td>
+            <td class="bc-supports-unknown bc-browser-safari"><abbr title="Unknown">?</abbr></td>
             <td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td>
-            <td class="bc-supports-no bc-browser-firefox-android">
+            <td class="bc-supports-no bc-browser-firefox_mobile">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td>
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 3.1
               <div class="bc-icons">
@@ -2585,26 +2585,26 @@
         </tr>
         <tr>
             <th scope="row">type=file</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 3.02</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-safari-desktop">
+            <td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
             <td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td>
-            <td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td>
-            <td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td>
-            <td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td>
+            <td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td>
+            <td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td>
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 8.0.2              <a href="history.html" title="View feature history" class="bc-history-link only-icon">
                 <span>History</span>
@@ -2624,74 +2624,74 @@
         </tr>
         <tr>
             <th scope="row">type=hidden</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 2.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-safari-desktop">
+            <td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
             <td class="bc-supports-yes bc-browser-chrome-android">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-mobile">
+            <td class="bc-supports-yes bc-browser-ie_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
         </tr>
             <th scope="row">type=image</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
 
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 2.0</td>
 
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-safari-desktop">
+            <td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-mobile">
+            <td class="bc-supports-yes bc-browser-ie_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
              <td class="bc-supports-yes bc-browser-chrome-android">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
         </tr>
         <tr>
             <th scope="row">type=month</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 5.0
 
@@ -2711,7 +2711,7 @@
               </section>
 
             </td>
-            <td class="bc-supports-no bc-browser-firefox-desktop">
+            <td class="bc-supports-no bc-browser-firefox">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No
               <div class="bc-icons">
@@ -2723,15 +2723,15 @@
                 </a>
               </div>
             </td>
-            <td class="bc-supports-no bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-no bc-browser-internet-explorer">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
 
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.62</td>
 
-            <td class="bc-supports-partial bc-browser-safari-desktop">
+            <td class="bc-supports-partial bc-browser-safari">
                 <abbr title="Partial support." class="bc-level bc-level-partial only-icon"><span>Partial support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Partial
               <div class="bc-icons">
@@ -2746,22 +2746,22 @@
             <td class="bc-supports-no bc-browser-chrome-android">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-no bc-browser-firefox-android">
+            <td class="bc-supports-no bc-browser-firefox_mobile">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-             <td class="bc-supports-no bc-browser-internet-explorer-mobile">
+             <td class="bc-supports-no bc-browser-ie_mobile">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.62</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
         </tr>
         <tr>
             <th scope="row">type=number</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 6.0
 
@@ -2781,8 +2781,8 @@
                 </dl>
               </section>
             </td>
-            <td class="bc-supports-yes  bc-browser-firefox-desktop">29.0</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes  bc-browser-firefox">29.0</td>
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.0
               <div class="bc-icons">
@@ -2794,10 +2794,10 @@
                 </a>
               </div>
             </td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.62</td>
-            <td class="bc-supports-yes bc-browser-safari-desktop">
+            <td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
             <td class="bc-supports-partial bc-browser-chrome-android">
@@ -2812,16 +2812,16 @@
                 </a>
               </div>
             </td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 29.0</td>
-            <td class="bc-supports-no bc-browser-internet-explorer-mobile">
+            <td class="bc-supports-no bc-browser-ie_mobile">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 4.0
               <div class="bc-icons">
@@ -2836,43 +2836,43 @@
         </tr>
         <tr>
             <th scope="row">type=password</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 2.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-safari-desktop">
+            <td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
             <td class="bc-supports-yes bc-browser-chrome-android">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-mobile">
+            <td class="bc-supports-yes bc-browser-ie_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
         </tr>
         <tr>
             <th scope="row">type=radio</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 3.6
               <a href="history.html" title="View feature history" class="bc-history-link only-icon">
@@ -2891,43 +2891,43 @@
                 </dl>
               </section>
             </td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 2.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-safari-desktop">
+            <td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
             <td class="bc-supports-yes bc-browser-chrome-android">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-mobile">
+            <td class="bc-supports-yes bc-browser-ie_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
         </tr>
         <tr>
             <th scope="row">type=range</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 5.0</td>
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 23.0</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 11.01
 
@@ -2948,185 +2948,185 @@
               </section>
 
             </td>
-            <td class="bc-supports-yes bc-browser-safari-desktop">
+            <td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
             <td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td>
-            <td class="bc-supports-no bc-browser-firefox-android">
+            <td class="bc-supports-no bc-browser-firefox_mobile">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td>
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 5.0</td>
         </tr>
         <tr>
             <th scope="row">type=reset</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 2.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-safari-desktop">
+            <td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
             <td class="bc-supports-yes bc-browser-chrome-android">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-mobile">
+            <td class="bc-supports-yes bc-browser-ie_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
         </tr>
         <tr>
             <th scope="row">type=search</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 5.0</td>
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 4.0</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 11.01</td>
-            <td class="bc-supports-yes bc-browser-safari-desktop">
+            <td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
             <td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr>
+            <td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr>
                 4.0</td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.62</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 4.0</td>
         </tr>
         <tr>
             <th scope="row">type=submit</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 2.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-safari-desktop">
+            <td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
             <td class="bc-supports-yes bc-browser-chrome-android">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-mobile">
+            <td class="bc-supports-yes bc-browser-ie_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
         </tr>
         <tr>
             <th scope="row">type=tel</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 5.0</td>
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 4.0</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 11.01</td>
-            <td class="bc-supports-unknown bc-browser-safari-desktop"><abbr title="Unknown">?</abbr></td>
+            <td class="bc-supports-unknown bc-browser-safari"><abbr title="Unknown">?</abbr></td>
             <td class="bc-supports-yes bc-browser-chrome-android">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 2.3</td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 4.0</td>
-            <td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td>
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.62</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 3.1</td>
         </tr>
         <tr>
             <th scope="row">type=text</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 2.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-safari-desktop">
+            <td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
             <td class="bc-supports-yes bc-browser-chrome-android">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-mobile">
+            <td class="bc-supports-yes bc-browser-ie_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
         </tr>
         <tr>
             <th scope="row">type=time</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 5.0</td>
-            <td class="bc-supports-no bc-browser-firefox-desktop">
+            <td class="bc-supports-no bc-browser-firefox">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No
               <div class="bc-icons">
@@ -3138,13 +3138,13 @@
                 </a>
               </div>
             </td>
-            <td class="bc-supports-no bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-no bc-browser-internet-explorer">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.62</td>
-            <td class="bc-supports-partial bc-browser-safari-desktop">
+            <td class="bc-supports-partial bc-browser-safari">
                 <abbr title="Partial support." class="bc-level bc-level-partial only-icon"><span>Partial support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Partial
               <div class="bc-icons">
@@ -3159,43 +3159,43 @@
             <td class="bc-supports-no bc-browser-chrome-android">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-no bc-browser-firefox-android">
+            <td class="bc-supports-no bc-browser-firefox_mobile">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-no bc-browser-internet-explorer-mobile">
+            <td class="bc-supports-no bc-browser-ie_mobile">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 No</td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.62</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
         </tr>
         <tr>
             <th scope="row">type=url</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 5.0</td>
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 4.0</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.62</td>
-            <td class="bc-supports-unknown bc-browser-safari-desktop"><abbr title="Unknown">?</abbr></td>
+            <td class="bc-supports-unknown bc-browser-safari"><abbr title="Unknown">?</abbr></td>
             <td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 4.0</td>
-            <td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td>
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.62</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 3.1
               <div class="bc-icons">
@@ -3210,7 +3210,7 @@
         </tr>
         <tr>
             <th scope="row">formnovalidate</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.0
 
@@ -3245,31 +3245,31 @@
                     </dd>
               </dl>
               </section>            </td>
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 4.0</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.62</td>
-            <td class="bc-supports-unknown bc-browser-safari-desktop"><abbr title="Unknown">?</abbr></td>
+            <td class="bc-supports-unknown bc-browser-safari"><abbr title="Unknown">?</abbr></td>
             <td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 4.0</td>
-            <td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td>
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.62</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 3.1</td>
         </tr>
         <tr>
             <th scope="row">multiple</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 5.0              <a href="history.html" title="View feature history" class="bc-history-link only-icon">
                 <span>History</span>
@@ -3288,7 +3288,7 @@
               </section>
 
             </td>
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes
 
@@ -3309,10 +3309,10 @@
               </section>
 
             </td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 10.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 11.01
 
@@ -3333,16 +3333,16 @@
               </section>
 
             </td>
-            <td class="bc-supports-unknown bc-browser-safari-desktop"><abbr title="Unknown">?</abbr></td>
+            <td class="bc-supports-unknown bc-browser-safari"><abbr title="Unknown">?</abbr></td>
             <td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td>
-            <td class="bc-supports-yes bc-browser-opera-mobile">
+            <td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td>
+            <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td>
+            <td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td>
         </tr>
     </tbody>
 </table>
@@ -3451,35 +3451,35 @@
         </tr>
         <tr class="bc-browsers">
             <td></td>
-            <th class="bc-browser-chrome-desktop">
+            <th class="bc-browser-chrome">
                 <abbr class="only-icon" title="Chrome for Desktop">
                     <span>Chrome for Desktop</span>
                     <i aria-hidden="true" class="ic-chrome"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-firefox-desktop">
+            <th class="bc-browser-firefox">
                 <abbr class="only-icon" title="Firefox for Desktop">
                     <span>Firefox for Desktop</span>
                     <i aria-hidden="true" class="ic-firefox"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-internet-explorer-desktop">
+            <th class="bc-browser-internet-explorer">
                 <abbr class="only-icon" title="Internet Explorer for Desktop">
                     <span>Internet Explorer for Desktop</span>
                     <i aria-hidden="true" class="ic-ie"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-opera-desktop">
+            <th class="bc-browser-opera">
                 <abbr class="only-icon" title="Opera for Desktop">
                     <span>Opera for Desktop</span>
                     <i aria-hidden="true" class="ic-opera"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-safari-desktop">
+            <th class="bc-browser-safari">
                 <abbr class="only-icon" title="Safari for Desktop">
                     <span>Safari for Desktop</span>
                     <i aria-hidden="true" class="ic-safari"></i>
@@ -3491,27 +3491,27 @@
                     <i aria-hidden="true" class="ic-chrome"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-firefox-android">
+            <th class="bc-browser-firefox_mobile">
                 <abbr class="only-icon" title="Firefox for Android">
                     <span>Firefox for Android</span>
                     <i aria-hidden="true" class="ic-firefox"></i>
                     <i aria-hidden="true" class="ic-android"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-internet-explorer-mobile">
+            <th class="bc-browser-ie_mobile">
                 <abbr class="only-icon" title="Internet Explorer for Mobile">
                     <span>Internet Explorer for Mobile</span>
                     <i aria-hidden="true" class="ic-ie"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-opera-mobile">
+            <th class="bc-browser-opera_mobile">
                 <abbr class="only-icon" title="Opera Mobile">
                     <span>Opera Mobile</span>
                     <i aria-hidden="true" class="ic-opera"></i>
                     <i aria-hidden="true" class="ic-mobile"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-safari-mobile">
+            <th class="bc-browser-safari_mobile">
                 <abbr class="only-icon" title="Safari Mobile">
                     <span>Safari Mobile</span>
                     <i aria-hidden="true" class="ic-safari"></i>
@@ -3522,34 +3522,34 @@
     <tbody>
         <tr>
             <th scope="row">Basic Support</th>
-           <td class="bc-supports-yes bc-browser-chrome-desktop">
+           <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes
             </td>
-            <td class="bc-supports-yes bc-browser-firefox-desktop">
+            <td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.5</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            <td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 9.0</td>
-            <td class="bc-supports-yes bc-browser-opera-desktop">
+            <td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-           <td class="bc-supports-yes bc-browser-safari-desktop"> <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
+           <td class="bc-supports-yes bc-browser-safari"> <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
             <td class="bc-supports-yes bc-browser-chrome-android">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-firefox-android">
+            <td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0</td>
-            <td class="bc-supports-yes bc-browser-internet-explorer-mobile">
+            <td class="bc-supports-yes bc-browser-ie_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-             <td class="bc-supports-yes bc-browser-opera-mobile">
+             <td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
-            <td class="bc-supports-yes bc-browser-safari-mobile">
+            <td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 Yes</td>
         </tr>
@@ -3583,35 +3583,35 @@
         </tr>
         <tr class="bc-browsers">
             <td></td>
-            <th class="bc-browser-chrome-desktop">
+            <th class="bc-browser-chrome">
                 <abbr class="only-icon" title="Chrome for Desktop">
                     <span>Chrome for Desktop</span>
                     <i aria-hidden="true" class="ic-chrome"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-firefox-desktop">
+            <th class="bc-browser-firefox">
                 <abbr class="only-icon" title="Firefox for Desktop">
                     <span>Firefox for Desktop</span>
                     <i aria-hidden="true" class="ic-firefox"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-internet-explorer-desktop">
+            <th class="bc-browser-internet-explorer">
                 <abbr class="only-icon" title="Internet Explorer for Desktop">
                     <span>Internet Explorer for Desktop</span>
                     <i aria-hidden="true" class="ic-ie"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-opera-desktop">
+            <th class="bc-browser-opera">
                 <abbr class="only-icon" title="Opera for Desktop">
                     <span>Opera for Desktop</span>
                     <i aria-hidden="true" class="ic-opera"></i>
                 </abbr>
             </th>
 
-            <th class="bc-browser-safari-desktop">
+            <th class="bc-browser-safari">
                 <abbr class="only-icon" title="Safari for Desktop">
                     <span>Safari for Desktop</span>
                     <i aria-hidden="true" class="ic-safari"></i>
@@ -3623,27 +3623,27 @@
                     <i aria-hidden="true" class="ic-chrome"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-firefox-android">
+            <th class="bc-browser-firefox_mobile">
                 <abbr class="only-icon" title="Firefox for Android">
                     <span>Firefox for Android</span>
                     <i aria-hidden="true" class="ic-firefox"></i>
                     <i aria-hidden="true" class="ic-android"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-internet-explorer-mobile">
+            <th class="bc-browser-ie_mobile">
                 <abbr class="only-icon" title="Internet Explorer for Mobile">
                     <span>Internet Explorer for Mobile</span>
                     <i aria-hidden="true" class="ic-ie"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-opera-mobile">
+            <th class="bc-browser-opera_mobile">
                 <abbr class="only-icon" title="Opera Mobile">
                     <span>Opera Mobile</span>
                     <i aria-hidden="true" class="ic-opera"></i>
                     <i aria-hidden="true" class="ic-mobile"></i>
                 </abbr>
             </th>
-            <th class="bc-browser-safari-mobile">
+            <th class="bc-browser-safari_mobile">
                 <abbr class="only-icon" title="Safari Mobile">
                     <span>Safari Mobile</span>
                     <i aria-hidden="true" class="ic-safari"></i>
@@ -3654,9 +3654,9 @@
     <tbody>
         <tr>
             <th scope="row">Basic support</th>
-            <td class="bc-supports-yes bc-browser-chrome-desktop">
+            <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                6.0</td><td class="bc-supports-yes bc-browser-firefox-desktop">
+                6.0</td><td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 6.0
 
@@ -3698,15 +3698,15 @@
                 </dl>
               </section>
 
-            </td><td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            </td><td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                10.0</td><td class="bc-supports-yes bc-browser-opera-desktop">
+                10.0</td><td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                11.0</td><td class="bc-supports-yes bc-browser-safari-desktop">
+                11.0</td><td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 5.2</td><td class="bc-supports-yes bc-browser-chrome-android">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                Yes</td><td class="bc-supports-yes bc-browser-firefox-android">
+                Yes</td><td class="bc-supports-yes bc-browser-firefox_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 6.0
               <div class="bc-icons">
@@ -3717,11 +3717,11 @@
                     </abbr>
                 </a>
               </div>
-            </td><td class="bc-supports-no bc-browser-internet-explorer-mobile">
+            </td><td class="bc-supports-no bc-browser-ie_mobile">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                No</td><td class="bc-supports-yes bc-browser-opera-mobile">
+                No</td><td class="bc-supports-yes bc-browser-opera_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                11.0</td><td class="bc-supports-yes bc-browser-safari-mobile">
+                11.0</td><td class="bc-supports-yes bc-browser-safari_mobile">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 7.0
               <div class="bc-icons">
@@ -3786,35 +3786,35 @@
     </tr>
     <tr class="bc-browsers">
       <td></td>
-      <th class="bc-browser-chrome-desktop">
+      <th class="bc-browser-chrome">
         <abbr class="only-icon" title="Chrome for Desktop">
           <span>Chrome for Desktop</span>
           <i aria-hidden="true" class="ic-chrome"></i>
         </abbr>
       </th>
 
-      <th class="bc-browser-firefox-desktop">
+      <th class="bc-browser-firefox">
         <abbr class="only-icon" title="Firefox for Desktop">
           <span>Firefox for Desktop</span>
           <i aria-hidden="true" class="ic-firefox"></i>
         </abbr>
       </th>
 
-      <th class="bc-browser-internet-explorer-desktop">
+      <th class="bc-browser-internet-explorer">
         <abbr class="only-icon" title="Internet Explorer for Desktop">
           <span>Internet Explorer for Desktop</span>
           <i aria-hidden="true" class="ic-ie"></i>
         </abbr>
       </th>
 
-      <th class="bc-browser-opera-desktop">
+      <th class="bc-browser-opera">
         <abbr class="only-icon" title="Opera for Desktop">
           <span>Opera for Desktop</span>
           <i aria-hidden="true" class="ic-opera"></i>
         </abbr>
       </th>
 
-      <th class="bc-browser-safari-desktop">
+      <th class="bc-browser-safari">
         <abbr class="only-icon" title="Safari for Desktop">
           <span>Safari for Desktop</span>
           <i aria-hidden="true" class="ic-safari"></i>
@@ -3826,27 +3826,27 @@
           <i aria-hidden="true" class="ic-chrome"></i>
         </abbr>
       </th>
-      <th class="bc-browser-firefox-android">
+      <th class="bc-browser-firefox_mobile">
         <abbr class="only-icon" title="Firefox for Android">
           <span>Firefox for Android</span>
           <i aria-hidden="true" class="ic-firefox"></i>
           <i aria-hidden="true" class="ic-android"></i>
         </abbr>
       </th>
-      <th class="bc-browser-internet-explorer-mobile">
+      <th class="bc-browser-ie_mobile">
         <abbr class="only-icon" title="Internet Explorer for Mobile">
           <span>Internet Explorer for Mobile</span>
           <i aria-hidden="true" class="ic-ie"></i>
         </abbr>
       </th>
-      <th class="bc-browser-opera-mobile">
+      <th class="bc-browser-opera_mobile">
         <abbr class="only-icon" title="Opera Mobile">
           <span>Opera Mobile</span>
           <i aria-hidden="true" class="ic-opera"></i>
           <i aria-hidden="true" class="ic-mobile"></i>
         </abbr>
       </th>
-      <th class="bc-browser-safari-mobile">
+      <th class="bc-browser-safari_mobile">
         <abbr class="only-icon" title="Safari Mobile">
           <span>Safari Mobile</span>
           <i aria-hidden="true" class="ic-safari"></i>
@@ -3858,35 +3858,35 @@
     <tr>
       <th scope="row">Basic support</th>
 
-      <td class="bc-supports-yes bc-browser-chrome-desktop">
+      <td class="bc-supports-yes bc-browser-chrome">
         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-        1.0</td><td class="bc-supports-yes bc-browser-firefox-desktop">
+        1.0</td><td class="bc-supports-yes bc-browser-firefox">
         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-        1.0</td><td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+        1.0</td><td class="bc-supports-yes bc-browser-internet-explorer">
         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-        Yes</td><td class="bc-supports-yes bc-browser-opera-desktop">
+        Yes</td><td class="bc-supports-yes bc-browser-opera">
         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-        Yes</td><td class="bc-supports-yes bc-browser-safari-desktop">
+        Yes</td><td class="bc-supports-yes bc-browser-safari">
         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
         1.0</td><td class="bc-supports-yes bc-browser-chrome-android">
         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-        1.0</td><td class="bc-supports-yes bc-browser-firefox-android">
+        1.0</td><td class="bc-supports-yes bc-browser-firefox_mobile">
         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-        1.0</td><td class="bc-supports-yes bc-browser-internet-explorer-mobile">
+        1.0</td><td class="bc-supports-yes bc-browser-ie_mobile">
         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-        Yes</td><td class="bc-supports-yes bc-browser-opera-mobile">
+        Yes</td><td class="bc-supports-yes bc-browser-opera_mobile">
         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-        Yes</td><td class="bc-supports-yes bc-browser-safari-mobile">
+        Yes</td><td class="bc-supports-yes bc-browser-safari_mobile">
         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
         1.0</td></tr>
         <tr>
           <th scope="row"><code>children</code></th>
 
-          <td class="bc-supports-yes bc-browser-chrome-desktop">
+          <td class="bc-supports-yes bc-browser-chrome">
             <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-            Yes</td><td class="bc-supports-yes bc-browser-firefox-desktop">
+            Yes</td><td class="bc-supports-yes bc-browser-firefox">
             <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-            3.0</td><td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            3.0</td><td class="bc-supports-yes bc-browser-internet-explorer">
             <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
             9.0
             <a href="history.html" title="View feature history" class="bc-history-link only-icon">
@@ -3934,57 +3934,57 @@
                 </dl>
               </section>
 
-            </td><td class="bc-supports-yes bc-browser-opera-desktop">
+            </td><td class="bc-supports-yes bc-browser-opera">
             <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-            Yes</td><td class="bc-supports-no bc-browser-safari-desktop">
+            Yes</td><td class="bc-supports-no bc-browser-safari">
             <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-            No</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td></tr>
+            No</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td></tr>
             <tr>
               <th scope="row">
                 <code>childElementCount</code>, <code>nextElementSibling</code>, <code>previousElementSibling</code>
               </th>
 
-              <td class="bc-supports-yes bc-browser-chrome-desktop">
+              <td class="bc-supports-yes bc-browser-chrome">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                Yes</td><td class="bc-supports-yes bc-browser-firefox-desktop">
+                Yes</td><td class="bc-supports-yes bc-browser-firefox">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                3.5</td><td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+                3.5</td><td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                9.0</td><td class="bc-supports-yes bc-browser-opera-desktop">
+                9.0</td><td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                Yes</td><td class="bc-supports-yes bc-browser-safari-desktop">
+                Yes</td><td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                Yes</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td></tr>
+                Yes</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td></tr>
                 <tr>
                   <th scope="row">
                     <code>firstElementChild</code>, <code>lastElementChild</code>
                   </th>
 
-                  <td class="bc-supports-yes bc-browser-chrome-desktop">
+                  <td class="bc-supports-yes bc-browser-chrome">
                     <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                    Yes</td><td class="bc-supports-yes bc-browser-firefox-desktop">
+                    Yes</td><td class="bc-supports-yes bc-browser-firefox">
                     <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                    3.0</td><td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+                    3.0</td><td class="bc-supports-yes bc-browser-internet-explorer">
                     <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                    9.0</td><td class="bc-supports-yes bc-browser-opera-desktop">
+                    9.0</td><td class="bc-supports-yes bc-browser-opera">
                     <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                    Yes</td><td class="bc-supports-yes bc-browser-safari-desktop">
+                    Yes</td><td class="bc-supports-yes bc-browser-safari">
                     <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                    Yes</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td></tr>
+                    Yes</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td></tr>
                     <tr>
                       <th scope="row">
                         <code>classList</code>
                       </th>
 
-                      <td class="bc-supports-yes bc-browser-chrome-desktop">
+                      <td class="bc-supports-yes bc-browser-chrome">
                         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                        Yes</td><td class="bc-supports-yes bc-browser-firefox-desktop">
+                        Yes</td><td class="bc-supports-yes bc-browser-firefox">
                         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                        3.6</td><td class="bc-supports-unknown bc-browser-internet-explorer-desktop"><abbr title="Unknown">?</abbr></td><td class="bc-supports-yes bc-browser-opera-desktop">
+                        3.6</td><td class="bc-supports-unknown bc-browser-internet-explorer"><abbr title="Unknown">?</abbr></td><td class="bc-supports-yes bc-browser-opera">
                         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                        Yes</td><td class="bc-supports-yes bc-browser-safari-desktop">
+                        Yes</td><td class="bc-supports-yes bc-browser-safari">
                         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                        Yes</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td></tr>
+                        Yes</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td></tr>
                         <tr>
                           <th scope="row">
                             <code>outterHTML</code>
@@ -3995,17 +3995,17 @@
                               </span>
                             </div>
                           </th>
-                          <td class="bc-supports-yes bc-browser-chrome-desktop">
+                          <td class="bc-supports-yes bc-browser-chrome">
                             <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                            Yes</td><td class="bc-supports-yes bc-browser-firefox-desktop">
+                            Yes</td><td class="bc-supports-yes bc-browser-firefox">
                             <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                            11.0</td><td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+                            11.0</td><td class="bc-supports-yes bc-browser-internet-explorer">
                             <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                            Yes</td><td class="bc-supports-yes bc-browser-opera-desktop">
+                            Yes</td><td class="bc-supports-yes bc-browser-opera">
                             <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                            Yes</td><td class="bc-supports-yes bc-browser-safari-desktop">
+                            Yes</td><td class="bc-supports-yes bc-browser-safari">
                             <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                            Yes</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td></tr>
+                            Yes</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td></tr>
                             <tr>
                               <th scope="row">
                                 <code>oncopy</code>, <code>oncut</code>, <code>onpaste</code>
@@ -4016,15 +4016,15 @@
                                   </span>
                                 </div>
                               </th>
-                              <td class="bc-supports-no bc-browser-chrome-desktop">
+                              <td class="bc-supports-no bc-browser-chrome">
                                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                                No</td><td class="bc-supports-yes bc-browser-firefox-desktop">
+                                No</td><td class="bc-supports-yes bc-browser-firefox">
                                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                                3.0</td><td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+                                3.0</td><td class="bc-supports-yes bc-browser-internet-explorer">
                                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                                Yes</td><td class="bc-supports-unknown bc-browser-opera-desktop"><abbr title="Unknown">?</abbr></td><td class="bc-supports-no bc-browser-safari-desktop">
+                                Yes</td><td class="bc-supports-unknown bc-browser-opera"><abbr title="Unknown">?</abbr></td><td class="bc-supports-no bc-browser-safari">
                                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                                No</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td></tr>
+                                No</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td></tr>
                                 <tr>
                                   <th scope="row">
                                     <code>matches()</code>
@@ -4036,7 +4036,7 @@
                                     </div>
                                   </th>
 
-                                  <td class="bc-supports-yes bc-browser-chrome-desktop">
+                                  <td class="bc-supports-yes bc-browser-chrome">
                                     <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                                     Yes
                                     <div class="bc-icons">
@@ -4045,7 +4045,7 @@
                                         <i aria-hidden="true" class="ic-altname"></i>
                                       </abbr>
                                     </div>
-                                  </td><td class="bc-supports-yes bc-browser-firefox-desktop">
+                                  </td><td class="bc-supports-yes bc-browser-firefox">
                                   <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                                   34.0
                                   <a href="history.html" title="View feature history" class="bc-history-link only-icon">
@@ -4075,7 +4075,7 @@
                                           Uses non-standard name: mozMatchesSelector.
                                         </dd>
                                       </dl>
-                                    </section>                                  </td><td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+                                    </section>                                  </td><td class="bc-supports-yes bc-browser-internet-explorer">
                                   <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                                   9.0
                                   <div class="bc-icons">
@@ -4084,7 +4084,7 @@
                                       <i aria-hidden="true" class="ic-altname"></i>
                                     </abbr>
                                   </div>
-                                </td><td class="bc-supports-yes bc-browser-opera-desktop">
+                                </td><td class="bc-supports-yes bc-browser-opera">
                                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                                 11.5
                                 <div class="bc-icons">
@@ -4133,7 +4133,7 @@
                                   </dl>
                                 </section>
 
-                              </td><td class="bc-supports-yes bc-browser-safari-desktop">
+                              </td><td class="bc-supports-yes bc-browser-safari">
                               <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                               5.0
                               <div class="bc-icons">
@@ -4142,10 +4142,10 @@
                                   <i aria-hidden="true" class="ic-altname"></i>
                                 </abbr>
                               </div>
-                            </td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td></tr>
+                            </td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td></tr>
                             <tr>
                               <th scope="row">requestPointerLock()</th>
-                              <td class="bc-supports-partial bc-browser-chrome-desktop">
+                              <td class="bc-supports-partial bc-browser-chrome">
                                 <abbr title="Partial support." class="bc-level bc-level-partial only-icon"><span>Partial support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                                 23.0
                                 <div class="bc-icons">
@@ -4289,7 +4289,7 @@
                                       </abbr> Disabled by default.
                                     </dd>
                                   </dl>
-                                </section>                              </td><td class="bc-supports-partial bc-browser-firefox-desktop">
+                                </section>                              </td><td class="bc-supports-partial bc-browser-firefox">
                               <abbr title="Partial support." class="bc-level bc-level-partial only-icon"><span>Partial support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                               14.0
                               <div class="bc-icons">
@@ -4298,13 +4298,13 @@
                                   <i aria-hidden="true" class="ic-prefix"></i>
                                 </abbr>
                               </div>
-                            </td><td class="bc-supports-no bc-browser-internet-explorer-desktop">
+                            </td><td class="bc-supports-no bc-browser-internet-explorer">
                             <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                            No</td><td class="bc-supports-no bc-browser-opera-desktop">
+                            No</td><td class="bc-supports-no bc-browser-opera">
                             <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                            No</td><td class="bc-supports-no bc-browser-safari-desktop">
+                            No</td><td class="bc-supports-no bc-browser-safari">
                             <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                            No</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td></tr>
+                            No</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td></tr>
                             <tr>
                               <th scope="row">
                                 <code>undoManager</code> and <code>undoScope</code>
@@ -4316,9 +4316,9 @@
                                 </div>
                               </th>
 
-                              <td class="bc-supports-no bc-browser-chrome-desktop">
+                              <td class="bc-supports-no bc-browser-chrome">
                                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                                No</td><td class="bc-supports-yes bc-browser-firefox-desktop">
+                                No</td><td class="bc-supports-yes bc-browser-firefox">
                                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                                 Yes
                                 <div class="bc-icons">
@@ -4327,13 +4327,13 @@
                                     <i aria-hidden="true" class="ic-altname"></i>
                                   </abbr>
                                 </div>
-                              </td><td class="bc-supports-no bc-browser-internet-explorer-desktop">
+                              </td><td class="bc-supports-no bc-browser-internet-explorer">
                               <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                              No</td><td class="bc-supports-no bc-browser-opera-desktop">
+                              No</td><td class="bc-supports-no bc-browser-opera">
                               <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                              No</td><td class="bc-supports-no bc-browser-safari-desktop">
+                              No</td><td class="bc-supports-no bc-browser-safari">
                               <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                              No</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr>
+                              No</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr>
                             </td>
                           </tr>
                         </tbody>
@@ -4411,35 +4411,35 @@
     </tr>
     <tr class="bc-browsers">
       <td></td>
-      <th class="bc-browser-chrome-desktop">
+      <th class="bc-browser-chrome">
         <abbr class="only-icon" title="Chrome for Desktop">
           <span>Chrome for Desktop</span>
           <i aria-hidden="true" class="ic-chrome"></i>
         </abbr>
       </th>
 
-      <th class="bc-browser-firefox-desktop">
+      <th class="bc-browser-firefox">
         <abbr class="only-icon" title="Firefox for Desktop">
           <span>Firefox for Desktop</span>
           <i aria-hidden="true" class="ic-firefox"></i>
         </abbr>
       </th>
 
-      <th class="bc-browser-internet-explorer-desktop">
+      <th class="bc-browser-internet-explorer">
         <abbr class="only-icon" title="Internet Explorer for Desktop">
           <span>Internet Explorer for Desktop</span>
           <i aria-hidden="true" class="ic-ie"></i>
         </abbr>
       </th>
 
-      <th class="bc-browser-opera-desktop">
+      <th class="bc-browser-opera">
         <abbr class="only-icon" title="Opera for Desktop">
           <span>Opera for Desktop</span>
           <i aria-hidden="true" class="ic-opera"></i>
         </abbr>
       </th>
 
-      <th class="bc-browser-safari-desktop">
+      <th class="bc-browser-safari">
         <abbr class="only-icon" title="Safari for Desktop">
           <span>Safari for Desktop</span>
           <i aria-hidden="true" class="ic-safari"></i>
@@ -4451,27 +4451,27 @@
           <i aria-hidden="true" class="ic-chrome"></i>
         </abbr>
       </th>
-      <th class="bc-browser-firefox-android">
+      <th class="bc-browser-firefox_mobile">
         <abbr class="only-icon" title="Firefox for Android">
           <span>Firefox for Android</span>
           <i aria-hidden="true" class="ic-firefox"></i>
           <i aria-hidden="true" class="ic-android"></i>
         </abbr>
       </th>
-      <th class="bc-browser-internet-explorer-mobile">
+      <th class="bc-browser-ie_mobile">
         <abbr class="only-icon" title="Internet Explorer for Mobile">
           <span>Internet Explorer for Mobile</span>
           <i aria-hidden="true" class="ic-ie"></i>
         </abbr>
       </th>
-      <th class="bc-browser-opera-mobile">
+      <th class="bc-browser-opera_mobile">
         <abbr class="only-icon" title="Opera Mobile">
           <span>Opera Mobile</span>
           <i aria-hidden="true" class="ic-opera"></i>
           <i aria-hidden="true" class="ic-mobile"></i>
         </abbr>
       </th>
-      <th class="bc-browser-safari-mobile">
+      <th class="bc-browser-safari_mobile">
         <abbr class="only-icon" title="Safari Mobile">
           <span>Safari Mobile</span>
           <i aria-hidden="true" class="ic-safari"></i>
@@ -4483,29 +4483,29 @@
     <tr>
     <th scope="row"><code>none</code>, <code>inline</code> and <code>block</code></th>
 
-      <td class="bc-supports-yes bc-browser-chrome-desktop">
+      <td class="bc-supports-yes bc-browser-chrome">
         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-        1.0</td><td class="bc-supports-yes bc-browser-firefox-desktop">
+        1.0</td><td class="bc-supports-yes bc-browser-firefox">
         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-        1.0</td><td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+        1.0</td><td class="bc-supports-yes bc-browser-internet-explorer">
         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-        4.0</td><td class="bc-supports-yes bc-browser-opera-desktop">
+        4.0</td><td class="bc-supports-yes bc-browser-opera">
         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-        7.0</td><td class="bc-supports-yes bc-browser-safari-desktop">
+        7.0</td><td class="bc-supports-yes bc-browser-safari">
         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-        1.0</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td></tr>
+        1.0</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td></tr>
         <tr>
-          <th scope="row"><code>inline-block</code></th>          <td class="bc-supports-yes bc-browser-chrome-desktop">
+          <th scope="row"><code>inline-block</code></th>          <td class="bc-supports-yes bc-browser-chrome">
             <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-            1.0</td><td class="bc-supports-yes bc-browser-firefox-desktop">
+            1.0</td><td class="bc-supports-yes bc-browser-firefox">
             <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-            3.0</td><td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+            3.0</td><td class="bc-supports-yes bc-browser-internet-explorer">
             <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-            7.0</td><td class="bc-supports-yes bc-browser-opera-desktop">
+            7.0</td><td class="bc-supports-yes bc-browser-opera">
             <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-            7.0</td><td class="bc-supports-yes bc-browser-safari-desktop">
+            7.0</td><td class="bc-supports-yes bc-browser-safari">
             <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-            1.0</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td></tr>
+            1.0</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td></tr>
             <tr>
               <th scope="row"><code>run-in</code>
                 <div class="bc-icons">
@@ -4516,15 +4516,15 @@
                 </div>
               </th>
 
-              <td class="bc-supports-no bc-browser-chrome-desktop">
+              <td class="bc-supports-no bc-browser-chrome">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                No</td><td class="bc-supports-no bc-browser-firefox-desktop">
+                No</td><td class="bc-supports-no bc-browser-firefox">
                 <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                No</td><td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+                No</td><td class="bc-supports-yes bc-browser-internet-explorer">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                8.0</td><td class="bc-supports-yes bc-browser-opera-desktop">
+                8.0</td><td class="bc-supports-yes bc-browser-opera">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                7.0</td><td class="bc-supports-yes bc-browser-safari-desktop">
+                7.0</td><td class="bc-supports-yes bc-browser-safari">
                 <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                 1.0
                 <div class="bc-icons">
@@ -4535,39 +4535,39 @@
                     </abbr>
                   </a>
                 </div>
-              </td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td></tr>
+              </td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td></tr>
               <tr>
                 <th scope="row"><code>inline-table</code></th>
 
-                <td class="bc-supports-yes bc-browser-chrome-desktop">
+                <td class="bc-supports-yes bc-browser-chrome">
                   <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                  1.0</td><td class="bc-supports-yes bc-browser-firefox-desktop">
+                  1.0</td><td class="bc-supports-yes bc-browser-firefox">
                   <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                  3.0</td><td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+                  3.0</td><td class="bc-supports-yes bc-browser-internet-explorer">
                   <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                  8.0</td><td class="bc-supports-yes bc-browser-opera-desktop">
+                  8.0</td><td class="bc-supports-yes bc-browser-opera">
                   <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                  7.0</td><td class="bc-supports-yes bc-browser-safari-desktop">
+                  7.0</td><td class="bc-supports-yes bc-browser-safari">
                   <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                  1.0</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td></tr>
+                  1.0</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td></tr>
                   <tr>
                     <th scope="row"><code>table</code>, <code>table-cell</code>, <code>table-column</code>, <code>table-column-group</code>, <code>table-header-group</code>, <code>table-row-group</code>, <code>table-footer-group</code>, <code>table-row</code>, and <code>table-caption</code></th>
 
-                    <td class="bc-supports-yes bc-browser-chrome-desktop">
+                    <td class="bc-supports-yes bc-browser-chrome">
                       <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                      1.0</td><td class="bc-supports-yes bc-browser-firefox-desktop">
+                      1.0</td><td class="bc-supports-yes bc-browser-firefox">
                       <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                      3.0</td><td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+                      3.0</td><td class="bc-supports-yes bc-browser-internet-explorer">
                       <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                      8.0</td><td class="bc-supports-yes bc-browser-opera-desktop">
+                      8.0</td><td class="bc-supports-yes bc-browser-opera">
                       <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                      7.0</td><td class="bc-supports-yes bc-browser-safari-desktop">
+                      7.0</td><td class="bc-supports-yes bc-browser-safari">
                       <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                      1.0</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td></tr>
+                      1.0</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td></tr>
                       <tr>
                         <th scope="row"><code>flex</code></th>
 
-                        <td class="bc-supports-yes bc-browser-chrome-desktop">
+                        <td class="bc-supports-yes bc-browser-chrome">
                           <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                           21.0
                           <div class="bc-icons">
@@ -4576,17 +4576,17 @@
                               <i aria-hidden="true" class="ic-prefix"></i>
                             </abbr>
                           </div>
-                        </td><td class="bc-supports-yes bc-browser-firefox-desktop">
+                        </td><td class="bc-supports-yes bc-browser-firefox">
                         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                        28.0</td><td class="bc-supports-no bc-browser-internet-explorer-desktop">
+                        28.0</td><td class="bc-supports-no bc-browser-internet-explorer">
                         <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                        No</td><td class="bc-supports-yes bc-browser-opera-desktop">
+                        No</td><td class="bc-supports-yes bc-browser-opera">
                         <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                        12.50</td><td class="bc-supports-unknown bc-browser-safari-desktop"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td></tr>
+                        12.50</td><td class="bc-supports-unknown bc-browser-safari"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td></tr>
                         <tr>
                           <th scope="row"><code>inline-flex</code></th>
 
-                          <td class="bc-supports-yes bc-browser-chrome-desktop">
+                          <td class="bc-supports-yes bc-browser-chrome">
                             <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                             21.0
                             <div class="bc-icons">
@@ -4595,13 +4595,13 @@
                                 <i aria-hidden="true" class="ic-prefix"></i>
                               </abbr>
                             </div>
-                          </td><td class="bc-supports-yes bc-browser-firefox-desktop">
+                          </td><td class="bc-supports-yes bc-browser-firefox">
                           <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                          28.0</td><td class="bc-supports-no bc-browser-internet-explorer-desktop">
+                          28.0</td><td class="bc-supports-no bc-browser-internet-explorer">
                           <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                          No</td><td class="bc-supports-yes bc-browser-opera-desktop">
+                          No</td><td class="bc-supports-yes bc-browser-opera">
                           <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                          12.50</td><td class="bc-supports-unknown bc-browser-safari-desktop"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td></tr>
+                          12.50</td><td class="bc-supports-unknown bc-browser-safari"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td></tr>
                           <tr>
                             <th scope="row"><code>grid
                               <div class="bc-icons">
@@ -4612,9 +4612,9 @@
                               </div>
                             </code></th>
 
-                            <td class="bc-supports-unknown bc-browser-chrome-desktop"><abbr title="Unknown">?</abbr></td><td class="bc-supports-no bc-browser-firefox-desktop">
+                            <td class="bc-supports-unknown bc-browser-chrome"><abbr title="Unknown">?</abbr></td><td class="bc-supports-no bc-browser-firefox">
                             <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                            No</td><td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+                            No</td><td class="bc-supports-yes bc-browser-internet-explorer">
                             <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                             Yes
                             <div class="bc-icons">
@@ -4623,7 +4623,7 @@
                                 <i aria-hidden="true" class="ic-prefix"></i>
                               </abbr>
                             </div>
-                          </td><td class="bc-supports-unknown bc-browser-opera-desktop"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-desktop"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td></tr>
+                          </td><td class="bc-supports-unknown bc-browser-opera"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td></tr>
                           <tr>
                             <th scope="row"><code>inline-grid
                               <div class="bc-icons">
@@ -4634,9 +4634,9 @@
                               </div>
                             </code></th>
 
-                            <td class="bc-supports-unknown bc-browser-chrome-desktop"><abbr title="Unknown">?</abbr></td><td class="bc-supports-no bc-browser-firefox-desktop">
+                            <td class="bc-supports-unknown bc-browser-chrome"><abbr title="Unknown">?</abbr></td><td class="bc-supports-no bc-browser-firefox">
                             <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                            No</td><td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+                            No</td><td class="bc-supports-yes bc-browser-internet-explorer">
                             <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                             Yes
                             <div class="bc-icons">
@@ -4645,7 +4645,7 @@
                                 <i aria-hidden="true" class="ic-prefix"></i>
                               </abbr>
                             </div>
-                          </td><td class="bc-supports-unknown bc-browser-opera-desktop"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-desktop"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td></tr>
+                          </td><td class="bc-supports-unknown bc-browser-opera"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td></tr>
                           <tr>
                             <th scope="row"><code>ruby</code>, <code>ruby-base</code>, <code>ruby-text</code>, <code>ruby-base-container</code>, <code>ruby-text-container</code>
                               <div class="bc-icons">
@@ -4656,9 +4656,9 @@
                               </div>
                             </th>
 
-                            <td class="bc-supports-unknown bc-browser-chrome-desktop"><abbr title="Unknown">?</abbr></td><td class="bc-supports-no bc-browser-firefox-desktop">
+                            <td class="bc-supports-unknown bc-browser-chrome"><abbr title="Unknown">?</abbr></td><td class="bc-supports-no bc-browser-firefox">
                             <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                            No</td><td class="bc-supports-yes bc-browser-internet-explorer-desktop">
+                            No</td><td class="bc-supports-yes bc-browser-internet-explorer">
                             <abbr title="Full support" class="bc-level bc-level-yes only-icon"><span>Full support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                             Yes
                             <div class="bc-icons">
@@ -4667,7 +4667,7 @@
                                 <i aria-hidden="true" class="ic-prefix"></i>
                               </abbr>
                             </div>
-                          </td><td class="bc-supports-unknown bc-browser-opera-desktop"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-desktop"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td></tr>
+                          </td><td class="bc-supports-unknown bc-browser-opera"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td></tr>
                           <tr>
                             <th scope="row"><code>contents</code>
                               <div class="bc-icons">
@@ -4678,9 +4678,9 @@
                               </div>
                             </th>
 
-                            <td class="bc-supports-no bc-browser-chrome-desktop">
+                            <td class="bc-supports-no bc-browser-chrome">
                               <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                              No</td><td class="bc-supports-no bc-browser-firefox-desktop">
+                              No</td><td class="bc-supports-no bc-browser-firefox">
                               <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
                               37.0
                               <div class="bc-icons">
@@ -4689,13 +4689,13 @@
                                   <i aria-hidden="true" class="ic-disabled"></i>
                                 </abbr>
                               </div>
-                            </td><td class="bc-supports-no bc-browser-internet-explorer-desktop">
+                            </td><td class="bc-supports-no bc-browser-internet-explorer">
                             <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                            No</td><td class="bc-supports-no bc-browser-opera-desktop">
+                            No</td><td class="bc-supports-no bc-browser-opera">
                             <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                            No</td><td class="bc-supports-no bc-browser-safari-desktop">
+                            No</td><td class="bc-supports-no bc-browser-safari">
                             <abbr title="No support." class="bc-level bc-level-no only-icon"><span>No support.</span><img src="support-sprite.gif" aria-hidden="true"></abbr>
-                            No</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-internet-explorer-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera-mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari-mobile"><abbr title="Unknown">?</abbr></td></tr>
+                            No</td><td class="bc-supports-unknown bc-browser-chrome-android"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-firefox_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-ie_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-opera_mobile"><abbr title="Unknown">?</abbr></td><td class="bc-supports-unknown bc-browser-safari_mobile"><abbr title="Unknown">?</abbr></td></tr>
                           </tbody>
                         </table>
 

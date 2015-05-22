@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'compat-icons';
-    src:url('../fonts/compat-icons.eot?-ehmwve');
-    src:url('../fonts/compat-icons.eot?#iefix-ehmwve') format('embedded-opentype'),
-        url('../fonts/compat-icons.woff?-ehmwve') format('woff'),
-        url('../fonts/compat-icons.ttf?-ehmwve') format('truetype'),
-        url('../fonts/compat-icons.svg?-ehmwve#compat-icons') format('svg');
+    src:url('fonts/compat-icons.eot?-ehmwve');
+    src:url('fonts/compat-icons.eot?#iefix-ehmwve') format('embedded-opentype'),
+        url('fonts/compat-icons.woff?-ehmwve') format('woff'),
+        url('fonts/compat-icons.ttf?-ehmwve') format('truetype'),
+        url('fonts/compat-icons.svg?-ehmwve#compat-icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -79,7 +79,7 @@
     content: "\f17b";
 }
 
-.ic-safari:before {
+.ic-safari:before, .ic-safari_mobile:before {
     content: "\e94a";
 }
 
@@ -95,7 +95,7 @@
     content: "\eae6";
 }
 
-.ic-ie:before {
+.ic-ie:before, .ic-internet_explorer:before, .ic-ie_mobile:before {
     content: "\eae7";
 }
 
@@ -168,26 +168,26 @@ icons support rules
     .bc-browser-android-browser:before {
         content: '\e9ca';
     }
-    .bc-browser-chrome-desktop:before,
+    .bc-browser-chrome:before,
     .bc-browser-chrome-android:before {
         content: '\eae5';
     }
-    .bc-browser-firefox-desktop:before,
-    .bc-browser-firefox-android:before,
+    .bc-browser-firefox:before,
+    .bc-browser-firefox_mobile:before,
     .bc-browser-firefox-fxos:before {
         content: '\eae6';
     }
-    .bc-browser-internet-explorer-desktop:before,
-    .bc-browser-internet-explorer-mobile:before {
+    .bc-browser-internet-explorer:before,
+    .bc-browser-ie_mobile:before {
         content: '\eae7';
     }
-    .bc-browser-opera-desktop:before,
-    .bc-browser-opera-mobile:before,
-    .bc-browser-opera-mini:before {
+    .bc-browser-opera:before,
+    .bc-browser-opera_mobile:before,
+    .bc-browser-opera_mini:before {
         content: '\eae8';
     }
-    .bc-browser-safari-desktop:before,
-    .bc-browser-safari-mobile:before {
+    .bc-browser-safari:before,
+    .bc-browser-safari_mobile:before {
         content: '\e94a';
     }
 
@@ -199,26 +199,26 @@ icons support rules
         width: 25px;
     }
 
-    .bc-browser-chrome-desktop:after,
-    .bc-browser-firefox-desktop:after,
-    .bc-browser-internet-explorer-desktop:after,
-    .bc-browser-opera-desktop:after,
-    .bc-browser-safari-desktop:after {
+    .bc-browser-chrome:after,
+    .bc-browser-firefox:after,
+    .bc-browser-internet-explorer:after,
+    .bc-browser-opera:after,
+    .bc-browser-safari:after {
         content: '\f108';
     }
 
     .bc-browser-android-browser:after,
     .bc-browser-chrome-android:after,
-    .bc-browser-firefox-android:after {
+    .bc-browser-firefox_mobile:after {
         content: '\f17b';
     }
 
-    .bc-browser-internet-explorer-mobile:after,
-    .bc-browser-opera-mobile:after,
-    .bc-browser-safari-mobile:after {
+    .bc-browser-ie_mobile:after,
+    .bc-browser-opera_mobile:after,
+    .bc-browser-safari_mobile:after {
         content: '\f10a';
     }
-    .bc-browser-opera-mini:after {
+    .bc-browser-opera_mini:after {
         content: '\f10b';
     }
 
@@ -311,8 +311,9 @@ table layout
     width: 10%; /* not actually 10% but triggers making all equal width */
 }
 
-    .bc-table thead th[colspan='2'] {
-        width: 20%;
+    .bc-table-3 thead th,
+    .bc-table-3 tbody td {
+        width: 33%;
     }
 
     .bc-table-4 thead th,
@@ -320,22 +321,55 @@ table layout
         width: 25%;
     }
 
-        .bc-table-4 thead th[colspan='2'] {
-            width: 50%;
-        }
+    .bc-table-5 thead th,
+    .bc-table-5 tbody td {
+        width: 20%;
+    }
+
+    .bc-table-6 thead th,
+    .bc-table-6 tbody td {
+        width: 16.66%;
+    }
+
+    .bc-table-7 thead th,
+    .bc-table-7 tbody td {
+        width: 14.2%;
+    }
+
+    .bc-table-8 thead th,
+    .bc-table-8 tbody td {
+        width: 12.5%;
+    }
+
+    .bc-table-9 thead th,
+    .bc-table-9 tbody td {
+        width: 11.11%;
+    }
+
+    /* 10 is default */
+
+    .bc-table-11 thead th,
+    .bc-table-11 tbody td {
+        width: 9.09%;
+    }
+
+    .bc-table-12 thead th,
+    .bc-table-12 tbody td {
+        width: 8.33%;
+    }
 
     .bc-table-13 thead th,
     .bc-table-13 tbody td {
         width: 7.69%;
     }
 
-        .bc-table-13 thead th[colspan='2'] {
-            width: 15.35%;
-        }
+    .bc-table thead th[colspan='2'] {
+        width: 50%;
+    }
 
-        .bc-table-13 thead th[colspan='3'] {
-            width: 23.07%;
-        }
+    .bc-table thead th[colspan='3'] {
+        width: 33.33%;
+    }
 
 .bc-table tbody th,
 .bc-table thead td {
