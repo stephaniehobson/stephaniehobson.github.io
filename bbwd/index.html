@@ -18,6 +18,7 @@
 
             .title {
                 margin: 10vh 0;
+                font-size: 30px;
                 text-align: center;
             }
 
@@ -54,25 +55,24 @@
                 font-family: Comic Sans, Comic Sans MS, cursive;
             }
 
-            .panel div:before {
+            .panel div:before,
+            .panel div:after {
                 content: '';
                 position: absolute;
                 top: 100%;
                 right: 20px;
                 width: 0;
                 height: 0;
+            }
+
+            .panel div:before {
                 border-left: 20px solid transparent;
                 border-right: 20px solid transparent;
                 border-top: 20px solid #000;
             }
 
             .panel div:after {
-                content: '';
-                position: absolute;
-                top: 100%;
-                right: 22px;
-                width: 0;
-                height: 0;
+                margin-right: 2px;
                 border-left: 18px solid transparent;
                 border-right: 18px solid transparent;
                 border-top: 18px solid #fff;
@@ -113,15 +113,15 @@
     <body>
         <h1 class="title">Bruce Banner: Web Developer!</h1>
         <div class="panel_wrap">
-            <div class="panel">
+            <div class="panel panel_boss">
                 <div id="boss"></div>
                 <img src="img/boss.jpg" alt="Bruce's boss.">
             </div>
-            <div class="panel">
+            <div class="panel panel_bruce">
                 <div id="bruce"></div>
                 <img src="img/bruce.jpg" alt="Bruce working, getting angry.">
             </div>
-            <div class="panel panel_silent">
+            <div class="panel panel_hulk">
                 <img src="img/hulk.jpg" alt="Hulk smashing his computer.">
             </div>
         </div>
@@ -132,7 +132,7 @@
             <button type="submit">Do it Bruce!</button>
         </form>
 
-        <div class="credit">Concept: willkg. Code: shobson. Art: <a href="http://lovefrompastpresentfuture.blogspot.ca/">I got it from here</a>. Characters: Marvel comics, obviously.</div>
+        <div class="credit">Concept: willkg. Code: <a href="http://stephaniehobson.ca">shobson</a>. Art: <a href="http://lovefrompastpresentfuture.blogspot.ca/">I got it from here</a>. Characters: Marvel comics, obviously.</div>
 
         <script>
 
@@ -146,8 +146,14 @@
                 return decodeURIComponent(results[2].replace(/\+/g, " "));
             }
 
-            var boss_text = "Hey, Bruce... can you " + getParameterByName('problem') + "?";
-            var bruce_text = "You wouldn't like me when I " + getParameterByName('problem') + ".";
+
+            var problem = getParameterByName('problem');
+            if(!problem){
+                problem = "debug this IE8 display problem";
+            }
+
+            var boss_text = "Hey, Bruce... can you " + problem + "?";
+            var bruce_text = "You wouldn't like me when I " + problem + ".";
 
             document.getElementById('boss').textContent=boss_text;
             document.getElementById('bruce').textContent=bruce_text;
