@@ -170,10 +170,10 @@
 
             var boss_text = "Hey, Bruce... can you " + problem + "?";
             var bruce_text = "You wouldn't like me when I " + problem + ".";
+            bruce_text = bruce_text.replace(/\byour\b/g, 'my');
 
             document.getElementById('boss').textContent=boss_text;
             document.getElementById('bruce').textContent=bruce_text;
-
 
         </script>
 
