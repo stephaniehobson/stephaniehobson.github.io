@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'compat-icons';
-	src:url('fonts/compat-icons.eot?-ehmwve');
-	src:url('fonts/compat-icons.eot?#iefix-ehmwve') format('embedded-opentype'),
-		url('fonts/compat-icons.woff?-ehmwve') format('woff'),
-		url('fonts/compat-icons.ttf?-ehmwve') format('truetype'),
-		url('fonts/compat-icons.svg?-ehmwve#compat-icons') format('svg');
+	src:url('fonts/compat-icons.eot?-6mzp9w');
+	src:url('fonts/compat-icons.eot?#iefix-6mzp9w') format('embedded-opentype'),
+		url('fonts/compat-icons.ttf?-6mzp9w') format('truetype'),
+		url('fonts/compat-icons.woff?-6mzp9w') format('woff'),
+		url('fonts/compat-icons.svg?-6mzp9w#compat-icons') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,83 +23,69 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.ic-blackberry:before {
+	content: "\e604";
+}
+.ic-edge:before {
+	content: "\e605";
+}
 .ic-altname:before {
 	content: "\e601";
 }
-
 .ic-firefoxos:before {
 	content: "\e600";
 }
-
 .ic-footnote:before {
 	content: "\e602";
 }
-
 .ic-prefix:before {
 	content: "\e603";
 }
-
 .ic-obsolete:before {
 	content: "\f014";
 }
-
 .ic-disabled:before {
 	content: "\f024";
 }
-
 .ic-non-standard:before {
 	content: "\f071";
 }
-
 .ic-experimental:before {
 	content: "\f0c3";
 }
-
 .ic-history:before {
 	content: "\f0dd";
 }
-
 .ic-desktop:before {
 	content: "\f108";
 }
-
 .ic-mobile:before {
 	content: "\f10a";
 }
-
 .ic-mini:before {
 	content: "\f10b";
 }
-
 .ic-protected:before {
 	content: "\f132";
 }
-
 .ic-android:before {
 	content: "\f17b";
 }
-
 .ic-safari:before {
 	content: "\e94a";
 }
-
 .ic-android-browser:before {
 	content: "\e9ca";
 }
-
 .ic-chrome:before {
 	content: "\eae5";
 }
-
 .ic-firefox:before {
 	content: "\eae6";
 }
-
 .ic-ie:before {
 	content: "\eae7";
 }
-
 .ic-opera:before {
 	content: "\eae8";
 }
-
