@@ -346,8 +346,8 @@ Table layout
 
 /*
 tablet display
-- declarataions are mixins
-- mixins are included in media queries below
+- declarataions are a mixin
+- mixin is included in media queries below the mixin definition
 ====================================================================== */
 @supports (display: grid) {
   @media all and (min-width: 47.9385em) and (max-width: 63.9375em) {
@@ -826,6 +826,9 @@ History
     box-shadow: none; } }
 
 @media all and (max-width: 47.9375em) {
+  .bc-table .bc-history {
+    padding-left: 0;
+  }
   .bc-history dl {
     margin-left: 10px; }
   .bc-history dt {
@@ -870,22 +873,17 @@ Legend
   content: '\a';
   white-space: pre; }
 
-@media all and (min-width: 47.9385em) {
-  .bc-legend dl {
-    display: grid;
-    grid-template-columns: 100px 1fr 100px 1fr; }
-  .bc-legend dt {
-    display: block;
-    grid-column: 1 / 2; }
-  .bc-legend dd {
-    display: block;
-    grid-column: 2 / 3; }
-  .bc-legend *:nth-child(4n + 3) {
-    display: block;
-    grid-column: 3 / 4; }
-  .bc-legend *:nth-child(4n + 4) {
-    display: block;
-    grid-column: 4 / 5; } }
+
+.bc-legend dl {
+display: grid;
+grid-template-columns: 30px 1fr; }
+.bc-legend dt {
+display: block;
+grid-column: 1 / 2; }
+.bc-legend dd {
+display: block;
+grid-column: 2 / 3; }
+
 
 /*
 Beta menu
