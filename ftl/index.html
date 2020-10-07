@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 1rem;
+        }
+        textarea {
+            width: 100%;
+            height: calc(100vh - 8rem);
+        }
+
+        button {
+            background-color: darkred;
+            color: #fff;
+            font-size: 20px;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label>Paste your text here:<br>
+            <textarea id="strings"></textarea>
+        </label>
+        <label>HTML file output<br>
+            <textarea id="to-html" readonly></textarea>
+        </label>
+        <label>FTL file output:<br>
+            <textarea id="to-ftl" readonly></textarea>
+        </label>
+        <button id="go" type="button">Convert</button>
+    </form>
+    <script>
+        var field_strings = document.getElementById('strings');
+        var field_html = document.getElementById('to-html');
+        var field_ftl = document.getElementById('to-ftl');
+        var go = document.getElementById('go');
+        var brandNames = [
+                        { "slug" : "-brand-name-firefox-extended-support-release", "name" : "Firefox Extended Support Release" },
+                        { "slug" : "-brand-name-mozilla-developer-network", "name" : "Mozilla Developer Network" },
+                        { "slug" : "-brand-name-firefox-developer-edition", "name" : "Firefox Developer Edition" },
+                        { "slug" : "-brand-name-firefox-private-network", "name" : "Firefox Private Network" },
+                        { "slug" : "-brand-name-mozilla-common-voice", "name" : "Mozilla Common Voice" },
+                        { "slug" : "-brand-name-mozilla-corporation", "name" : "Mozilla Corporation" },
+                        { "slug" : "-brand-name-mozilla-foundation", "name" : "Mozilla Foundation" },
+                        { "slug" : "-brand-name-firefox-enterprise", "name" : "Firefox Enterprise" },
+                        { "slug" : "-brand-name-facebook-messenger", "name" : "Facebook Messenger" },
+                        { "slug" : "-brand-name-facebook-container", "name" : "Facebook Container" },
+                        { "slug" : "-brand-name-developer-edition", "name" : "Developer Edition" },
+                        { "slug" : "-brand-name-firefox-lockwise", "name" : "Firefox Lockwise" },
+                        { "slug" : "-brand-name-firefox-devtools", "name" : "Firefox DevTools" },
+                        { "slug" : "-brand-name-firefox-daylight", "name" : "Firefox Daylight" },
+                        { "slug" : "-brand-name-firefox-browsers", "name" : "Firefox Browsers" },
+                        { "slug" : "-brand-name-firefox-accounts", "name" : "Firefox Accounts" },
+                        { "slug" : "-brand-name-creative-commons", "name" : "Creative Commons" },
+                        { "slug" : "-brand-name-firefox-reality", "name" : "Firefox Reality" },
+                        { "slug" : "-brand-name-firefox-nightly", "name" : "Firefox Nightly" },
+                        { "slug" : "-brand-name-firefox-monitor", "name" : "Firefox Monitor" },
+                        { "slug" : "-brand-name-firefox-browser", "name" : "Firefox Browser" },
+                        { "slug" : "-brand-name-firefox-account", "name" : "Firefox Account" },
+                        { "slug" : "-brand-name-firefox-aurora", "name" : "Firefox Aurora" },
+                        { "slug" : "-brand-name-firefox-focus", "name" : "Firefox Focus" },
+                        { "slug" : "-brand-name-web-assembly", "name" : "Web Assembly" },
+                        { "slug" : "-brand-name-mozilla-hubs", "name" : "Mozilla Hubs" },
+                        { "slug" : "-brand-name-mdn-web-docs", "name" : "MDN Web Docs" },
+                        { "slug" : "-brand-name-firefox-sync", "name" : "Firefox Sync" },
+                        { "slug" : "-brand-name-firefox-send", "name" : "Firefox Send" },
+                        { "slug" : "-brand-name-firefox-lite", "name" : "Firefox Lite" },
+                        { "slug" : "-brand-name-firefox-beta", "name" : "Firefox Beta" },
+                        { "slug" : "-brand-name-common-voice", "name" : "Common Voice" },
+                        { "slug" : "-brand-name-thunderbird", "name" : "Thunderbird" },
+                        { "slug" : "-brand-name-mozilla-vpn", "name" : "Mozilla VPN" },
+                        { "slug" : "-brand-name-google-play", "name" : "Google Play" },
+                        { "slug" : "-brand-name-firefox-esr", "name" : "Firefox ESR" },
+                        { "slug" : "-brand-name-test-flight", "name" : "TestFlight" },
+                        { "slug" : "-brand-name-enterprise", "name" : "Enterprise" },
+                        { "slug" : "-brand-name-chromebook", "name" : "Chromebook"},
+                        { "slug" : "-brand-name-ie", "name" : "Internet Explorer" },
+                        { "slug" : "-brand-name-workplace", "name" : "Workplace" },
+                        { "slug" : "-brand-name-microsoft", "name" : "Microsoft" },
+                        { "slug" : "-brand-name-messenger", "name" : "Messenger" },
+                        { "slug" : "-brand-name-instagram", "name" : "Instagram" },
+                        { "slug" : "-brand-name-app-store", "name" : "App Store" },
+                        { "slug" : "-brand-name-lockwise", "name" : "Lockwise" },
+                        { "slug" : "-brand-name-facebook", "name" : "Facebook" },
+                        { "slug" : "-brand-name-devtools", "name" : "DevTools" },
+                        { "slug" : "-brand-name-daylight", "name" : "Daylight" },
+                        { "slug" : "-brand-name-chromium", "name" : "Chromium" },
+                        { "slug" : "-brand-name-chromeos", "name" : "ChromeOS" },
+                        { "slug" : "-brand-name-bugzilla", "name" : "Bugzilla" },
+                        { "slug" : "-brand-name-youtube", "name" : "YouTube" },
+                        { "slug" : "-brand-name-windows", "name" : "Windows" },
+                        { "slug" : "-brand-name-twitter", "name" : "Twitter" },
+                        { "slug" : "-brand-name-reality", "name" : "Reality" },
+                        { "slug" : "-brand-name-nightly", "name" : "Nightly" },
+                        { "slug" : "-brand-name-mozilla", "name" : "Mozilla" },
+                        { "slug" : "-brand-name-monitor", "name" : "Monitor" },
+                        { "slug" : "-brand-name-firefox", "name" : "Firefox" },
+                        { "slug" : "-brand-name-fire-tv", "name" : "Fire TV" },
+                        { "slug" : "-brand-name-android", "name" : "Android" },
+                        { "slug" : "-brand-name-safari", "name" : "Safari" },
+                        { "slug" : "-brand-name-pocket", "name" : "Pocket" },
+                        { "slug" : "-brand-name-mac-short", "name" : "Mac" },
+                        { "slug" : "-brand-name-iphone", "name" : "iPhone" },
+                        { "slug" : "-brand-name-google", "name" : "Google" },
+                        { "slug" : "-brand-name-github", "name" : "GitHub" },
+                        { "slug" : "-brand-name-chrome", "name" : "Chrome" },
+                        { "slug" : "-brand-name-aurora", "name" : "Aurora" },
+                        { "slug" : "-brand-name-amazon", "name" : "Amazon" },
+                        { "slug" : "-brand-name-vista", "name" : "Vista" },
+                        { "slug" : "-brand-name-opera", "name" : "Opera" },
+                        { "slug" : "-brand-name-linux", "name" : "Linux" },
+                        { "slug" : "-brand-name-focus", "name" : "Focus" },
+                        { "slug" : "-brand-name-brave", "name" : "Brave" },
+                        { "slug" : "-brand-name-apple", "name" : "Apple" },
+                        { "slug" : "-brand-name-sync", "name" : "Sync" },
+                        { "slug" : "-brand-name-send", "name" : "Send" },
+                        { "slug" : "-brand-name-rust", "name" : "Rust" },
+                        { "slug" : "-brand-name-mac", "name" : "macOS" },
+                        { "slug" : "-brand-name-lite", "name" : "Lite" },
+                        { "slug" : "-brand-name-ipad", "name" : "iPad" },
+                        { "slug" : "-brand-name-hulu", "name" : "Hulu" },
+                        { "slug" : "-brand-name-hubs", "name" : "Hubs" },
+                        { "slug" : "-brand-name-edge", "name" : "Edge" },
+                        { "slug" : "-brand-name-beta", "name" : "Beta" },
+                        { "slug" : "-brand-name-mdn", "name" : "MDN" },
+                        { "slug" : "-brand-name-ios", "name" : "iOS" },
+                        { "slug" : "-brand-name-esr", "name" : "ESR" },
+                        { "slug" : "-brand-name-xp", "name" : "XP" }
+        ];
+
+        function replaceText(t) {
+            var ftl = t;
+
+            for( let name in brandNames ){
+                //console.log( brandNames[name]['slug'] );
+                ftl = ftl.replaceAll(brandNames[name]['name'], '{ ' + brandNames[name]['slug'] + ' }');
+            }
+            // brands.forEach( function(slug) {
+            //     console.log(slug);
+            //     ftl = ftl.replace(brands[slug], '{ ' + slug + ' }');
+            // });
+
+            return ftl;
+        }
+
+        function convert() {
+
+            field_html.value = '';
+            field_ftl.value = '';
+            var strings = field_strings.value;
+            var arr_strings = strings.split('\n');
+
+            // populate textareas
+            arr_strings.forEach( function(str) {
+                if(str.length > 0) {
+
+                    // remove punctuation
+                    var text = str.replace(/[.,\/#!$%\^&\*\?;:…{}=\-_`'’“”~()]/g,"");
+                    text = text.toLowerCase();
+
+                    // get first 3 words
+                    var words = text.split(' ');
+
+                    slug = words[0] + '-' + words[1] + '-' + words[2];
+
+                    // add slug to html
+                    field_html.value = field_html.value + "{{ ftl('"  + slug + "') }}" + '\r\n';
+
+                    // add slug to flt and print string
+                    field_ftl.value = field_ftl.value + slug +
+                                    ' = ' + str + '\r\n' ;
+                }
+            });
+
+            // brand name subs
+            field_ftl.value = replaceText(field_ftl.value);
+
+
+            // cleanup
+
+
+        }
+
+        go.addEventListener("click", convert);
+
+    </script>
+</body>
+</html>
