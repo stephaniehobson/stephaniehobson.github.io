@@ -9,9 +9,15 @@
             grid-template-columns: 1fr 1fr 1fr;
             column-gap: 1rem;
         }
+
+        form > label:first-child {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
         textarea {
             width: 100%;
-            height: calc(100vh - 8rem);
+            height: calc(100vh - 10rem);
         }
 
         button {
@@ -24,6 +30,9 @@
 </head>
 <body>
     <form>
+        <label>What's the prefix?:<br>
+            <input type="prefix" id="prefix">
+        </label>
         <label>Paste your text here:<br>
             <textarea id="strings"></textarea>
         </label>
@@ -36,6 +45,7 @@
         <button id="go" type="button">Convert</button>
     </form>
     <script>
+        var field_prefix = document.getElementById('prefix');
         var field_strings = document.getElementById('strings');
         var field_html = document.getElementById('to-html');
         var field_ftl = document.getElementById('to-ftl');
@@ -141,10 +151,6 @@
                 //console.log( brandNames[name]['slug'] );
                 ftl = ftl.replaceAll(brandNames[name]['name'], '{ ' + brandNames[name]['slug'] + ' }');
             }
-            // brands.forEach( function(slug) {
-            //     console.log(slug);
-            //     ftl = ftl.replace(brands[slug], '{ ' + slug + ' }');
-            // });
 
             return ftl;
         }
@@ -167,7 +173,9 @@
                     // get first 3 words
                     var words = text.split(' ');
 
-                    slug = words[0] + '-' + words[1] + '-' + words[2];
+                    slug = field_prefix.value + '-' + words[0] + '-' + words[1] + '-' + words[2];
+                    slug = slug.replace('-undefined', "");
+                    slug = slug.replace('-undefined', "");
 
                     // add slug to html
                     field_html.value = field_html.value + "{{ ftl('"  + slug + "') }}" + '\r\n';
